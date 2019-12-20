@@ -1,0 +1,75 @@
+/* light theme */
+
+// light theme colors
+$light-background-color: #f9f9f9;
+$light-background-hov: color.scale(#363c4a, $alpha(-90%));
+$light-text: #4a5669;
+$light-text-hov: #363c4a;
+$light-text-point: #9f1d4b;
+
+// header
+$light-header-title: $light-text-hov;
+$light-theme-switch-icon: $light-text;
+$light-theme-switch-bg: $light-background-color;
+$light-theme-switch-bg-hov: $light-background-hov;
+
+// bio
+$light-bio-text: $light-text-hov;
+$light-bio-name: $light-text-point;
+
+// main category
+$light-main-category-text: color.scale($light-text, $alpha(-40%));
+$light-main-category-text-hov: $light-text-hov;
+$light-main-category-text-box: $light-background-color;
+$light-main-category-text-box-hov: $light-background-hov;
+
+// sub category
+$light-sub-category-text: $light-text-point;
+
+// post
+$light-post-text: $light-text;
+$light-post-text-hov: $light-text-hov;
+$light-post-border-line-hov: color.scale(#000, $alpha(-84%));
+
+// code
+// footer
+/* 나중에 */
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* dark theme */
+
+// dark theme colors
+$dark-background-color: #242932;
+$dark-background-hov: color.scale(#eaedf5, $alpha(-90%));
+$dark-text: #c6d1e6;
+$dark-text-hov: #eaedf5;
+$dark-text-point: #faa2c1;
+
+// header
+$dark-header-title: $dark-text-hov;
+$dark-theme-switch-icon: $dark-text;
+$dark-theme-switch-bg: $dark-background-color;
+$dark-theme-switch-bg-hov: $dark-background-hov;
+
+// bio
+$dark-bio-text: $dark-text-hov;
+$dark-bio-name: $dark-text-point;
+
+// main category
+$dark-main-category-text: color.scale($dark-text, $alpha(-40%));
+$dark-main-category-text-hov: $dark-text-hov;
+$dark-main-category-text-box: $dark-background-color;
+$dark-main-category-text-box-hov: $dark-background-hov;
+
+// sub category
+$dark-sub-category-text: $dark-text-point;
+
+// post
+$dark-post-text: $dark-text;
+$dark-post-text-hov: $dark-text-hov;
+$dark-post-border-line-hov: color.scale(#fff, $alpha(-84%));
+
+// code
+// footer
+/* 나중에 */
