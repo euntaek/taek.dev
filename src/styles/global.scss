@@ -1,0 +1,16 @@
+@import "./variables.scss";
+
+body {
+  font-family: "Spoqa Han Sans";
+  font-style: normal;
+  -webkit-text-size-adjust: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // background-color: $light-background-color;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
