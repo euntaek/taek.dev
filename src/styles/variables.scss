@@ -2,8 +2,8 @@
 
 // light theme colors
 $light-background-color: #f9f9f9;
-$light-box-hov: color.scale(#2d364a, $alpha(-90%));
-$light-text: color.scale(#2d364a, $alpha(-20%));
+$light-box-hov: scale-color(#2d364a, $alpha: -90%);
+$light-text: scale-color(#2d364a, $alpha: -20%);
 $light-text-hov: #2d364a;
 $light-text-point: #9f1d4b;
 
@@ -18,21 +18,21 @@ $light-bio-text: $light-text-hov;
 $light-bio-name: $light-text-point;
 
 // main category
-$light-main-category-text: color.scale($light-text-hov, $alpha(-35%));
+$light-main-category-text: scale-color($light-text-hov, $alpha: -35%);
 $light-main-category-text-hov: $light-text-hov;
 $light-main-category-text-box: $light-background-color;
 $light-main-category-text-box-hov: $light-box-hov;
 
 // sub category
-$light-sub-category-text: color.scale($light-text-point, $alpha(-35%));
+$light-sub-category-text: scale-color($light-text-point, $alpha: -35%);
 $light-sub-category-text-hov: $light-text-point;
 $light-main-category-text-box: $light-background-color;
-$light-sub-category-text-box-hov: color.scale($light-text-point, $alpha(-90%));
+$light-sub-category-text-box-hov: scale-color($light-text-point, $alpha: -90%);
 
 // post
 $light-post-text: $light-text;
 $light-post-text-hov: $light-text-hov;
-$light-post-border-line-hov: color.scale(#000, $alpha(-84%));
+$light-post-border-line-hov: scale-color(#000, $alpha: -84%);
 
 // code
 // footer
@@ -44,8 +44,8 @@ $light-post-border-line-hov: color.scale(#000, $alpha(-84%));
 
 // dark theme colors
 $dark-background-color: #242932;
-$dark-box-hov: color.scale(#e3edff, $alpha(-90%));
-$dark-text: color.scale(#e3edff, $alpha(-20%));
+$dark-box-hov: scale-color(#e3edff, $alpha: -90%);
+$dark-text: scale-color(#e3edff, $alpha: -20%);
 $dark-text-hov: #e3edff;
 $dark-text-point: #faa2c1;
 
@@ -60,21 +60,21 @@ $dark-bio-text: $dark-text-hov;
 $dark-bio-name: $dark-text-point;
 
 // main category
-$dark-main-category-text: color.scale($dark-text-hov, $alpha(-35%));
+$dark-main-category-text: scale-color($dark-text-hov, $alpha: -35%);
 $dark-main-category-text-hov: $dark-text-hov;
 $dark-main-category-text-box: $dark-background-color;
 $dark-main-category-text-box-hov: $dark-box-hov;
 
 // sub category
-$dark-sub-category-text: color.scale($dark-text-point, $alpha(-35%));
+$dark-sub-category-text: scale-color($dark-text-point, $alpha: -35%);
 $dark-sub-category-text-hov: $dark-text-point;
 $dark-main-category-text-box: $dark-background-color;
-$dark-sub-category-text-box-hov: color.scale($dark-text-point, $alpha(-90%));
+$dark-sub-category-text-box-hov: scale-color($dark-text-point, $alpha: -90%);
 
 // post
 $dark-post-text: $dark-text;
 $dark-post-text-hov: $dark-text-hov;
-$dark-post-border-line-hov: color.scale(#fff, $alpha(-84%));
+$dark-post-border-line-hov: scale-color(#fff, $alpha: -84%);
 
 // code
 // footer
