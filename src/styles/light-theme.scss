@@ -1,0 +1,37 @@
+body.light {
+  background-color: $light-background-color;
+
+  header {
+    .title {
+      color: $light-header-title;
+    }
+
+    .socials {
+      background-color: $light-socials-bg;
+      .social-icon {
+        fill: $light-socials-icon;
+      }
+    }
+    .socials:hover {
+      background-color: $light-socials-bg-hov;
+      .social-icon {
+        fill: $light-text-hov;
+      }
+    }
+
+    .theme-switch {
+      background-color: $light-theme-switch-bg;
+      .theme-icon {
+        fill: $light-theme-switch-icon;
+      }
+    }
+    .theme-switch:hover {
+      background-color: $light-theme-switch-bg-hov;
+      .theme-icon {
+        fill: $light-text-hov;
+      }
+    }
+  }
+
+  // dark light 스타일 설정하기.
+}

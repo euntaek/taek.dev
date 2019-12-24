@@ -9,8 +9,11 @@ $light-text-point: #9f1d4b;
 
 // header
 $light-header-title: $light-text-hov;
+$light-socials-icon: $light-text;
+$light-socials-bg: scale-color($light-background-color, $alpha: -100%);
+$light-socials-bg-hov: $light-box-hov;
 $light-theme-switch-icon: $light-text;
-$light-theme-switch-bg: $light-background-color;
+$light-theme-switch-bg: scale-color($light-background-color, $alpha: -100%);
 $light-theme-switch-bg-hov: $light-box-hov;
 
 // bio
@@ -51,8 +54,11 @@ $dark-text-point: #faa2c1;
 
 // header
 $dark-header-title: $dark-text-hov;
+$dark-socials-icon: $dark-text;
+$dark-socials-bg: scale-color($dark-background-color, $alpha: -100%);
+$dark-socials-bg-hov: $dark-box-hov;
 $dark-theme-switch-icon: $dark-text;
-$dark-theme-switch-bg: $dark-background-color;
+$dark-theme-switch-bg: scale-color($dark-background-color, $alpha: -100%);
 $dark-theme-switch-bg-hov: $dark-box-hov;
 
 // bio

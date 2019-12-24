@@ -1,16 +1,23 @@
 @import "./variables.scss";
+@import "./light-theme.scss";
+@import "./dark-theme.scss";
+
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 body {
   font-family: "Spoqa Han Sans";
   font-style: normal;
   -webkit-text-size-adjust: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // background-color: $light-background-color;
-  outline: none;
+  background-color: $light-background-color;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
+  transition: all 0.3s, all 0.3s;
 }
