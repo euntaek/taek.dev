@@ -69,6 +69,7 @@ module.exports = {
         showSpinner: false,
       },
     },
+    `gatsby-plugin-react-svg`,
     `gatsby-plugin-feed`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
