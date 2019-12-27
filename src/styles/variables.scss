@@ -5,14 +5,14 @@ $light-background-color: #f9f9f9;
 $light-box-hov: scale-color(#2d364a, $alpha: -90%);
 $light-text: scale-color(#2d364a, $alpha: -20%);
 $light-text-hov: #2d364a;
-$light-text-point: #9f1d4b;
+$light-text-point: #155693;
 
 // header
 $light-header-title: $light-text-hov;
 $light-socials-icon: $light-text;
 $light-socials-bg: scale-color($light-background-color, $alpha: -100%);
 $light-socials-bg-hov: $light-box-hov;
-$light-theme-switch-icon: $light-text;
+$light-theme-switch-icon: $light-text-hov;
 $light-theme-switch-bg: scale-color($light-background-color, $alpha: -100%);
 $light-theme-switch-bg-hov: $light-box-hov;
 
@@ -50,7 +50,7 @@ $dark-background-color: #242932;
 $dark-box-hov: scale-color(#e3edff, $alpha: -90%);
 $dark-text: scale-color(#e3edff, $alpha: -20%);
 $dark-text-hov: #e3edff;
-$dark-text-point: #faa2c1;
+$dark-text-point: #81b9ee;
 
 // header
 $dark-header-title: $dark-text-hov;
