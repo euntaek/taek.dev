@@ -9,7 +9,6 @@ const style = css`
   position: relative;
   width: 32px;
   height: 32px;
-  margin: 0 0 4px 4px;
   border-radius: 12px;
   border: none;
   outline: none;
