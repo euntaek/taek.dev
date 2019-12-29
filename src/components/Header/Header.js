@@ -31,7 +31,7 @@ const dumyDate = {
 
 function Header() {
   return (
-    <header css={style}>
+    <header css={style} id="header">
       <h1 className="title">TAEK.io</h1>
       <div>
         <ThemeContainer />
