@@ -1,7 +1,7 @@
 body.dark {
   background-color: $dark-background-color;
 
-  header {
+  #header {
     .title {
       color: $dark-header-title;
     }
@@ -33,5 +33,12 @@ body.dark {
     }
   }
 
-  // dark light 스타일 설정하기.
+  #bio {
+    p {
+      color: $dark-text-hov;
+    }
+    a {
+      color: $dark-text-point;
+    }
+  }
 }
