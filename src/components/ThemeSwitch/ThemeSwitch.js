@@ -32,6 +32,7 @@ function ThemeSwitch({ initialTheme }) {
       css={style}
       onClick={() => onClick(theme)}
       className="theme-switch align-center"
+      aria-label="Dark/Ligth Mode Switch"
     >
       <LightThemeIcon animate={theme === "light"} />
       <DarkThemeIcon animate={theme === "dark"} />

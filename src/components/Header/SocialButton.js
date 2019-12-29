@@ -34,6 +34,7 @@ function SocialButton({ social, uri }) {
       target="_blank"
       rel="noreferrer noopener"
       className="socials align-center"
+      title={`Open the blog owner's ${social} new page.}`}
     >
       {social == "github" && <Github />}
       {social == "facebook" && <Facebook />}
