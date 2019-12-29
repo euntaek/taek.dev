@@ -23,10 +23,10 @@ const style = css`
   }
 `;
 
-const dumyDate = {
-  github: `https:github.com`,
-  facebook: `f`,
-  linkedIn: `i`,
+const dummyDate = {
+  github: `https://github.com`,
+  facebook: `https://github.com`,
+  linkedIn: `https://github.com`,
 };
 
 function Header() {
@@ -35,8 +35,8 @@ function Header() {
       <h1 className="title">TAEK.io</h1>
       <div>
         <ThemeContainer />
-        {Object.keys(dumyDate).map(item => (
-          <SocialButton social={item} uri={dumyDate[item]} key={item} />
+        {Object.keys(dummyDate).map(item => (
+          <SocialButton social={item} uri={dummyDate[item]} key={item} />
         ))}
       </div>
     </header>
