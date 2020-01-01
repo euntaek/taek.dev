@@ -7,8 +7,8 @@ const style = css`
 
   p {
     margin: 0;
-    padding: 4px 0;
     font-size: 16px;
+    line-height: 1.8em;
     a {
       position: relative;
       text-decoration: none;
