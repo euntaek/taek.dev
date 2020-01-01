@@ -3,7 +3,7 @@ import { jsx, css } from "@emotion/core";
 
 const style = css`
   position: absolute;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s cubic-bezier(0.42, 0, 0, 0.68);
 `;
 
 const fade = {
