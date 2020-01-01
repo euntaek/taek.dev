@@ -1,15 +1,14 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import SocialContainer from "./SocialContainer";
 
 const style = css`
   margin: 8px 16px 48px;
 
   p {
     margin: 0;
+    padding: 4px 0;
     font-size: 16px;
-    font-weight: normal;
-    letter-spacing: normal;
-
     a {
       position: relative;
       text-decoration: none;
@@ -35,6 +34,7 @@ function Bio() {
         <br />
         {test}
       </p>
+      <SocialContainer />
     </aside>
   );
 }
