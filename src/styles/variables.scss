@@ -23,13 +23,13 @@ $light-socials-icon-dis: $light-box-hov;
 // main category
 $light-main-category-text: scale-color($light-text-hov, $alpha: -35%);
 $light-main-category-text-hov: $light-text-hov;
-$light-main-category-text-box: $light-background-color;
+$light-main-category-text-box: scale-color($light-background-color, $alpha: -100%);
 $light-main-category-text-box-hov: $light-box-hov;
 
 // sub category
 $light-sub-category-text: scale-color($light-text-point, $alpha: -35%);
 $light-sub-category-text-hov: $light-text-point;
-$light-main-category-text-box: $light-background-color;
+$light-sub-category-text-box: $light-background-color;
 $light-sub-category-text-box-hov: scale-color($light-text-point, $alpha: -90%);
 
 // post
@@ -68,13 +68,13 @@ $dark-socials-icon-dis: $dark-box-hov;
 // main category
 $dark-main-category-text: scale-color($dark-text-hov, $alpha: -35%);
 $dark-main-category-text-hov: $dark-text-hov;
-$dark-main-category-text-box: $dark-background-color;
+$dark-main-category-text-box: scale-color($dark-background-color, $alpha: -100%);
 $dark-main-category-text-box-hov: $dark-box-hov;
 
 // sub category
 $dark-sub-category-text: scale-color($dark-text-point, $alpha: -35%);
 $dark-sub-category-text-hov: $dark-text-point;
-$dark-main-category-text-box: $dark-background-color;
+$dark-sub-category-text-box: $dark-background-color;
 $dark-sub-category-text-box-hov: scale-color($dark-text-point, $alpha: -90%);
 
 // post

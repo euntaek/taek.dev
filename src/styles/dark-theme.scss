@@ -37,4 +37,17 @@ body.dark {
       fill: $dark-socials-icon-dis;
     }
   }
+
+  #category {
+    .main-category {
+      .main-item {
+        color: $dark-main-category-text;
+        background-color: $dark-main-category-text-box;
+      }
+      .main-item:hover {
+        color: $dark-main-category-text-hov;
+        background-color: $dark-main-category-text-box-hov;
+      }
+    }
+  }
 }

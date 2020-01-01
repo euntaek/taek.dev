@@ -37,4 +37,17 @@ body.light {
       fill: $light-socials-icon-dis;
     }
   }
+
+  #category {
+    .main-category {
+      .main-item {
+        color: $light-main-category-text;
+        background-color: $light-main-category-text-box;
+      }
+      .main-item:hover {
+        color: $light-main-category-text-hov;
+        background-color: $light-main-category-text-box-hov;
+      }
+    }
+  }
 }
