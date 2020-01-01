@@ -3,6 +3,7 @@ import { jsx, css } from "@emotion/core";
 import SocialButton from "./SocialButton";
 
 const style = css`
+  display: flex;
   margin: 8px 0 0 0;
   padding: 0;
   list-style: none;
