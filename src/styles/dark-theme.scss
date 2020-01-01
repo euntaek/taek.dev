@@ -5,20 +5,6 @@ body.dark {
     .title {
       color: $dark-header-title;
     }
-
-    .socials {
-      background-color: $dark-socials-bg;
-      .social-icon {
-        fill: $dark-socials-icon;
-      }
-    }
-    .socials:hover {
-      background-color: $dark-socials-bg-hov;
-      .social-icon {
-        fill: $dark-text-hov;
-      }
-    }
-
     .theme-switch {
       background-color: $dark-theme-switch-bg;
       .theme-icon {
@@ -39,6 +25,16 @@ body.dark {
     }
     a {
       color: $dark-text-point;
+    }
+
+    .social-icon {
+      fill: $dark-socials-icon;
+    }
+    .social-icon:hover {
+      fill: $dark-socials-icon-hov;
+    }
+    .social-icon:disable {
+      fill: $dark-socials-icon-dis;
     }
   }
 }

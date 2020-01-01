@@ -5,20 +5,6 @@ body.light {
     .title {
       color: $light-header-title;
     }
-
-    .socials {
-      background-color: $light-socials-bg;
-      .social-icon {
-        fill: $light-socials-icon;
-      }
-    }
-    .socials:hover {
-      background-color: $light-socials-bg-hov;
-      .social-icon {
-        fill: $light-text-hov;
-      }
-    }
-
     .theme-switch {
       background-color: $light-theme-switch-bg;
       .theme-icon {
@@ -39,6 +25,16 @@ body.light {
     }
     a {
       color: $light-text-point;
+    }
+
+    .social-icon {
+      fill: $light-socials-icon;
+    }
+    .social-icon:hover {
+      fill: $light-socials-icon-hov;
+    }
+    .social-icon:disable {
+      fill: $light-socials-icon-dis;
     }
   }
 }
