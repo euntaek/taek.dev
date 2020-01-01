@@ -25,18 +25,15 @@ export default class HTML extends React.Component {
                   currentTheme = newTheme;
                   window.__theme = currentTheme;
                   document.body.className = newTheme;
-                  console.log('setTheme', currentTheme, window.__theme);
                 }
 
                 try {
                   currentTheme = localStorage.getItem("theme") || 'light';
-                  console.log('html.js', currentTheme);
                 } catch(err){}
                 setTheme(currentTheme);
                 
                 window.__theme = currentTheme;
                 window.__onChangeTheme = function(newTheme) {
-                  console.log('window onchange', newTheme);
                   setTheme(newTheme);
                   try { 
                     localStorage.setItem("theme", newTheme)

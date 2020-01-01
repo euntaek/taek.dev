@@ -20,10 +20,8 @@ const style = css`
 function ThemeSwitch({ initialTheme }) {
   const [theme, setTheme] = useState(initialTheme);
 
-  console.log("switch", theme);
   const onClick = theme => {
     const newTheme = theme === "light" ? "dark" : "light";
-    console.log("onChageTheme", newTheme);
     window.__onChangeTheme(newTheme);
     setTheme(newTheme);
   };
