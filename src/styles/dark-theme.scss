@@ -76,4 +76,26 @@ body.dark {
       }
     }
   }
+
+  #Contents {
+    .post {
+      color: $dark-post-text;
+    }
+    .post:hover {
+      color: $dark-post-text-hov;
+      background-color: $dark-post-box-hov;
+    }
+    a:link {
+      color: $dark-post-text;
+      text-decoration: none;
+    }
+    a:visited {
+      color: $dark-post-text;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $dark-post-text-hov;
+      text-decoration: none;
+    }
+  }
 }

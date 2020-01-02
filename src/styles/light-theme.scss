@@ -76,4 +76,26 @@ body.light {
       }
     }
   }
+
+  #Contents {
+    .post {
+      color: $light-post-text;
+    }
+    .post:hover {
+      color: $light-post-text-hov;
+      background-color: $light-post-box-hov;
+    }
+    a:link {
+      color: $light-post-text;
+      text-decoration: none;
+    }
+    a:visited {
+      color: $light-post-text;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $light-post-text-hov;
+      text-decoration: none;
+    }
+  }
 }

@@ -1,16 +1,19 @@
+/* global */
+$transparent: transparent;
+
 /* light theme */
 
 // light theme colors
 $light-background-color: #f9f9f9;
 $light-box-hov: scale-color(#2d364a, $alpha: -90%);
-$light-text: scale-color(#2d364a, $alpha: -30%);
+$light-text: scale-color(#2d364a, $alpha: -20%);
 $light-text-hov: #2d364a;
 $light-text-point: #094577;
 
 // header
 $light-header-title: $light-text-hov;
 $light-theme-switch-icon: $light-text;
-$light-theme-switch-bg: scale-color($light-background-color, $alpha: -100%);
+$light-theme-switch-bg: $transparent;
 $light-theme-switch-bg-hov: $light-box-hov;
 
 // bio
@@ -23,14 +26,14 @@ $light-socials-icon-dis: $light-box-hov;
 // main category
 $light-main-category-text: scale-color($light-text-hov, $alpha: -35%);
 $light-main-category-text-hov: $light-text-hov;
-$light-main-category-text-box: scale-color($light-background-color, $alpha: -100%);
+$light-main-category-text-box: $transparent;
 $light-main-category-text-box-active: $light-box-hov;
 
 // sub category
 $light-sub-category-line: scale-color($light-text-point, $alpha: -80%);
-$light-sub-category-text: scale-color($light-text-point, $alpha: -30%);
+$light-sub-category-text: scale-color($light-text-point, $alpha: -28%);
 $light-sub-category-text-hov: $light-text-point;
-$light-sub-category-text-box: scale-color($light-text-point, $alpha: -100%);
+$light-sub-category-text-box: $transparent;
 $light-sub-category-text-box-active: scale-color($light-text-point, $alpha: -90%);
 $light-pagination-bullets: scale-color($light-text-hov, $alpha: -50%);
 $light-pagination-bullets-active: $light-sub-category-text;
@@ -38,6 +41,7 @@ $light-pagination-bullets-active: $light-sub-category-text;
 // post
 $light-post-text: $light-text;
 $light-post-text-hov: $light-text-hov;
+$light-post-box-hov: scale-color($light-text-hov, $alpha: -95%);
 $light-post-border-line-hov: scale-color(#000, $alpha: -84%);
 
 // code
@@ -58,7 +62,7 @@ $dark-text-point: #a5d3f8;
 // header
 $dark-header-title: $dark-text-hov;
 $dark-theme-switch-icon: $dark-text;
-$dark-theme-switch-bg: scale-color($dark-background-color, $alpha: -100%);
+$dark-theme-switch-bg: $transparent;
 $dark-theme-switch-bg-hov: $dark-box-hov;
 
 // bio
@@ -71,14 +75,14 @@ $dark-socials-icon-dis: $dark-box-hov;
 // main category
 $dark-main-category-text: scale-color($dark-text-hov, $alpha: -35%);
 $dark-main-category-text-hov: $dark-text-hov;
-$dark-main-category-text-box: scale-color($dark-background-color, $alpha: -100%);
+$dark-main-category-text-box: $transparent;
 $dark-main-category-text-box-active: $dark-box-hov;
 
 // sub category
 $dark-sub-category-line: scale-color($dark-text-point, $alpha: -80%);
-$dark-sub-category-text: scale-color($dark-text-point, $alpha: -30%);
+$dark-sub-category-text: scale-color($dark-text-point, $alpha: -28%);
 $dark-sub-category-text-hov: $dark-text-point;
-$dark-sub-category-text-box: scale-color($dark-text-point, $alpha: -100%);
+$dark-sub-category-text-box: $transparent;
 $dark-sub-category-text-box-active: scale-color($dark-text-point, $alpha: -90%);
 $dark-pagination-bullets: scale-color($dark-text-hov, $alpha: -50%);
 $dark-pagination-bullets-active: $dark-sub-category-text;
@@ -86,6 +90,7 @@ $dark-pagination-bullets-active: $dark-sub-category-text;
 // post
 $dark-post-text: $dark-text;
 $dark-post-text-hov: $dark-text-hov;
+$dark-post-box-hov: scale-color($dark-text-hov, $alpha: -95%);
 $dark-post-border-line-hov: scale-color(#fff, $alpha: -84%);
 
 // code
