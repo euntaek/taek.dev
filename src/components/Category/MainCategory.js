@@ -9,10 +9,10 @@ const style = css`
   }
 `;
 
-function MainCategory({ dummyDate, selected }) {
+function MainCategory({ dummyData, selected }) {
   return (
     <div css={style} className="main-category" role="tablist">
-      {dummyDate.map(item => (
+      {dummyData.map(item => (
         <MainItem mainItem={item} selected={selected} key={item} />
       ))}
     </div>
