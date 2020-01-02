@@ -5,7 +5,7 @@ import Swiper from "swiper";
 import SubItem from "./SubItem";
 
 const style = css`
-  margin-top: 16px;
+  margin-top: 20px;
   height: 60px;
   border-top: 1px solid;
   border-bottom: 1px solid;

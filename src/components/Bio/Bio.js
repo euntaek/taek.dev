@@ -3,7 +3,7 @@ import { jsx, css } from "@emotion/core";
 import SocialContainer from "./SocialContainer";
 
 const style = css`
-  margin: 16px 16px 2px;
+  margin: 8px 16px 2px;
 
   p {
     margin: 0;
