@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer";
 
 const style = css`
-  min-width: 320px;
+  min-width: 300px;
   max-width: 696px;
   margin: 0 auto;
 `;
