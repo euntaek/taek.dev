@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 
 import Bio from "../components/Bio";
 import Category from "../components/Category";
-import PostList from "../components/Blog";
+import Contents from "../components/Contents";
 
 const index = () => {
   return (
@@ -12,7 +12,7 @@ const index = () => {
       <Bio />
       <main>
         <Category />
-        <PostList />
+        <Contents />
       </main>
     </Layout>
   );
