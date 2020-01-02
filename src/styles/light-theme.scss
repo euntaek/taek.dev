@@ -46,7 +46,33 @@ body.light {
       }
       .main-item:hover {
         color: $light-main-category-text-hov;
-        background-color: $light-main-category-text-box-hov;
+      }
+      .main-item.main-category-active {
+        color: $light-main-category-text-hov;
+        background-color: $light-main-category-text-box-active;
+      }
+    }
+
+    .sub-category {
+      border-top: 1px solid $light-sub-category-line;
+      border-bottom: 1px solid $light-sub-category-line;
+      .sub-item {
+        color: $light-sub-category-text;
+        background-color: $light-sub-category-text-box;
+      }
+      .sub-item:hover {
+        color: $light-sub-category-text-hov;
+      }
+      .sub-item.sub-category-active {
+        color: $light-sub-category-text-hov;
+        background-color: $light-sub-category-text-box-active;
+      }
+      .swiper-pagination-bullet {
+        background-color: $light-pagination-bullets;
+        opacity: 1;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: $light-pagination-bullets-active;
       }
     }
   }

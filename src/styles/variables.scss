@@ -24,13 +24,16 @@ $light-socials-icon-dis: $light-box-hov;
 $light-main-category-text: scale-color($light-text-hov, $alpha: -35%);
 $light-main-category-text-hov: $light-text-hov;
 $light-main-category-text-box: scale-color($light-background-color, $alpha: -100%);
-$light-main-category-text-box-hov: $light-box-hov;
+$light-main-category-text-box-active: $light-box-hov;
 
 // sub category
-$light-sub-category-text: scale-color($light-text-point, $alpha: -35%);
+$light-sub-category-line: scale-color($light-text-point, $alpha: -80%);
+$light-sub-category-text: scale-color($light-text-point, $alpha: -30%);
 $light-sub-category-text-hov: $light-text-point;
-$light-sub-category-text-box: $light-background-color;
-$light-sub-category-text-box-hov: scale-color($light-text-point, $alpha: -90%);
+$light-sub-category-text-box: scale-color($light-text-point, $alpha: -100%);
+$light-sub-category-text-box-active: scale-color($light-text-point, $alpha: -90%);
+$light-pagination-bullets: scale-color($light-text-hov, $alpha: -50%);
+$light-pagination-bullets-active: $light-sub-category-text;
 
 // post
 $light-post-text: $light-text;
@@ -69,13 +72,16 @@ $dark-socials-icon-dis: $dark-box-hov;
 $dark-main-category-text: scale-color($dark-text-hov, $alpha: -35%);
 $dark-main-category-text-hov: $dark-text-hov;
 $dark-main-category-text-box: scale-color($dark-background-color, $alpha: -100%);
-$dark-main-category-text-box-hov: $dark-box-hov;
+$dark-main-category-text-box-active: $dark-box-hov;
 
 // sub category
-$dark-sub-category-text: scale-color($dark-text-point, $alpha: -35%);
+$dark-sub-category-line: scale-color($dark-text-point, $alpha: -80%);
+$dark-sub-category-text: scale-color($dark-text-point, $alpha: -30%);
 $dark-sub-category-text-hov: $dark-text-point;
-$dark-sub-category-text-box: $dark-background-color;
-$dark-sub-category-text-box-hov: scale-color($dark-text-point, $alpha: -90%);
+$dark-sub-category-text-box: scale-color($dark-text-point, $alpha: -100%);
+$dark-sub-category-text-box-active: scale-color($dark-text-point, $alpha: -90%);
+$dark-pagination-bullets: scale-color($dark-text-hov, $alpha: -50%);
+$dark-pagination-bullets-active: $dark-sub-category-text;
 
 // post
 $dark-post-text: $dark-text;
