@@ -13,18 +13,18 @@ const style = css`
   transition: all 150ms ease-in-out;
 `;
 
-function MainItem({ category, selected }) {
+function MainItem({ mainItem, selected }) {
   return (
     <button
-      id={`${category}-anchor`}
+      id={`main-${mainItem}`}
       css={style}
-      className="main-item"
+      className={`main-item ${mainItem === selected && "main-category-active"}`}
       // aria-label={`view ${category} posts`}
-      aria-controls={category}
+      aria-controls={mainItem}
       role="tab"
-      aria-selected={selected === category}
+      aria-selected={selected === mainItem}
     >
-      {category.toUpperCase()}
+      {mainItem.toUpperCase()}
     </button>
   );
 }

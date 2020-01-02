@@ -13,7 +13,7 @@ function MainCategory({ dummyDate, selected }) {
   return (
     <div css={style} className="main-category" role="tablist">
       {dummyDate.map(item => (
-        <MainItem category={item} selected={selected} key={item} />
+        <MainItem mainItem={item} selected={selected} key={item} />
       ))}
     </div>
   );
