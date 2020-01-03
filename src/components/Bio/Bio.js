@@ -21,18 +21,22 @@ const style = css`
       position: absolute;
       border-bottom: 1px solid;
     }
+
+    @media (max-width: 420px) {
+      font-size: 14px;
+    }
   }
 `;
 
 function Bio() {
   const name = "김은택";
-  const test = "현재 프론트엔드 개발자를 목표로 공부하고 있습니다.";
+  const test = "현재 프론트엔드 개발자가 되기 위해 노력 중 입니다.";
   return (
     <aside id="bio" css={style}>
       <p>
-        안녕하세요! <a href="#">{name}</a>이라고 합니다.
+        👋 안녕하세요! <a href="#">{name}</a>이라고 합니다.
         <br />
-        {test}
+        📖 {test}
       </p>
       <SocialContainer />
     </aside>
