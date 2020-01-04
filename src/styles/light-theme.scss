@@ -77,24 +77,32 @@ body.light {
     }
   }
 
-  #Contents {
+  #contents {
     .post {
       color: $light-post-text;
     }
     .post:hover {
       color: $light-post-text-hov;
       background-color: $light-post-box-hov;
-    }
-    a:link {
-      color: $light-post-text;
       text-decoration: none;
     }
-    a:visited {
-      color: $light-post-text;
+    .post:link,
+    .post:visited {
       text-decoration: none;
+    }
+  }
+
+  #footer {
+    color: $light-post-text;
+    a {
+      color: $light-post-text;
     }
     a:hover {
       color: $light-post-text-hov;
+      text-decoration: none;
+    }
+    a:link,
+    a:visited {
       text-decoration: none;
     }
   }
