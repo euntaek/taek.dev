@@ -34,7 +34,7 @@ const style = css`
 function Header() {
   return (
     <header css={style} id="header">
-      <h1 className="title">TAEKLOG</h1>
+      <h1 className="title">TAEK LOG</h1>
       <div>
         <ThemeContainer />
       </div>

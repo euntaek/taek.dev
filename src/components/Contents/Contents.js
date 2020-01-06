@@ -36,7 +36,7 @@ const dummyData = [
 
 function Contents({ selected }) {
   return (
-    <div id="Contents">
+    <div id="contents">
       <div
         style={{ width: "100%", marginTop: "40px" }}
         id="slide1"

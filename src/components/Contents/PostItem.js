@@ -4,8 +4,6 @@ import { jsx, css } from "@emotion/core";
 const style = css`
   width: 100%;
   min-height: 152px;
-  border-radius: 12px;
-  transition: all 150ms ease-in-out;
 
   a {
     padding: 28px 16px;
@@ -15,6 +13,8 @@ const style = css`
     flex-flow: column;
     justify-content: space-between;
     text-decoration: none;
+    border-radius: 12px;
+    transition: all 150ms ease-in-out;
     header {
       h3 {
         margin-bottom: 4px;
@@ -36,8 +36,8 @@ const style = css`
 
 function PostItem({ post }) {
   return (
-    <article css={style} className="post">
-      <a href="#">
+    <article css={style}>
+      <a href="#" className="post">
         <header>
           <h3>{post.postName}</h3>
           <small>{post.date}</small>
