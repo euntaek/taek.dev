@@ -18,7 +18,10 @@ const SEO = ({ description, lang, meta, title }) => {
           siteMetadata {
             title
             description
-            author
+            author {
+              ko
+              en
+            }
           }
         }
       }
@@ -57,7 +60,7 @@ const SEO = ({ description, lang, meta, title }) => {
 };
 
 SEO.defaultProps = {
-  lang: `ko`,
+  lang: `ko-KR`,
   meta: [],
   description: ``,
 };
