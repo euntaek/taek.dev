@@ -17,6 +17,14 @@ body.dark {
         fill: $dark-text-hov;
       }
     }
+    a {
+      color: $dark-post-text-hov;
+    }
+    a:hover,
+    a:link,
+    a:visited {
+      text-decoration: none;
+    }
   }
 
   #bio {

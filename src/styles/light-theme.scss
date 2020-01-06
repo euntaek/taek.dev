@@ -17,6 +17,14 @@ body.light {
         fill: $light-text-hov;
       }
     }
+    a {
+      color: $light-post-text-hov;
+    }
+    a:hover,
+    a:link,
+    a:visited {
+      text-decoration: none;
+    }
   }
 
   #bio {
