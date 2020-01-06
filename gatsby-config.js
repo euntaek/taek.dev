@@ -70,7 +70,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-svg`,
-    `gatsby-plugin-feed`,
+    // `gatsby-plugin-feed`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
