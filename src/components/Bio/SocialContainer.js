@@ -14,22 +14,16 @@ const style = css`
   }
 `;
 
-const dummyDate = {
-  github: `https://github.com`,
-  facebook: `https://github.com`,
-  linkedIn: `https://github.com`,
-  // twitter: `http://twitter.com`,
-  // insta: ``,
-};
-
-function SocialContainer() {
+function SocialContainer({ socials }) {
   return (
     <ul css={style}>
-      {Object.keys(dummyDate).map(item => (
-        <li key={item}>
-          <SocialButton social={item} uri={dummyDate[item]} />
-        </li>
-      ))}
+      {Object.keys(socials).map(item => {
+        return socials[item] ? (
+          <li key={item}>
+            <SocialButton social={item} uri={socials[item]} />
+          </li>
+        ) : null;
+      })}
     </ul>
   );
 }

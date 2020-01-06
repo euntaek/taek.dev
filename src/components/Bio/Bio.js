@@ -1,5 +1,8 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import { Link } from "gatsby";
+
+import useSiteMetadata from "../../hooks/useSiteMetadata";
 import SocialContainer from "./SocialContainer";
 
 const style = css`
@@ -15,9 +18,9 @@ const style = css`
     }
     a:after {
       content: "";
-      bottom: 1px;
+      bottom: 0;
       left: 0px;
-      width: 2.75em;
+      width: 100%;
       position: absolute;
       border-bottom: 1px solid;
     }
@@ -29,16 +32,16 @@ const style = css`
 `;
 
 function Bio() {
-  const name = "김은택";
-  const test = "현재 프론트엔드 개발자가 되기 위해 노력 중 입니다.";
+  const { author, introduction, social } = useSiteMetadata();
+
   return (
     <aside id="bio" css={style}>
       <p>
-        👋 안녕하세요! <a href="#">{name}</a>이라고 합니다.
+        👋 안녕하세요! <Link to="about">{author.ko}</Link>이라고 합니다.
         <br />
-        📖 {test}
+        📖 {introduction}
       </p>
-      <SocialContainer />
+      <SocialContainer socials={social} />
     </aside>
   );
 }
