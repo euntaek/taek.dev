@@ -2,6 +2,7 @@
 import { jsx, css } from "@emotion/core";
 
 import ThemeContainer from "./ThemeContainer";
+import tree from "../SVG/tree";
 
 const style = css`
   max-width: 100%;
@@ -17,12 +18,23 @@ const style = css`
     font-weight: bold;
     margin: 0;
   }
+
+  .title:after {
+    background: url("${tree}") no-repeat;
+    display: inline-block;
+    width: 24px;
+    background-size: contain;
+    height: 39px;
+    content: "";
+    margin-left: 4px;
+    transform: rotate(-15deg);
+  }
 `;
 
 function Header() {
   return (
     <header css={style} id="header">
-      <h1 className="title">TAEK.io</h1>
+      <h1 className="title">TAEKLOG</h1>
       <div>
         <ThemeContainer />
       </div>
