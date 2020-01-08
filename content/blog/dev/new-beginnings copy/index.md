@@ -1,8 +1,8 @@
 ---
 title: "Hello world"
 date: "2015-05-01T22:12:03.284Z"
-main-category: "etc"
-sub-category: "review"
+main-category: "dev"
+sub-category: "javascript"
 description: "hello!! i'm euntaek!! This is gatsby blog"
 ---
 

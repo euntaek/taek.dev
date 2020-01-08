@@ -1,9 +1,9 @@
 ---
 title: Hello World
 date: "2015-05-01T22:12:03.284Z"
+main-category: "dev"
+sub-category: "react"
 description: "Hello World"
-maincategory: "Dev"
-subcategory: "react"
 ---
 
 This is my first post on my new fake blog! How exciting!

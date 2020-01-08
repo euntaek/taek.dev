@@ -1,9 +1,9 @@
 ---
-title: "Hello world"
+title: New Beginings
 date: "2015-05-01T22:12:03.284Z"
-main-category: "etc"
-sub-category: "review"
-description: "hello!! i'm euntaek!! This is gatsby blog"
+main-category: "dev"
+sub-category: "web"
+description: "Hello World"
 ---
 
 This is my first post on my new fake blog! How exciting!
