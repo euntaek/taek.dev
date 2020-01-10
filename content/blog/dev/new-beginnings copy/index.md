@@ -1,9 +1,11 @@
 ---
-title: "Hello world"
+title: "[Javascript] async/await에 대해 알아보자."
 date: "2015-05-01T22:12:03.284Z"
-main-category: "dev"
-sub-category: "javascript"
-description: "hello!! i'm euntaek!! This is gatsby blog"
+category: "dev"
+tags:
+          - "react"
+          - "typescript"
+description: "async/await에 대해 알아보고 promise와의 차이점을 알아봅니다."
 ---
 
 This is my first post on my new fake blog! How exciting!

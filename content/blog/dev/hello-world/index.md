@@ -1,9 +1,12 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
-main-category: "dev"
-sub-category: "react"
-description: "Hello World"
+title: "[Algorithm] 퀵 소트, 정렬 소트, 분열 소트를 알아보자."
+date: "2018-09-01T22:12:03.284Z"
+category: "dev"
+tags:
+  - "gatsby"
+  - "react"
+description: "정렬 알고리즘에 대해 하나하나 알아봅니다.
+정말 맛있는 음식이 무엇일까요? 그것은 바로!! 알리오올리오!"
 ---
 
 This is my first post on my new fake blog! How exciting!

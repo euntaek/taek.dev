@@ -1,9 +1,11 @@
 ---
-title: New Beginings
+title: "아마존 AWS Bilders 온라인 컨퍼런스 후기"
 date: "2015-05-01T22:12:03.284Z"
-main-category: "etc"
-sub-category: "book"
-description: "Hello World"
+category: "etc"
+tags: 
+          - "컨퍼런스"
+          - "후기"
+description: "1월 22일 아마존 aws 서비스 온라인 컨퍼런스 참가하였습니다. 세션 별 후기 등을 기술합니다."
 ---
 
 This is my first post on my new fake blog! How exciting!

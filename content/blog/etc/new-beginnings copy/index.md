@@ -1,9 +1,11 @@
 ---
-title: "Hello world"
+title: "일본 오사카 3박 4일 여행"
 date: "2015-05-01T22:12:03.284Z"
-main-category: "etc"
-sub-category: "review"
-description: "hello!! i'm euntaek!! This is gatsby blog"
+category: "etc"
+tags: 
+          - "여행"
+          - "일본"
+description: "이번 취업 전 여행으로 일본 오사카를 다녀왔습니다. 오사카에서 먹었던 음식 및 느꼇던 점을 남겨봅니다."
 ---
 
 This is my first post on my new fake blog! How exciting!
