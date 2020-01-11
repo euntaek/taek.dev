@@ -47,33 +47,33 @@ body.dark {
   }
 
   #category {
-    .main-category {
-      .main-item {
-        color: $dark-main-category-text;
-        background-color: $dark-main-category-text-box;
+    .categories {
+      .category {
+        color: $dark-category-text;
+        background-color: $dark-category-text-box;
       }
-      .main-item:hover {
-        color: $dark-main-category-text-hov;
+      .category:hover {
+        color: $dark-category-text-hov;
       }
-      .main-item.main-category-active {
-        color: $dark-main-category-text-hov;
-        background-color: $dark-main-category-text-box-active;
+      .category.category-active {
+        color: $dark-category-text-hov;
+        background-color: $dark-category-text-box-active;
       }
     }
 
-    .sub-category {
-      border-top: 1px solid $dark-sub-category-line;
-      border-bottom: 1px solid $dark-sub-category-line;
-      .sub-item {
-        color: $dark-sub-category-text;
-        background-color: $dark-sub-category-text-box;
+    .tags {
+      border-top: 1px solid $dark-tag-line;
+      border-bottom: 1px solid $dark-tag-line;
+      .tag {
+        color: $dark-tag-text;
+        background-color: $dark-tag-text-box;
       }
-      .sub-item:hover {
-        color: $dark-sub-category-text-hov;
+      .tag:hover {
+        color: $dark-tag-text-hov;
       }
-      .sub-item.sub-category-active {
-        color: $dark-sub-category-text-hov;
-        background-color: $dark-sub-category-text-box-active;
+      .tag.tag-active {
+        color: $dark-tag-text-hov;
+        background-color: $dark-tag-text-box-active;
       }
       .swiper-pagination-bullet {
         background-color: $dark-pagination-bullets;

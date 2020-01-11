@@ -47,33 +47,34 @@ body.light {
   }
 
   #category {
-    .main-category {
-      .main-item {
-        color: $light-main-category-text;
-        background-color: $light-main-category-text-box;
+    .categories {
+      .category {
+        color: $light-category-text;
+        background-color: $light-category-text-box;
       }
-      .main-item:hover {
-        color: $light-main-category-text-hov;
+      .category:hover {
+        color: $light-category-text-hov;
       }
-      .main-item.main-category-active {
-        color: $light-main-category-text-hov;
-        background-color: $light-main-category-text-box-active;
+      .category.category-active {
+        color: $light-category-text-hov;
+        background-color: $light-category-text-box-active;
       }
     }
 
-    .sub-category {
-      border-top: 1px solid $light-sub-category-line;
-      border-bottom: 1px solid $light-sub-category-line;
-      .sub-item {
-        color: $light-sub-category-text;
-        background-color: $light-sub-category-text-box;
+    .tags {
+      border-top: 1px solid $light-tag-line;
+      border-bottom: 1px solid $light-tag-line;
+      .tag {
+        // color: black;
+        color: $light-tag-text;
+        background-color: $light-tag-text-box;
       }
-      .sub-item:hover {
-        color: $light-sub-category-text-hov;
+      .tag:hover {
+        color: $light-tag-text-hov;
       }
-      .sub-item.sub-category-active {
-        color: $light-sub-category-text-hov;
-        background-color: $light-sub-category-text-box-active;
+      .tag.tag-active {
+        color: $light-tag-text-hov;
+        background-color: $light-tag-text-box-active;
       }
       .swiper-pagination-bullet {
         background-color: $light-pagination-bullets;
