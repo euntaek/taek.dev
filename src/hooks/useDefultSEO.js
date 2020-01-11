@@ -1,9 +1,17 @@
 import { useStaticQuery, graphql } from "gatsby";
 
 const useSiteMetadata = () => {
-  const { site } = useStaticQuery(
+  const seoMetaData = useStaticQuery(
     graphql`
-      query SiteMetaData {
+      query defaultSEO {
+        file(absolutePath: { regex: "/meta-og-image.png/" }) {
+          name
+          childImageSharp {
+            original {
+              src
+            }
+          }
+        }
         site {
           siteMetadata {
             title
@@ -11,25 +19,14 @@ const useSiteMetadata = () => {
               ko
               en
             }
-            siteUrl
             description
-            introduction
-            icon
             keywords
-            social {
-              github
-              facebook
-              linkedIn
-              insta
-              twitter
-            }
-            ga
           }
         }
       }
     `,
   );
-  return site.siteMetadata;
+  return seoMetaData;
 };
 
 export default useSiteMetadata;

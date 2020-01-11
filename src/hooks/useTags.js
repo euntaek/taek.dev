@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby";
 
-const useTags = () => {
+const useTags = selectedCategory => {
   const {
     allMarkdownRemark: { group: tags },
   } = useStaticQuery(
@@ -20,7 +20,10 @@ const useTags = () => {
       }
     `,
   );
-  return tags;
+
+  return selectedCategory === "all"
+    ? tags
+    : tags.filter(tag => tag.nodes[0].frontmatter.category === selectedCategory);
 };
 
 export default useTags;
