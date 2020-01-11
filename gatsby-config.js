@@ -51,29 +51,20 @@ module.exports = {
         background_color: `#f9f9f9`,
         theme_color: `#242932`,
         display: `minimal-ui`,
-        icon: `content/assets/icon.png`,
+        icon: siteMetadata.icon,
       },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: siteMetadata.GA,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        // Setting a color is optional.
-        color: `tomato`,
-        // Disable the loading spinner.
-        showSpinner: false,
+        trackingId: siteMetadata.ga,
       },
     },
     `gatsby-plugin-react-svg`,
     // `gatsby-plugin-feed`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet-async`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
   ],
