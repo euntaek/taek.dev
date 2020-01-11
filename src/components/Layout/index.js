@@ -1,5 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import { HelmetProvider } from "react-helmet-async";
+
 import Header from "../Header/Header";
 import Footer from "../Footer";
 
@@ -12,11 +14,13 @@ const style = css`
 
 const Layout = ({ children }) => {
   return (
-    <div css={style}>
-      <Header />
-      {children}
-      <Footer />
-    </div>
+    <HelmetProvider>
+      <div css={style}>
+        <Header />
+        {children}
+        <Footer />
+      </div>
+    </HelmetProvider>
   );
 };
 
