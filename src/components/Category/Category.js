@@ -1,24 +1,32 @@
-import React from "react";
-import MainCategory from "./MainCategory";
-import SubCategory from "./SubCategory";
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core";
 
-const dummyData = ["all", "dev", "etc"];
-const selected = "all";
+const style = css`
+  width: 76px;
+  height: 32px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+`;
 
-const dummySlides = () => {
-  const sliders = [];
-  for (let i = 0; i < 20; i++) {
-    sliders.push(`slide${i + 1}`);
-  }
-  return sliders;
-};
-
-function Category() {
+function Category({ title, selected, selectCategory }) {
   return (
-    <div id="category" style={{ marginTop: "40px" }}>
-      <MainCategory dummyData={dummyData} selected={selected} />
-      <SubCategory selected={selected} slides={dummySlides()} />
-    </div>
+    <button
+      id={`category-${title}`}
+      css={style}
+      className={`category ${title === selected && "category-active"}`}
+      // aria-label={`view ${category} posts`}
+      aria-controls={`tags-${title}`}
+      role="tab"
+      aria-selected={selected === title}
+      onClick={() => selectCategory(title)}
+    >
+      {title.toUpperCase()}
+    </button>
   );
 }
 

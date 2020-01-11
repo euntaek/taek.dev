@@ -2,7 +2,9 @@
 import { jsx, css } from "@emotion/core";
 import { useEffect } from "react";
 import Swiper from "swiper";
-import SubItem from "./SubItem";
+
+import useTags from "../../hooks/useTags";
+import Tag from "./Tag";
 
 const style = css`
   margin-top: 20px;
@@ -22,11 +24,15 @@ const style = css`
     padding-top: 8px;
     border: none;
     outline: none;
+    list-style: none;
   }
 `;
 
-function SubCategory({ slides, selected }) {
+function Tags({ selectedCategory, checkedTags, checkTags }) {
+  const tags = useTags(selectedCategory);
+
   useEffect(() => {
+    // eslint-disable-next-line no-unused-vars
     var swiper = new Swiper(".swiper-container", {
       slidesPerView: "auto",
       spaceBetween: 16,
@@ -37,28 +43,31 @@ function SubCategory({ slides, selected }) {
         dynamicBullets: true,
       },
     });
-  }, []);
+    return () => {
+      swiper.destroy();
+    };
+  }, [selectedCategory]);
 
   return (
     <div
       css={style}
-      id={selected}
-      className="sub-category"
+      id={`tags-${selectedCategory}`}
+      className="tags"
       role="tabpanel"
-      aria-labelledby={`main-${selected}`}
+      aria-labelledby={`category-${selectedCategory}`}
     >
-      <div className="swiper-container">
-        <div className="swiper-wrapper" role="tablist">
-          {slides.map(item => (
-            <div className="swiper-slide" key={item}>
-              <SubItem subItem={item} selected="slide1" key={item} />
-            </div>
+      <div className="swiper-container" role="group">
+        <ul className="swiper-wrapper">
+          {tags.map(tag => (
+            <li className="swiper-slide" key={tag.fieldValue}>
+              <Tag tag={tag} checkedTags={checkedTags} checkTags={checkTags} />
+            </li>
           ))}
-        </div>
+        </ul>
         <div className="swiper-pagination"></div>
       </div>
     </div>
   );
 }
 
-export default SubCategory;
+export default Tags;
