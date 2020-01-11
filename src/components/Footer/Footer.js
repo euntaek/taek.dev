@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import React from "react";
 
 const style = css`
   margin-top: 40px;
@@ -14,9 +15,9 @@ const style = css`
 function Footer() {
   return (
     <footer id="footer" css={style} className="align-center">
-      ©{2020},&nbsp;<a href="#">Euntaek Kim</a>
+      &copy;{2020},&nbsp;<a href="#">Euntaek Kim</a>
     </footer>
   );
 }
 
-export default Footer;
+export default React.memo(Footer);

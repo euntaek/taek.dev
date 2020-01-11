@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { Link } from "gatsby";
+import React from "react";
 
 import useSiteMetadata from "../../hooks/useSiteMetadata";
 import ThemeContainer from "./ThemeContainer";
@@ -50,4 +51,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default React.memo(Header);

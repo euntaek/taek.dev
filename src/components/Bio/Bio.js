@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { Link } from "gatsby";
+import React from "react";
 
 import useSiteMetadata from "../../hooks/useSiteMetadata";
 import SocialContainer from "./SocialContainer";
@@ -37,7 +38,7 @@ function Bio() {
   return (
     <aside id="bio" css={style}>
       <p>
-        👋 안녕하세요! <Link to="about">{author.ko}</Link>이라고 합니다.
+        👋 안녕하세요! <Link to="/about">{author.ko}</Link>이라고 합니다.
         <br />
         📖 {introduction}
       </p>
@@ -46,4 +47,4 @@ function Bio() {
   );
 }
 
-export default Bio;
+export default React.memo(Bio);
