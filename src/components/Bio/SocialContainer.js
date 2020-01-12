@@ -6,7 +6,6 @@ const style = css`
   display: flex;
   margin: 8px 0 0 0;
   padding: 0;
-  list-style: none;
 
   li {
     display: inline-block;

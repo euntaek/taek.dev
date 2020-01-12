@@ -21,10 +21,9 @@ const style = css`
   .swiper-slide {
     width: auto;
     height: auto;
-    padding-top: 8px;
+    padding-top: 4px;
     border: none;
     outline: none;
-    list-style: none;
   }
 `;
 

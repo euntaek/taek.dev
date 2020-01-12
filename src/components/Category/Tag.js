@@ -2,10 +2,10 @@
 import { jsx, css } from "@emotion/core";
 
 const style = css`
-  padding: 0 8px;
-  height: 28px;
   font-size: 14px;
   font-weight: bold;
+  padding: 0 8px;
+  height: 28px;
   border: none;
   border-radius: 14px;
   cursor: pointer;
@@ -18,7 +18,7 @@ function Tag({ tag, checkedTags, checkTags }) {
   return (
     <div
       css={style}
-      className={`tag ${checked && "tag-active"}`}
+      className={`tag ${checked && "tag-active"} align-center`}
       onClick={() => checkTags(tag.fieldValue)}
       role="checkbox"
       aria-checked={checked}

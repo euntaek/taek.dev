@@ -2,10 +2,10 @@
 import { jsx, css } from "@emotion/core";
 
 const style = css`
-  width: 76px;
-  height: 32px;
   font-size: 20px;
   font-weight: bold;
+  width: 76px;
+  height: 32px;
   border: none;
   border-radius: 15px;
   outline: none;
