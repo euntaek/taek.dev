@@ -88,16 +88,33 @@ body.light {
 
   #contents {
     .post {
+      &:hover {
+        .post-title,
+        .post-spoiler,
+        .post-date {
+          color: $light-post-text-hov;
+        }
+        .post-tag {
+          color: $light-post-tag-hov;
+        }
+      }
+    }
+    .post-title,
+    .post-spoiler,
+    .post-date {
       color: $light-post-text;
     }
-    .post:hover {
-      color: $light-post-text-hov;
-      background-color: $light-post-box-hov;
-      text-decoration: none;
+    .post-title:hover {
+      border-bottom: 1px solid $light-post-text-hov;
     }
-    .post:link,
-    .post:visited {
-      text-decoration: none;
+    .tag-bullet {
+      color: $light-post-tag;
+    }
+    .post-tag {
+      color: $light-post-tag;
+      &:hover {
+        border-bottom: 1px solid $light-post-tag-hov;
+      }
     }
   }
 

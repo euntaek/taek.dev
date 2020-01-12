@@ -42,7 +42,8 @@ $light-pagination-bullets-active: $light-tag-text;
 $light-post-text: $light-text;
 $light-post-text-hov: $light-text-hov;
 $light-post-box-hov: scale-color($light-text-hov, $alpha: -95%);
-$light-post-border-line-hov: scale-color(#000, $alpha: -84%);
+$light-post-tag: scale-color($light-text-point, $alpha: -25%);
+$light-post-tag-hov: $light-text-point;
 
 // code
 // footer
@@ -91,7 +92,8 @@ $dark-pagination-bullets-active: $dark-tag-text;
 $dark-post-text: $dark-text;
 $dark-post-text-hov: $dark-text-hov;
 $dark-post-box-hov: scale-color($dark-text-hov, $alpha: -95%);
-$dark-post-border-line-hov: scale-color(#fff, $alpha: -84%);
+$dark-post-tag: scale-color($dark-text-point, $alpha: -25%);
+$dark-post-tag-hov: $dark-text-point;
 
 // code
 // footer

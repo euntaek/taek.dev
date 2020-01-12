@@ -87,16 +87,33 @@ body.dark {
 
   #contents {
     .post {
+      &:hover {
+        .post-title,
+        .post-spoiler,
+        .post-date {
+          color: $dark-post-text-hov;
+        }
+        .post-tag {
+          color: $dark-post-tag-hov;
+        }
+      }
+    }
+    .post-title,
+    .post-spoiler,
+    .post-date {
       color: $dark-post-text;
     }
-    .post:hover {
-      color: $dark-post-text-hov;
-      background-color: $dark-post-box-hov;
-      text-decoration: none;
+    .post-title:hover {
+      border-bottom: 1px solid $dark-post-text-hov;
     }
-    .post:link,
-    .post:visited {
-      text-decoration: none;
+    .tag-bullet {
+      color: $dark-post-tag;
+    }
+    .post-tag {
+      color: $dark-post-tag;
+      &:hover {
+        border-bottom: 1px solid $dark-post-tag-hov;
+      }
     }
   }
 
