@@ -87,6 +87,7 @@ body.light {
   }
 
   #contents {
+    /* 
     .post {
       &:hover {
         .post-title,
@@ -98,11 +99,13 @@ body.light {
           color: $light-post-tag-hov;
         }
       }
-    }
+    } 
+    */
     .post-title,
     .post-spoiler,
     .post-date {
-      color: $light-post-text;
+      // color: $light-post-text;
+      color: $light-post-text-hov;
     }
     .post-title:hover {
       border-bottom: 1px solid $light-post-text-hov;
@@ -111,7 +114,8 @@ body.light {
       color: $light-post-tag;
     }
     .post-tag {
-      color: $light-post-tag;
+      // color: $light-post-tag;
+      color: $light-post-tag-hov;
       &:hover {
         border-bottom: 1px solid $light-post-tag-hov;
       }

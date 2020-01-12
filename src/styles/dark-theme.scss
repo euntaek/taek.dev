@@ -86,7 +86,8 @@ body.dark {
   }
 
   #contents {
-    .post {
+    /*
+     .post {
       &:hover {
         .post-title,
         .post-spoiler,
@@ -98,10 +99,12 @@ body.dark {
         }
       }
     }
+     */
     .post-title,
     .post-spoiler,
     .post-date {
-      color: $dark-post-text;
+      // color: $dark-post-text;
+      color: $dark-post-text-hov;
     }
     .post-title:hover {
       border-bottom: 1px solid $dark-post-text-hov;
@@ -110,7 +113,8 @@ body.dark {
       color: $dark-post-tag;
     }
     .post-tag {
-      color: $dark-post-tag;
+      // color: $dark-post-tag;
+      color: $dark-post-tag-hov;
       &:hover {
         border-bottom: 1px solid $dark-post-tag-hov;
       }
