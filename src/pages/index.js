@@ -26,13 +26,15 @@ const index = ({ data }) => {
     },
     [category],
   );
-
   const checkTags = useCallback(tag => {
     setTags(prevTags => {
       return prevTags.find(prevTag => prevTag === tag)
         ? prevTags.filter(prevTag => prevTag !== tag)
         : prevTags.concat(tag);
     });
+  }, []);
+  const checkTagInsidePost = useCallback(tag => {
+    setTags([tag]);
   }, []);
 
   return (
@@ -46,7 +48,12 @@ const index = ({ data }) => {
           selectCategory={selectCategory}
           checkTags={checkTags}
         />
-        <ContentsContainer posts={posts} category={category} tags={tags} />
+        <ContentsContainer
+          posts={posts}
+          category={category}
+          tags={tags}
+          checkTagInsidePost={checkTagInsidePost}
+        />
       </main>
     </Layout>
   );
@@ -71,7 +78,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
-          excerpt(format: PLAIN, pruneLength: 100, truncate: true)
+          excerpt(format: PLAIN, pruneLength: 105, truncate: true)
         }
       }
     }
