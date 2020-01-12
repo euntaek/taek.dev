@@ -9,7 +9,7 @@
 }
 
 * {
-  font-family: "Spoqa Han Sans";
+  font-family: "Roboto", "Noto Sans KR";
   font-style: normal;
   -webkit-text-size-adjust: antialiased;
   -webkit-font-smoothing: antialiased;
@@ -24,7 +24,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
   transition: background-color 0.3s, all 0.3s;
+}
+
+ul {
+  list-style: none;
 }
