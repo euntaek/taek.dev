@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Helmet } from "react-helmet-async";
+import Helmet from "react-helmet";
 import useDefultSEO from "../../hooks/useDefultSEO";
 
 const SEO = ({ description, lang, meta, title, keywords }) => {
@@ -20,7 +20,7 @@ const SEO = ({ description, lang, meta, title, keywords }) => {
 
   const metaDescription = description || defaultDescription;
   const metaKeywords = keywords || defaultKeywords;
-
+  console.log(title);
   return (
     <Helmet
       htmlAttributes={{
