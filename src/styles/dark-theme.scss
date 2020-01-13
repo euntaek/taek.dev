@@ -86,34 +86,20 @@ body.dark {
   }
 
   #contents {
-    /*
-     .post {
-      &:hover {
-        .post-title,
-        .post-spoiler,
-        .post-date {
-          color: $dark-post-text-hov;
-        }
-        .post-tag {
-          color: $dark-post-tag-hov;
-        }
-      }
-    }
-     */
-    .post-title,
+    .post-title a,
     .post-spoiler,
     .post-date {
-      // color: $dark-post-text;
       color: $dark-post-text-hov;
     }
     .post-title:hover {
-      border-bottom: 1px solid $dark-post-text-hov;
+      a {
+        border-bottom: 1px solid $dark-post-text-hov;
+      }
     }
     .tag-bullet {
       color: $dark-post-tag;
     }
     .post-tag {
-      // color: $dark-post-tag;
       color: $dark-post-tag-hov;
       &:hover {
         border-bottom: 1px solid $dark-post-tag-hov;

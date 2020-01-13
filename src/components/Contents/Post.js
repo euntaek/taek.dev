@@ -4,24 +4,23 @@ import { Link } from "gatsby";
 import dateFormatter from "../../utils/dateFormatter";
 
 const style = css`
-  font-weight: bold;
-  font-size: 28px;
   width: 100%;
   padding: 0 16px;
+  box-sizing: border-box;
 
   .date-and-tag {
-    font-size: 14px;
-    font-weight: 500;
     display: flex;
     flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 500;
   }
   .post-date {
-    margin: 0 8px 4px 0;
+    margin: 0 8px 0 0;
     white-space: nowrap;
   }
   .tag-group {
     display: block;
-    margin-bottom: 4px;
+    margin: 0;
     li {
       display: inline;
     }
@@ -30,25 +29,25 @@ const style = css`
     margin: 0 2px;
   }
   .post-tag {
-    font-size: 14px;
-    font-weight: bold;
     border: 1px solid transparent;
     outline: none;
     background-color: transparent;
     cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
   }
   .post-title {
+    margin: 8px 0 0 0;
+    line-height: 1;
     font-size: 28px;
     font-weight: bold;
-    &:link,
-    &:visited {
+    a:link,
+    a:visited {
       text-decoration: none;
     }
   }
   .post-spoiler {
-    font-size: 16px;
-    font-weight: normal;
-    margin-top: 16px;
+    margin: 16px 0 0;
   }
   & + & {
     margin-top: 56px;
@@ -74,10 +73,8 @@ function Post({ post, checkTagInsidePost }) {
             ))}
           </ul>
         </div>
-        <h3>
-          <Link to={post.fields.slug} className="post-title">
-            {post.frontmatter.title}
-          </Link>
+        <h3 className="post-title">
+          <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
         </h3>
       </header>
       <p className="post-spoiler">{post.excerpt}</p>

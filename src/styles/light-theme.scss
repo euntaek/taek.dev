@@ -65,7 +65,6 @@ body.light {
       border-top: 1px solid $light-tag-line;
       border-bottom: 1px solid $light-tag-line;
       .tag {
-        // color: black;
         color: $light-tag-text;
         background-color: $light-tag-text-box;
       }
@@ -87,34 +86,20 @@ body.light {
   }
 
   #contents {
-    /* 
-    .post {
-      &:hover {
-        .post-title,
-        .post-spoiler,
-        .post-date {
-          color: $light-post-text-hov;
-        }
-        .post-tag {
-          color: $light-post-tag-hov;
-        }
-      }
-    } 
-    */
-    .post-title,
+    .post-title a,
     .post-spoiler,
     .post-date {
-      // color: $light-post-text;
       color: $light-post-text-hov;
     }
     .post-title:hover {
-      border-bottom: 1px solid $light-post-text-hov;
+      a {
+        border-bottom: 1px solid $light-post-text-hov;
+      }
     }
     .tag-bullet {
       color: $light-post-tag;
     }
     .post-tag {
-      // color: $light-post-tag;
       color: $light-post-tag-hov;
       &:hover {
         border-bottom: 1px solid $light-post-tag-hov;

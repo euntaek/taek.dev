@@ -2,14 +2,14 @@
 import { jsx, css } from "@emotion/core";
 
 const style = css`
-  font-size: 14px;
-  font-weight: bold;
   padding: 0 8px;
   height: 28px;
   border: none;
   border-radius: 14px;
   cursor: pointer;
   transition: all 150ms ease-in-out;
+  font-size: 14px;
+  font-weight: bold;
 `;
 
 function Tag({ tag, checkedTags, checkTags }) {

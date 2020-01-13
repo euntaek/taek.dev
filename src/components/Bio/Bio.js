@@ -7,13 +7,10 @@ import useSiteMetadata from "../../hooks/useSiteMetadata";
 import SocialContainer from "./SocialContainer";
 
 const style = css`
-  font-size: 16px;
-  font-weight: normal;
   margin: 8px 16px 2px;
 
   p {
     margin: 0;
-    line-height: 1.8em;
     a {
       position: relative;
       text-decoration: none;

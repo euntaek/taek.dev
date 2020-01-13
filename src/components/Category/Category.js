@@ -2,8 +2,6 @@
 import { jsx, css } from "@emotion/core";
 
 const style = css`
-  font-size: 20px;
-  font-weight: bold;
   width: 76px;
   height: 32px;
   border: none;
@@ -11,6 +9,7 @@ const style = css`
   outline: none;
   cursor: pointer;
   transition: all 150ms ease-in-out;
+  font-size: 20px;
 `;
 
 function Category({ title, selected, selectCategory }) {

@@ -9,24 +9,26 @@
 }
 
 * {
-  font-family: "Roboto", "Noto Sans KR";
-  font-style: normal;
-  -webkit-text-size-adjust: antialiased;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
+  font: 1rem/1.75 "Roboto", "Noto Sans KR", sans-serif;
+  -webkit-text-size-adjust: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-color: $light-background-color;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   transition: background-color 0.3s, all 0.3s;
 }
 
+button {
+  font: bold 1rem "Roboto", "Noto Sans KR", sans-serif;
+  -webkit-text-size-adjust: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 ul {
   list-style: none;
 }

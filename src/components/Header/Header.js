@@ -1,26 +1,26 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { Link } from "gatsby";
-import React from "react";
+import React, { useEffect } from "react";
+import _ from "lodash";
 
 import useSiteMetadata from "../../hooks/useSiteMetadata";
 import ThemeContainer from "./ThemeContainer";
 import tree from "../SVG/tree";
+import { useRef } from "react";
 
 const style = css`
   max-width: 100%;
   height: 80px;
   display: flex;
+  flex-flow:row wrap-reverse; 
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; 
   margin: 24px 16px 0;
-
-  h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin: 0;
-  }
-
+  .title{
+    margin: 0; 
+    font: bold 48px/1 "rubik", san-serif;
+    }
   .title:after {
     background: url("${tree}") no-repeat;
     display: inline-block;
@@ -28,23 +28,41 @@ const style = css`
     background-size: contain;
     height: 39px;
     content: "";
-    margin-left: 4px;
+    margin-left: 4px; 
     transform: rotate(-15deg);
-  }
-  a {
-    font-family: "rubik";
   }
 `;
 
 function Header() {
   const { title } = useSiteMetadata();
+  const header = useRef(null);
+
+  useEffect(() => {
+    const headerWidth = [...header.current.children].reduce((acc, node) => {
+      return acc + node.offsetWidth;
+    }, 0);
+    window.addEventListener("resize", onResize(headerWidth), false);
+    1;
+    return () => {
+      window.removeEventListener("resize", onResize(headerWidth), false);
+    };
+  }, []);
+
+  const onResize = headerWidth =>
+    _.debounce(() => {
+      // title + theme = 296
+      // innerWidth = 343
+      // siteWidth = 328 ( title(260) + theme(36) + margin(16))
+      // scrollBarWidth = 15 (innerWidth(343) - siteWidth(343))
+      console.log("onresize", headerWidth);
+    }, 300);
 
   return (
-    <header css={style} id="header">
+    <header ref={header} css={style} id="header">
       <h1 className="title">
         <Link to="/">{title}</Link>
       </h1>
-      <div>
+      <div className="themeContainer">
         <ThemeContainer />
       </div>
     </header>
