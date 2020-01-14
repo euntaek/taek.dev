@@ -4,15 +4,23 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
+import PostContainer from "../components/Post";
 
-function PostTemplate({ data, pageContext }) {
+function PostTemplate({ data, pageContext, location }) {
   const post = data.markdownRemark;
+  const postMetadata = post.frontmatter;
+  const url = encodeURI(post.fields.slug);
+
   return (
-    <Layout>
-      <div>
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+    <Layout location={location}>
+      <SEO title={postMetadata.title} description={postMetadata.description} url={url} />
+      <PostContainer
+        title={postMetadata.title}
+        date={postMetadata.date}
+        html={post.html}
+        pageContext={pageContext}
+      />
     </Layout>
   );
 }
@@ -20,10 +28,17 @@ function PostTemplate({ data, pageContext }) {
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+      id
       frontmatter {
         title
+        description
+        date(formatString: "YYYY-MM-DD")
+        tags
       }
+      fields {
+        slug
+      }
+      html
     }
   }
 `;

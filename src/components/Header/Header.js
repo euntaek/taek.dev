@@ -9,19 +9,24 @@ import ThemeContainer from "./ThemeContainer";
 import tree from "../SVG/tree";
 import { useRef } from "react";
 
-const style = css`
+const style = pathName => {
+  const height = pathName === "/" ? "5rem" : "3rem";
+  const fontSize = pathName === "/" ? "3rem" : "1.75rem";
+
+  return css`
   margin: 24px 16px 0;
   max-width: 100%;
-  height: 80px;
+  height: ${height};
   display: flex;
   flex-flow:row wrap-reverse; 
   align-items: center;
   justify-content: space-between; 
+  transition: all 300ms ease-in-out;
   .title{
     margin: 0; 
-    font: bold 3rem/1 "rubik", san-serif;
+    font: bold ${fontSize}/1 "rubik", san-serif;
     }
-  .title:after {
+  /* .title:after {
     background: url("${tree}") no-repeat;
     display: inline-block;
     width: 24px;
@@ -30,8 +35,9 @@ const style = css`
     content: "";
     margin-left: 4px; 
     transform: rotate(-15deg);
-  }
+  } */
 `;
+};
 
 function Header({ pathName }) {
   console.log("header", pathName);
@@ -59,13 +65,13 @@ function Header({ pathName }) {
     }, 300);
 
   return (
-    <header ref={header} css={style} id="header">
+    <header ref={header} css={style(pathName)} id="header">
       {pathName === "/" ? (
         <h1 className="title">
           <Link to="/">{title}</Link>
         </h1>
       ) : (
-        <h3>
+        <h3 className="title">
           <Link to="/">{title}</Link>
         </h3>
       )}

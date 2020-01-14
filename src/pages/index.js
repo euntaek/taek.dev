@@ -7,7 +7,7 @@ import Bio from "../components/Bio";
 import CategoryContainer from "../components/Category";
 import ContentsContainer from "../components/Contents";
 
-const index = ({ data }) => {
+const index = ({ data, location }) => {
   const InitialTitle = "TAEK LOG";
   const InitialCategory = "all";
   const InitialTags = [];
@@ -38,7 +38,7 @@ const index = ({ data }) => {
   }, []);
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title={InitialTitle} />
       <Bio />
       <main>

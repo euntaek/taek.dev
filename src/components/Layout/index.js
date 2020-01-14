@@ -11,10 +11,10 @@ const style = css`
   padding-bottom: 16px;
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ location, children }) => {
   return (
     <div css={style}>
-      <Header />
+      <Header pathName={location.pathname} />
       {children}
       <Footer />
     </div>
