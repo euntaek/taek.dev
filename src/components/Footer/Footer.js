@@ -9,6 +9,12 @@ const style = css`
 
   a {
     font-weight: bold;
+
+    &:hover,
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
   }
 `;
 
