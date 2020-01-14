@@ -2,99 +2,36 @@
 $transparent: transparent;
 
 /* light theme */
-
-// light theme colors
 $light-background-color: #f9f9f9;
-$light-box-hov: scale-color(#2d364a, $alpha: -90%);
-$light-text: scale-color(#2d364a, $alpha: -20%);
-$light-text-hov: #2d364a;
-$light-text-point: #094577;
 
-// header
-$light-header-title: $light-text-hov;
-$light-theme-switch-icon: $light-text;
-$light-theme-switch-bg: $transparent;
-$light-theme-switch-bg-hov: $light-box-hov;
+$light-text: #2d364a;
+$light-text-inactive: scale-color($light-text, $alpha: -30%);
+$light-text-box: scale-color($light-text, $alpha: -90%);
 
-// bio
-$light-bio-text: $light-text-hov;
-$light-bio-name: $light-text-point;
-$light-socials-icon: scale-color($light-text-hov, $alpha: -60%);
-$light-socials-icon-hov: $light-text;
-$light-socials-icon-dis: $light-box-hov;
+$light-point-color: #094577;
+$light-point-color-inactive: scale-color($light-point-color, $alpha: -30%);
+$light-point-box: scale-color($light-point-color, $alpha: -90%);
 
-// category
-$light-category-text: scale-color($light-text-hov, $alpha: -35%);
-$light-category-text-hov: $light-text-hov;
-$light-category-text-box: $transparent;
-$light-category-text-box-active: $light-box-hov;
+$light-theme-icon: scale-color($light-text, $alpha: -30%);
+$light-theme-icon-hov: $light-text;
 
-// tag
-$light-tag-line: scale-color($light-text-point, $alpha: -80%);
-$light-tag-text: scale-color($light-text-point, $alpha: -25%);
-$light-tag-text-hov: $light-text-point;
-$light-tag-text-box: $transparent;
-$light-tag-text-box-active: scale-color($light-text-point, $alpha: -90%);
-$light-pagination-bullets: scale-color($light-text-hov, $alpha: -50%);
-$light-pagination-bullets-active: $light-tag-text;
-
-// post
-$light-post-text: $light-text;
-$light-post-text-hov: $light-text-hov;
-$light-post-box-hov: scale-color($light-text-hov, $alpha: -95%);
-$light-post-tag: scale-color($light-text-point, $alpha: -25%);
-$light-post-tag-hov: $light-text-point;
-
-// code
-// footer
-/* 나중에 */
-
-/* ------------------------------------------------------------------------------------------------ */
+$light-social-icon: scale-color($light-text, $alpha: -60%);
+$light-social-icon-hov: scale-color($light-text, $alpha: -20%);
+$light-social-icon-inactive: scale-color($light-text, $alpha: -90%);
 
 /* dark theme */
-
-// dark theme colors
 $dark-background-color: #242932;
-$dark-box-hov: scale-color(#e3edff, $alpha: -90%);
-$dark-text: scale-color(#e3edff, $alpha: -20%);
-$dark-text-hov: #e3edff;
-$dark-text-point: #a5d3f8;
 
-// header
-$dark-header-title: $dark-text-hov;
-$dark-theme-switch-icon: $dark-text;
-$dark-theme-switch-bg: $transparent;
-$dark-theme-switch-bg-hov: $dark-box-hov;
+$dark-text: #e3edff;
+$dark-text-inactive: scale-color($dark-text, $alpha: -30%);
+$dark-text-box: scale-color($dark-text, $alpha: -90%);
+$dark-point-color: #a5d3f8;
+$dark-point-color-inactive: scale-color($dark-point-color, $alpha: -30%);
+$dark-point-box: scale-color($dark-point-color, $alpha: -90%);
 
-// bio
-$dark-bio-text: $dark-text-hov;
-$dark-bio-name: $dark-text-point;
-$dark-socials-icon: scale-color($dark-text-hov, $alpha: -60%);
-$dark-socials-icon-hov: $dark-text;
-$dark-socials-icon-dis: $dark-box-hov;
+$dark-theme-icon: scale-color($dark-text, $alpha: -30%);
+$dark-theme-icon-hov: $dark-text;
 
-// category
-$dark-category-text: scale-color($dark-text-hov, $alpha: -35%);
-$dark-category-text-hov: $dark-text-hov;
-$dark-category-text-box: $transparent;
-$dark-category-text-box-active: $dark-box-hov;
-
-// tag
-$dark-tag-line: scale-color($dark-text-point, $alpha: -80%);
-$dark-tag-text: scale-color($dark-text-point, $alpha: -25%);
-$dark-tag-text-hov: $dark-text-point;
-$dark-tag-text-box: $transparent;
-$dark-tag-text-box-active: scale-color($dark-text-point, $alpha: -90%);
-$dark-pagination-bullets: scale-color($dark-text-hov, $alpha: -50%);
-$dark-pagination-bullets-active: $dark-tag-text;
-
-// post
-$dark-post-text: $dark-text;
-$dark-post-text-hov: $dark-text-hov;
-$dark-post-box-hov: scale-color($dark-text-hov, $alpha: -95%);
-$dark-post-tag: scale-color($dark-text-point, $alpha: -25%);
-$dark-post-tag-hov: $dark-text-point;
-
-// code
-// footer
-/* 나중에 */
+$dark-social-icon: scale-color($dark-text, $alpha: -60%);
+$dark-social-icon-hov: scale-color($dark-text, $alpha: -20%);
+$dark-social-icon-inactive: scale-color($dark-text, $alpha: -90%);

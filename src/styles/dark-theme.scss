@@ -3,84 +3,84 @@ body.dark {
 
   #header {
     .title {
-      color: $dark-header-title;
+      color: $dark-text;
     }
     .theme-switch {
-      background-color: $dark-theme-switch-bg;
+      background-color: $transparent;
       .theme-icon {
-        fill: $dark-theme-switch-icon;
+        fill: $dark-theme-icon;
       }
-    }
-    .theme-switch:hover {
-      background-color: $dark-theme-switch-bg-hov;
-      .theme-icon {
-        fill: $dark-text-hov;
+      &:hover {
+        background-color: $dark-text-box;
+        .theme-icon {
+          fill: $dark-text;
+        }
       }
     }
     a {
-      color: $dark-post-text-hov;
-    }
-    a:hover,
-    a:link,
-    a:visited {
-      text-decoration: none;
+      color: $dark-text;
+      &:hover,
+      &:link,
+      &:visited {
+        text-decoration: none;
+      }
     }
   }
 
   #bio {
     p {
-      color: $dark-text-hov;
+      color: $dark-text;
     }
     a {
-      color: $dark-text-point;
+      color: $dark-point-color;
     }
 
     .social-icon {
-      fill: $dark-socials-icon;
-    }
-    .social-icon:hover {
-      fill: $dark-socials-icon-hov;
-    }
-    .social-icon:disable {
-      fill: $dark-socials-icon-dis;
+      fill: $dark-social-icon;
+      &:hover {
+        fill: $dark-social-icon-hov;
+      }
+      &:disable {
+        fill: $dark-social-icon-inactive;
+      }
     }
   }
 
   #category {
     .categories {
       .category {
-        color: $dark-category-text;
-        background-color: $dark-category-text-box;
-      }
-      .category:hover {
-        color: $dark-category-text-hov;
-      }
-      .category.category-active {
-        color: $dark-category-text-hov;
-        background-color: $dark-category-text-box-active;
+        color: $dark-text-inactive;
+        background-color: $transparent;
+        &:hover {
+          color: $dark-text;
+        }
+        &.category-active {
+          color: $dark-text;
+          background-color: $dark-text-box;
+        }
       }
     }
 
     .tags {
-      border-top: 1px solid $dark-tag-line;
-      border-bottom: 1px solid $dark-tag-line;
+      border-top: 1px solid scale-color($dark-point-color, $alpha: -80%);
+      border-bottom: 1px solid scale-color($dark-point-color, $alpha: -80%);
       .tag {
-        color: $dark-tag-text;
-        background-color: $dark-tag-text-box;
-      }
-      .tag:hover {
-        color: $dark-tag-text-hov;
-      }
-      .tag.tag-active {
-        color: $dark-tag-text-hov;
-        background-color: $dark-tag-text-box-active;
+        color: $dark-point-color-inactive;
+        background-color: $transparent;
+        &:hover {
+          color: $dark-point-color;
+        }
+        &.tag-active {
+          color: $dark-point-color;
+          background-color: $dark-point-box;
+        }
       }
       .swiper-pagination-bullet {
-        background-color: $dark-pagination-bullets;
+        background-color: scale-color($dark-point-color, $alpha: -50%);
         opacity: 1;
       }
       .swiper-pagination-bullet-active {
-        background-color: $dark-pagination-bullets-active;
+        background-color: $dark-point-color-inactive;
       }
     }
   }
@@ -89,36 +89,35 @@ body.dark {
     .post-title a,
     .post-spoiler,
     .post-date {
-      color: $dark-post-text-hov;
+      color: $dark-text;
     }
     .post-title:hover {
       a {
-        border-bottom: 1px solid $dark-post-text-hov;
+        border-bottom: 1px solid $dark-text;
       }
     }
     .tag-bullet {
-      color: $dark-post-tag;
+      color: scale-color($dark-point-color, $alpha: -20%);
     }
     .post-tag {
-      color: $dark-post-tag-hov;
+      color: $dark-point-color;
       &:hover {
-        border-bottom: 1px solid $dark-post-tag-hov;
+        border-bottom: 1px solid $dark-point-color;
       }
     }
   }
 
   #footer {
-    color: $dark-post-text;
+    color: $dark-text-inactive;
     a {
-      color: $dark-post-text;
+      color: $dark-text-inactive;
+      &:hover {
+        color: $dark-text;
+      }
     }
-    a:hover {
-      color: $dark-post-text-hov;
-      text-decoration: none;
-    }
-    a:link,
-    a:visited {
-      text-decoration: none;
-    }
+  }
+
+  #post {
+    color: $dark-text;
   }
 }
