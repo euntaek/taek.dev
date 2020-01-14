@@ -15,6 +15,7 @@ const useSiteMetadata = () => {
         site {
           siteMetadata {
             title
+            siteUrl
             author {
               ko
               en

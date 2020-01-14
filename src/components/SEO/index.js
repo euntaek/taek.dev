@@ -3,11 +3,12 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import useDefultSEO from "../../hooks/useDefultSEO";
 
-const SEO = ({ description, lang, meta, title, keywords }) => {
+const SEO = ({ description, lang, meta, title, keywords, url }) => {
   const {
     site: {
       siteMetadata: {
         title: defaultTitle,
+        siteUrl,
         author,
         description: defaultDescription,
         keywords: defaultKeywords,
@@ -20,7 +21,8 @@ const SEO = ({ description, lang, meta, title, keywords }) => {
 
   const metaDescription = description || defaultDescription;
   const metaKeywords = keywords || defaultKeywords;
-  console.log(title);
+  const metaUrl = url ? siteUrl + url : siteUrl;
+
   return (
     <Helmet
       htmlAttributes={{
@@ -32,6 +34,10 @@ const SEO = ({ description, lang, meta, title, keywords }) => {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          property: `og:url`,
+          content: metaUrl,
         },
         {
           property: `og:title`,
