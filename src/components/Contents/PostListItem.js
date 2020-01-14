@@ -11,7 +11,7 @@ const style = css`
   .date-and-tag {
     display: flex;
     flex-wrap: wrap;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
   }
   .post-date {
@@ -21,6 +21,8 @@ const style = css`
   .tag-group {
     display: block;
     margin: 0;
+    padding: 0;
+    list-style: none;
     li {
       display: inline;
     }
@@ -33,13 +35,13 @@ const style = css`
     outline: none;
     background-color: transparent;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: bold;
   }
   .post-title {
     margin: 8px 0 0 0;
     line-height: 1;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: bold;
     a:link,
     a:visited {
@@ -54,13 +56,13 @@ const style = css`
   }
 `;
 
-function Post({ post, checkTagInsidePost }) {
+function PostListItem({ post, checkTagInsidePost }) {
   return (
-    <article css={style} className="post">
+    <article css={style} className="post-list-item">
       <header>
         <div className="date-and-tag">
           <time dateTime={post.frontmatter.date} className="post-date">
-            {dateFormatter(post.frontmatter.date)}
+            {dateFormatter(post.frontmatter.date).toUpperCase()}
           </time>
           <ul className="tag-group">
             {post.frontmatter.tags.map((tag, index) => (
@@ -82,4 +84,4 @@ function Post({ post, checkTagInsidePost }) {
   );
 }
 
-export default Post;
+export default PostListItem;
