@@ -8,10 +8,6 @@
   align-items: center;
 }
 
-* {
-  padding: 0;
-}
-
 body {
   font: 1rem/1.75 "Roboto", "Noto Sans KR", sans-serif;
   -webkit-text-size-adjust: antialiased;
@@ -28,7 +24,4 @@ button {
   -webkit-text-size-adjust: antialiased;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-ul {
-  list-style: none;
 }

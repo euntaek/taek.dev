@@ -18,6 +18,10 @@ const style = css`
     height: 100%;
     display: flex;
   }
+  .swiper-wrapper {
+    padding: 0;
+    list-style: none;
+  }
   .swiper-slide {
     width: auto;
     height: auto;
