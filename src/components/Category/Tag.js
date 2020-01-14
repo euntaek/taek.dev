@@ -8,7 +8,7 @@ const style = css`
   border-radius: 14px;
   cursor: pointer;
   transition: all 150ms ease-in-out;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
 `;
 

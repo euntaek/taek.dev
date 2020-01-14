@@ -25,7 +25,7 @@ const style = css`
     }
 
     @media (max-width: 420px) {
-      font-size: 14px;
+      font-size: 0.875rem;
     }
   }
 `;

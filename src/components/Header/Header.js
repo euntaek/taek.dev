@@ -10,16 +10,16 @@ import tree from "../SVG/tree";
 import { useRef } from "react";
 
 const style = css`
+  margin: 24px 16px 0;
   max-width: 100%;
   height: 80px;
   display: flex;
   flex-flow:row wrap-reverse; 
   align-items: center;
   justify-content: space-between; 
-  margin: 24px 16px 0;
   .title{
     margin: 0; 
-    font: bold 48px/1 "rubik", san-serif;
+    font: bold 3rem/1 "rubik", san-serif;
     }
   .title:after {
     background: url("${tree}") no-repeat;
@@ -33,7 +33,8 @@ const style = css`
   }
 `;
 
-function Header() {
+function Header({ pathName }) {
+  console.log("header", pathName);
   const { title } = useSiteMetadata();
   const header = useRef(null);
 
@@ -59,9 +60,15 @@ function Header() {
 
   return (
     <header ref={header} css={style} id="header">
-      <h1 className="title">
-        <Link to="/">{title}</Link>
-      </h1>
+      {pathName === "/" ? (
+        <h1 className="title">
+          <Link to="/">{title}</Link>
+        </h1>
+      ) : (
+        <h3>
+          <Link to="/">{title}</Link>
+        </h3>
+      )}
       <div className="themeContainer">
         <ThemeContainer />
       </div>

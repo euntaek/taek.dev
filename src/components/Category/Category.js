@@ -9,7 +9,7 @@ const style = css`
   outline: none;
   cursor: pointer;
   transition: all 150ms ease-in-out;
-  font-size: 20px;
+  font-size: 1.25rem;
 `;
 
 function Category({ title, selected, selectCategory }) {
