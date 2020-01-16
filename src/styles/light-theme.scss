@@ -3,7 +3,9 @@ body.light {
 
   #header {
     .title {
-      color: $light-text;
+      a {
+        color: $light-text;
+      }
     }
     .theme-switch {
       background-color: $transparent;
@@ -15,14 +17,6 @@ body.light {
         .theme-icon {
           fill: $light-text;
         }
-      }
-    }
-    a {
-      color: $light-text;
-      &:hover,
-      &:link,
-      &:visited {
-        text-decoration: none;
       }
     }
   }
@@ -119,5 +113,11 @@ body.light {
 
   #post {
     color: $light-text;
+    .post-main {
+      @import "./light-prismjs.scss";
+      &:after {
+        background-color: scale-color($light-text, $alpha: -70%);
+      }
+    }
   }
 }

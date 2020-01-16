@@ -3,7 +3,9 @@ body.dark {
 
   #header {
     .title {
-      color: $dark-text;
+      a {
+        color: $dark-text;
+      }
     }
     .theme-switch {
       background-color: $transparent;
@@ -15,14 +17,6 @@ body.dark {
         .theme-icon {
           fill: $dark-text;
         }
-      }
-    }
-    a {
-      color: $dark-text;
-      &:hover,
-      &:link,
-      &:visited {
-        text-decoration: none;
       }
     }
   }
@@ -119,5 +113,11 @@ body.dark {
 
   #post {
     color: $dark-text;
+    .post-main {
+      @import "./dark-prismjs.scss";
+      &:after {
+        background-color: scale-color($dark-text, $alpha: -70%);
+      }
+    }
   }
 }

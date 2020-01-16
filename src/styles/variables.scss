@@ -5,11 +5,12 @@ $transparent: transparent;
 $light-background-color: #f9f9f9;
 
 $light-text: #2d364a;
-$light-text-inactive: scale-color($light-text, $alpha: -30%);
+$light-text-inactive: scale-color($light-text, $alpha: -20%);
 $light-text-box: scale-color($light-text, $alpha: -90%);
 
-$light-point-color: #094577;
-$light-point-color-inactive: scale-color($light-point-color, $alpha: -30%);
+// $light-point-color: #094577;
+$light-point-color: #0a4d9b;
+$light-point-color-inactive: scale-color($light-point-color, $alpha: -20%);
 $light-point-box: scale-color($light-point-color, $alpha: -90%);
 
 $light-theme-icon: scale-color($light-text, $alpha: -30%);
@@ -23,10 +24,10 @@ $light-social-icon-inactive: scale-color($light-text, $alpha: -90%);
 $dark-background-color: #242932;
 
 $dark-text: #e3edff;
-$dark-text-inactive: scale-color($dark-text, $alpha: -30%);
+$dark-text-inactive: scale-color($dark-text, $alpha: -20%);
 $dark-text-box: scale-color($dark-text, $alpha: -90%);
-$dark-point-color: #a5d3f8;
-$dark-point-color-inactive: scale-color($dark-point-color, $alpha: -30%);
+$dark-point-color: #8bc1fd;
+$dark-point-color-inactive: scale-color($dark-point-color, $alpha: -20%);
 $dark-point-box: scale-color($dark-point-color, $alpha: -90%);
 
 $dark-theme-icon: scale-color($dark-text, $alpha: -30%);
