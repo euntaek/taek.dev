@@ -6,9 +6,8 @@ import useCategories from "../../hooks/useCateroies";
 import Category from "./Category";
 
 const style = css`
-  margin: 0 16px;
   button {
-    margin-right: 8px;
+    margin-right: 0.5rem;
   }
 `;
 

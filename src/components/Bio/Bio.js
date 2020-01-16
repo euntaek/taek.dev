@@ -7,8 +7,6 @@ import useSiteMetadata from "../../hooks/useSiteMetadata";
 import SocialContainer from "./SocialContainer";
 
 const style = css`
-  margin: 8px 16px 2px;
-
   p {
     margin: 0;
     a {
@@ -24,7 +22,7 @@ const style = css`
       border-bottom: 1px solid;
     }
 
-    @media (max-width: 420px) {
+    @media only screen and (max-width: 420px) {
       font-size: 0.875rem;
     }
   }

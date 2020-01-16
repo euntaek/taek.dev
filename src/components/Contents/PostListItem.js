@@ -5,7 +5,6 @@ import dateFormatter from "../../utils/dateFormatter";
 
 const style = css`
   width: 100%;
-  padding: 0 16px;
   box-sizing: border-box;
 
   .date-and-tag {
@@ -15,7 +14,7 @@ const style = css`
     font-weight: 500;
   }
   .post-date {
-    margin: 0 8px 0 0;
+    margin: 0 0.5rem 0 0;
     white-space: nowrap;
   }
   .tag-group {
@@ -28,7 +27,7 @@ const style = css`
     }
   }
   .tag-bullet {
-    margin: 0 2px;
+    margin: 0 0.125rem;
   }
   .post-tag {
     border: 1px solid transparent;
@@ -39,8 +38,8 @@ const style = css`
     font-weight: bold;
   }
   .post-title {
-    margin: 8px 0 0 0;
-    line-height: 1;
+    margin: 0.5rem 0 0 0;
+    line-height: 1.2;
     font-size: 1.75rem;
     font-weight: bold;
     a:link,
@@ -49,10 +48,10 @@ const style = css`
     }
   }
   .post-spoiler {
-    margin: 16px 0 0;
+    margin: 1rem 0 0;
   }
   & + & {
-    margin-top: 56px;
+    margin-top: 3.5rem;
   }
 `;
 

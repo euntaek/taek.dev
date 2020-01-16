@@ -6,9 +6,9 @@ import Footer from "../Footer";
 
 const style = css`
   min-width: 300px;
-  max-width: 696px;
+  max-width: 656px;
   margin: 0 auto;
-  padding-bottom: 16px;
+  padding: 1.25rem;
 `;
 
 const Layout = ({ location, children }) => {

@@ -7,7 +7,7 @@ import useTags from "../../hooks/useTags";
 import Tag from "./Tag";
 
 const style = css`
-  margin-top: 20px;
+  margin: 1.25rem -1.25rem 0;
   height: 60px;
   border-top: 1px solid;
   border-bottom: 1px solid;

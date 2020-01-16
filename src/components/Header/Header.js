@@ -14,17 +14,25 @@ const style = pathName => {
   const fontSize = pathName === "/" ? "3rem" : "1.75rem";
 
   return css`
-  margin: 24px 16px 0;
+  margin-bottom: 0.5rem;
+  padding: 1.5rem 0 0;
   max-width: 100%;
   height: ${height};
   display: flex;
   flex-flow:row wrap-reverse; 
   align-items: center;
   justify-content: space-between; 
-  transition: all 300ms ease-in-out;
   .title{
     margin: 0; 
     font: bold ${fontSize}/1 "rubik", san-serif;
+    a {
+      &:hover,
+      &:link,
+      &:visited {
+        text-decoration: none;
+      }
+    }
+    }
     }
   /* .title:after {
     background: url("${tree}") no-repeat;
