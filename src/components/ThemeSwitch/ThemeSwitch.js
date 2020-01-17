@@ -13,7 +13,7 @@ const style = css`
   border: none;
   outline: none;
   cursor: pointer;
-  transition: background-color 150ms ease-in-out;
+  transition: background-color 100ms ease-in-out;
   overflow: hidden;
 `;
 

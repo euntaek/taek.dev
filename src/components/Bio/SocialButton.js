@@ -9,7 +9,7 @@ import Twitter from "../SVG/twitter.svg";
 
 const style = css`
   svg {
-    transition: fill 150ms ease-in-out;
+    transition: fill 100ms ease-in-out;
   }
 `;
 
