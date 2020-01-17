@@ -7,25 +7,37 @@ const style = css`
   border: none;
   border-radius: 14px;
   cursor: pointer;
-  transition: all 150ms ease-in-out;
+  transition: color 100ms ease-in-out;
   font-size: 0.875rem;
   font-weight: bold;
+  outline: none;
+  data {
+    margin-left: 0.25rem;
+  }
+  span {
+    margin-left: 0.25rem;
+    font-size: 1.5rem;
+  }
 `;
 
-function Tag({ tag, checkedTags, checkTags }) {
+function Tag({ tag, checkedTags, checkTag }) {
   const checked = !!checkedTags.find(checkedTag => checkedTag === tag.fieldValue);
 
   return (
     <div
       css={style}
       className={`tag ${checked && "tag-active"} align-center`}
-      onClick={() => checkTags(tag.fieldValue)}
+      onClick={() => checkTag(tag.fieldValue)}
       role="checkbox"
       aria-checked={checked}
       tabIndex="0"
     >
       {tag.fieldValue.toUpperCase()}
-      <data value={tag.totalCount}>({tag.totalCount})</data>
+      {checked === true ? (
+        <span>&times;</span>
+      ) : (
+        <data value={tag.totalCount}>({tag.totalCount})</data>
+      )}
     </div>
   );
 }
