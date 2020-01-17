@@ -2,37 +2,67 @@
 $transparent: transparent;
 
 /* light theme */
-$light-background-color: #f9f9f9;
+$light-background-color: #fff;
+// fff + 4c4c4d = 8.57 fff + 2b2b2b = 14.15
+$light-text-color1: #2b2b2b;
+$light-text-color2: #4c4c4d;
+$light-point-color: #01579b;
 
-$light-text: #2d364a;
-$light-text-inactive: scale-color($light-text, $alpha: -20%);
-$light-text-box: scale-color($light-text, $alpha: -90%);
-
-// $light-point-color: #094577;
-$light-point-color: #0a4d9b;
+$light-text-inactive: scale-color($light-text-color1, $alpha: -40%);
+$light-text-box: scale-color($light-text-color1, $alpha: -90%);
 $light-point-color-inactive: scale-color($light-point-color, $alpha: -20%);
 $light-point-box: scale-color($light-point-color, $alpha: -90%);
 
-$light-theme-icon: scale-color($light-text, $alpha: -30%);
-$light-theme-icon-hov: $light-text;
+$light-theme-icon: scale-color($light-text-color1, $alpha: -30%);
+$light-theme-icon-hov: $light-text-color1;
 
-$light-social-icon: scale-color($light-text, $alpha: -60%);
-$light-social-icon-hov: scale-color($light-text, $alpha: -20%);
-$light-social-icon-inactive: scale-color($light-text, $alpha: -90%);
+$light-social-icon: scale-color($light-text-color1, $alpha: -60%);
+$light-social-icon-hov: scale-color($light-text-color1, $alpha: -20%);
+$light-social-icon-inactive: scale-color($light-text-color1, $alpha: -90%);
+
+// prismjs color
+$light-code-background: #fff;
+$light-code-highlight: #dbd5dd;
+$light-code-comment: #9e94a4;
+
+$light-code-color1: #2d364a;
+$light-code-color2: #3a7164;
+$light-code-color3: #00778f;
+$light-code-color4: #0f4e7a;
+$light-code-color5: #bb3e68;
+$light-code-color6: #bd4200;
+$light-code-color7: #547220;
+$light-code-color8: #8a5c84;
 
 /* dark theme */
-$dark-background-color: #242932;
+$dark-background-color: #212121;
+// 212121 + bdbdbd = 8.57 212121 + f0f0f0 = 14.12
+$dark-text-color1: #f0f0f0;
+$dark-text-color2: #bdbdbd;
+$dark-point-color: #90caf9;
 
-$dark-text: #e3edff;
-$dark-text-inactive: scale-color($dark-text, $alpha: -20%);
-$dark-text-box: scale-color($dark-text, $alpha: -90%);
-$dark-point-color: #8bc1fd;
+$dark-text-inactive: scale-color($dark-text-color1, $alpha: -40%);
+$dark-text-box: scale-color($dark-text-color1, $alpha: -90%);
 $dark-point-color-inactive: scale-color($dark-point-color, $alpha: -20%);
 $dark-point-box: scale-color($dark-point-color, $alpha: -90%);
 
-$dark-theme-icon: scale-color($dark-text, $alpha: -30%);
-$dark-theme-icon-hov: $dark-text;
+$dark-theme-icon: scale-color($dark-text-color1, $alpha: -30%);
+$dark-theme-icon-hov: $dark-text-color1;
 
-$dark-social-icon: scale-color($dark-text, $alpha: -60%);
-$dark-social-icon-hov: scale-color($dark-text, $alpha: -20%);
-$dark-social-icon-inactive: scale-color($dark-text, $alpha: -90%);
+$dark-social-icon: scale-color($dark-text-color1, $alpha: -60%);
+$dark-social-icon-hov: scale-color($dark-text-color1, $alpha: -20%);
+$dark-social-icon-inactive: scale-color($dark-text-color1, $alpha: -90%);
+
+// prismjs color
+$dark-code-background: #2b303b;
+$dark-code-highlight: #38404d;
+$dark-code-comment: #656d8b;
+
+$dark-code-color1: #e3edff;
+$dark-code-color2: #75aea5;
+$dark-code-color3: #87bbce;
+$dark-code-color4: #6e98bf;
+$dark-code-color5: #e183a2;
+$dark-code-color6: #f58578;
+$dark-code-color7: #829b88;
+$dark-code-color8: #b77881;

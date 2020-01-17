@@ -5,9 +5,9 @@ const style = css`
   font-family: "Noto Sans KR", sans-serif;
   &:after {
     content: "";
-    margin: 3.5rem auto 1.75rem;
+    margin: 3.5rem auto;
     display: block;
-    width: 60%;
+    width: 100%;
     border: none;
     border-radius: 1px;
     height: 2px;
@@ -24,7 +24,7 @@ const style = css`
   }
   a {
     text-decoration: none;
-    font-weight: 600;
+    font-weight: bold;
   }
   ul,
   ol {
@@ -58,7 +58,7 @@ const style = css`
     margin-bottom: 0;
   }
   hr {
-    margin: 0 0 calc(1.75rem - 1px);
+    margin: 0 0 1.75rem;
     padding: 0;
     border: none;
     height: 1px;

@@ -4,7 +4,7 @@ body.light {
   #header {
     .title {
       a {
-        color: $light-text;
+        color: $light-text-color1;
       }
     }
     .theme-switch {
@@ -15,7 +15,7 @@ body.light {
       &:hover {
         background-color: $light-text-box;
         .theme-icon {
-          fill: $light-text;
+          fill: $light-text-color1;
         }
       }
     }
@@ -23,7 +23,7 @@ body.light {
 
   #bio {
     p {
-      color: $light-text;
+      color: $light-text-color1;
     }
     a {
       color: $light-point-color;
@@ -46,10 +46,10 @@ body.light {
         color: $light-text-inactive;
         background-color: $transparent;
         &:hover {
-          color: $light-text;
+          color: $light-text-color1;
         }
         &.category-active {
-          color: $light-text;
+          color: $light-text-color1;
           background-color: $light-text-box;
         }
       }
@@ -80,15 +80,19 @@ body.light {
   }
 
   #contents {
-    .post-title a,
+    .post-title {
+      a {
+        color: $light-text-color1;
+      }
+      &:hover {
+        a {
+          border-bottom: 1px solid $light-text-color1;
+        }
+      }
+    }
     .post-spoiler,
     .post-date {
-      color: $light-text;
-    }
-    .post-title:hover {
-      a {
-        border-bottom: 1px solid $light-text;
-      }
+      color: $light-text-color2;
     }
     .tag-bullet {
       color: scale-color($light-point-color, $alpha: -20%);
@@ -102,21 +106,46 @@ body.light {
   }
 
   #footer {
-    color: $light-text-inactive;
+    color: $light-text-color2;
     a {
-      color: $light-text-inactive;
-      &:hover {
-        color: $light-text;
-      }
+      color: $light-text-color1;
     }
   }
 
   #post {
-    color: $light-text;
+    color: $light-text-color2;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $light-text-color1;
+    }
     .post-main {
       @import "./light-prismjs.scss";
+      a {
+        color: $light-point-color;
+        &:hover {
+          background-color: $light-point-box;
+        }
+        &.anchor svg {
+          stroke: $light-text-color1;
+        }
+      }
+      hr {
+        background-color: scale-color($color: $light-text-color1, $alpha: -70%);
+      }
       &:after {
-        background-color: scale-color($light-text, $alpha: -70%);
+        background-color: $light-point-box;
+      }
+    }
+    .post-nav {
+      a {
+        color: $light-text-color1;
+        &:hover {
+          background-color: $light-text-box;
+        }
       }
     }
   }

@@ -1,13 +1,5 @@
-a {
-  color: $dark-point-color;
-  &:hover {
-    background-color: scale-color($dark-point-color, $alpha: -85%);
-  }
-}
-
-hr {
-  background-color: scale-color($dark-text, $alpha: -70%);
-}
+// --------------------------------------------------------------------------------
+// prismjs theme 커스텀
 
 .gatsby-highlight,
 .gatsby-highlight-code-line {
@@ -19,27 +11,12 @@ hr {
 }
 
 .gatsby-highlight-code-line {
-  background-color: #2b313b;
+  background-color: $dark-code-highlight;
   display: block;
   padding-right: 1rem;
   padding-left: 1.25rem;
   border-left: 0.25rem solid $dark-point-color;
 }
-
-// --------------------------------------------------------------------------------
-// prismjs theme 커스텀
-
-$dark-code-background: #1c2126;
-$dark-code-comment: #565d76;
-
-$dark-code-color1: #e3edff;
-$dark-code-color2: #75aea5;
-$dark-code-color3: #87bbce;
-$dark-code-color4: #6e98bf;
-$dark-code-color5: #e183a2;
-$dark-code-color6: #f58578;
-$dark-code-color7: #829b88;
-$dark-code-color8: #b77881;
 
 code[class*="language-"],
 pre[class*="language-"] {
@@ -93,16 +70,16 @@ pre[class*="language-"] {
   padding: 1.25rem;
   margin: 0.5rem 0;
   overflow: auto;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   background: $dark-code-background;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
   padding: 0.1rem 0.5rem;
-  border-radius: 0.3em;
+  border-radius: 0.25rem;
   white-space: normal;
-  background: scale-color($color: $dark-point-color, $alpha: -90%);
+  background: $dark-point-box;
   color: $dark-point-color;
   font-size: 0.875rem;
   font-weight: 500;

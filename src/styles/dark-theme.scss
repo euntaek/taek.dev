@@ -4,7 +4,7 @@ body.dark {
   #header {
     .title {
       a {
-        color: $dark-text;
+        color: $dark-text-color1;
       }
     }
     .theme-switch {
@@ -15,7 +15,7 @@ body.dark {
       &:hover {
         background-color: $dark-text-box;
         .theme-icon {
-          fill: $dark-text;
+          fill: $dark-text-color1;
         }
       }
     }
@@ -23,7 +23,7 @@ body.dark {
 
   #bio {
     p {
-      color: $dark-text;
+      color: $dark-text-color1;
     }
     a {
       color: $dark-point-color;
@@ -46,10 +46,10 @@ body.dark {
         color: $dark-text-inactive;
         background-color: $transparent;
         &:hover {
-          color: $dark-text;
+          color: $dark-text-color1;
         }
         &.category-active {
-          color: $dark-text;
+          color: $dark-text-color1;
           background-color: $dark-text-box;
         }
       }
@@ -80,15 +80,19 @@ body.dark {
   }
 
   #contents {
-    .post-title a,
+    .post-title {
+      a {
+        color: $dark-text-color1;
+      }
+      &:hover {
+        a {
+          border-bottom: 1px solid $dark-text-color1;
+        }
+      }
+    }
     .post-spoiler,
     .post-date {
-      color: $dark-text;
-    }
-    .post-title:hover {
-      a {
-        border-bottom: 1px solid $dark-text;
-      }
+      color: $dark-text-color2;
     }
     .tag-bullet {
       color: scale-color($dark-point-color, $alpha: -20%);
@@ -102,21 +106,46 @@ body.dark {
   }
 
   #footer {
-    color: $dark-text-inactive;
+    color: $dark-text-color2;
     a {
-      color: $dark-text-inactive;
-      &:hover {
-        color: $dark-text;
-      }
+      color: $dark-text-color2;
     }
   }
 
   #post {
-    color: $dark-text;
+    color: $dark-text-color2;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $dark-text-color1;
+    }
     .post-main {
       @import "./dark-prismjs.scss";
+      a {
+        color: $dark-point-color;
+        &:hover {
+          background-color: $dark-point-box;
+        }
+        &.anchor svg {
+          stroke: $dark-text-color1;
+        }
+      }
+      hr {
+        background-color: scale-color($color: $dark-text-color1, $alpha: -70%);
+      }
       &:after {
-        background-color: scale-color($dark-text, $alpha: -70%);
+        background-color: $dark-point-box;
+      }
+    }
+    .post-nav {
+      a {
+        color: $dark-text-color1;
+        &:hover {
+          background-color: $dark-text-box;
+        }
       }
     }
   }

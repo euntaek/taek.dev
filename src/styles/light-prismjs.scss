@@ -1,13 +1,5 @@
-a {
-  color: $light-point-color;
-  &:hover {
-    background-color: scale-color($light-point-color, $alpha: -85%);
-  }
-}
-
-hr {
-  background-color: scale-color($light-text, $alpha: -70%);
-}
+// --------------------------------------------------------------------------------
+// prismjs theme 커스텀
 
 .gatsby-highlight,
 .gatsby-highlight-code-line {
@@ -19,34 +11,19 @@ hr {
 }
 
 .gatsby-highlight-code-line {
-  background-color: #dbd5dd;
+  background-color: $light-code-highlight;
   display: block;
   padding-right: 1rem;
   padding-left: 1.25rem;
   border-left: 0.25rem solid $light-point-color;
 }
 
-// --------------------------------------------------------------------------------
-// prismjs theme 커스텀
-
-$light-code-background: #efedf0;
-$light-code-comment: #9e94a4;
-
-$light-code-color1: #2d364a;
-$light-code-color2: #3a7164;
-$light-code-color3: #00778f;
-$light-code-color4: #0f4e7a;
-$light-code-color5: #bb3e68;
-$light-code-color6: #bd4200;
-$light-code-color7: #547220;
-$light-code-color8: #8a5c84;
-
 code[class*="language-"],
 pre[class*="language-"] {
   color: $light-code-color1;
   background: none;
   font-family: Source Code Pro, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  font-size: 0.875rem;
+  font-size: 0.925rem;
   font-weight: 500;
   text-align: left;
   white-space: pre;
@@ -93,14 +70,16 @@ pre[class*="language-"] {
   padding: 1.25rem;
   margin: 0.5rem 0;
   overflow: auto;
-  border-radius: 0.5rem;
+  border: 1px solid $light-text-box;
+  //  scale-color($color: $light-text-color1, $alpha: -80%);
+  // border-radius: 0.25rem;
   background: $light-code-background;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
   padding: 0.1rem 0.5rem;
-  border-radius: 0.3em;
+  border-radius: 0.25em;
   white-space: normal;
   background: $light-point-box;
   color: $light-point-color;
