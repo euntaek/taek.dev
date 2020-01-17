@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import useDefultSEO from "../../hooks/useDefultSEO";
 
-const SEO = ({ description, lang, meta, title, keywords, url }) => {
+const SEO = ({ description, lang, meta, title, tags = [], url }) => {
   const {
     site: {
       siteMetadata: {
@@ -20,9 +20,11 @@ const SEO = ({ description, lang, meta, title, keywords, url }) => {
   } = useDefultSEO();
 
   const metaDescription = description || defaultDescription;
-  const metaKeywords = keywords || defaultKeywords;
+  const metaKeywords = [...new Set([...defaultKeywords, ...tags])];
   const metaUrl = url ? siteUrl + url : siteUrl;
 
+  console.log(metaUrl);
+  console.log(metaKeywords);
   return (
     <Helmet
       htmlAttributes={{
