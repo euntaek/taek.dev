@@ -31,7 +31,7 @@ const style = css`
   }
 `;
 
-function Tags({ selectedCategory, checkedTags, checkTags }) {
+function Tags({ selectedCategory, checkedTags, checkTag }) {
   const tags = useTags(selectedCategory);
 
   useEffect(() => {
@@ -63,7 +63,7 @@ function Tags({ selectedCategory, checkedTags, checkTags }) {
         <ul className="swiper-wrapper">
           {tags.map(tag => (
             <li className="swiper-slide" key={tag.fieldValue}>
-              <Tag tag={tag} checkedTags={checkedTags} checkTags={checkTags} />
+              <Tag tag={tag} checkedTags={checkedTags} checkTag={checkTag} />
             </li>
           ))}
         </ul>

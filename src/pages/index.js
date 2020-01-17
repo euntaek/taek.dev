@@ -26,7 +26,7 @@ const index = ({ data, location }) => {
     },
     [category],
   );
-  const checkTags = useCallback(tag => {
+  const checkTag = useCallback(tag => {
     setTags(prevTags => {
       return prevTags.find(prevTag => prevTag === tag)
         ? prevTags.filter(prevTag => prevTag !== tag)
@@ -46,7 +46,7 @@ const index = ({ data, location }) => {
           category={category}
           tags={tags}
           selectCategory={selectCategory}
-          checkTags={checkTags}
+          checkTag={checkTag}
         />
         <ContentsContainer
           posts={posts}
