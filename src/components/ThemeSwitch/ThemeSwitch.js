@@ -9,7 +9,7 @@ const style = css`
   position: relative;
   width: 32px;
   height: 32px;
-  border-radius: 12px;
+  border-radius: 0.25rem;
   border: none;
   outline: none;
   cursor: pointer;
