@@ -23,7 +23,7 @@ const style = css`
     margin: 3.5rem 0 1.75rem;
   }
   a {
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: bold;
   }
   ul,

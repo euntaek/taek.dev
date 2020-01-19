@@ -3,7 +3,7 @@ import { jsx, css } from "@emotion/core";
 import { Link } from "gatsby";
 
 const style = css`
-  margin: 2.5rem -1.25rem;
+  margin: 1.25rem -1.25rem;
   ul {
     margin: 0;
     padding: 0;
