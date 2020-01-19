@@ -21,6 +21,11 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const result = await graphql(`
     query {
+      site {
+        siteMetadata {
+          utterances
+        }
+      }
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
         filter: { frontmatter: { category: { ne: "" }, tags: { ne: "" } } }
@@ -62,8 +67,9 @@ exports.createPages = async ({ graphql, actions }) => {
   if (result.error) {
     throw result.errors;
   }
-
+  const metaData = result.data.site.siteMetadata;
   const posts = result.data.allMarkdownRemark.edges;
+
   posts.forEach(({ node, next, previous }) => {
     createPage({
       path: node.fields.slug,
@@ -75,6 +81,7 @@ exports.createPages = async ({ graphql, actions }) => {
         tags: node.frontmatter.tags,
         slug: node.fields.slug,
         html: node.html,
+        utterances: metaData.utterances,
         previous: getPostNav(previous),
         next: getPostNav(next),
       },

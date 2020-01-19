@@ -4,9 +4,9 @@ import PostHeader from "./PostHeader";
 import PostMain from "./PostMain";
 import PostFooter from "./PostFooter";
 import PostNav from "./PostNav";
-import PostComment from "./PostComment";
+import Utterances from "./Utterances";
 
-const PostContainer = ({ title, date, html, previous, next }) => (
+const PostContainer = ({ title, date, html, utterances, previous, next }) => (
   <main id="post">
     <article>
       <PostHeader title={title} date={date} />
@@ -14,7 +14,7 @@ const PostContainer = ({ title, date, html, previous, next }) => (
       <PostFooter />
     </article>
     <PostNav previous={previous} next={next} />
-    <PostComment />
+    <Utterances repo={utterances} />
   </main>
 );
 

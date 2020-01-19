@@ -23,5 +23,6 @@ module.exports = {
     insta: `https://www.instagram.com/zmn5113/?hl=ko`,
     twitter: ``,
   },
+  utterances: `EuntaekKim/taek.io`,
   ga: ``,
 };
