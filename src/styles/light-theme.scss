@@ -108,7 +108,10 @@ body.light {
   #footer {
     color: $light-text-color2;
     a {
-      color: $light-text-color1;
+      color: $light-text-color2;
+      &:hover {
+        color: $light-text-color1;
+      }
     }
   }
 

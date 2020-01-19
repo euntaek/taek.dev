@@ -3,9 +3,8 @@ $transparent: transparent;
 
 /* light theme */
 $light-background-color: #fff;
-// fff + 4c4c4d = 8.57 fff + 2b2b2b = 14.15
 $light-text-color1: #2b2b2b;
-$light-text-color2: #4c4c4d;
+$light-text-color2: #424242;
 $light-point-color: #01579b;
 
 $light-text-inactive: scale-color($light-text-color1, $alpha: -40%);
@@ -21,24 +20,23 @@ $light-social-icon-hov: scale-color($light-text-color1, $alpha: -20%);
 $light-social-icon-inactive: scale-color($light-text-color1, $alpha: -90%);
 
 // prismjs color
-$light-code-background: #fff;
-$light-code-highlight: #dbd5dd;
-$light-code-comment: #9e94a4;
+$light-code-background: $light-background-color;
+$light-code-highlight: #ebebeb;
+$light-code-comment: #a4a4a4;
 
-$light-code-color1: #2d364a;
-$light-code-color2: #3a7164;
-$light-code-color3: #00778f;
-$light-code-color4: #0f4e7a;
-$light-code-color5: #bb3e68;
-$light-code-color6: #bd4200;
-$light-code-color7: #547220;
-$light-code-color8: #8a5c84;
+$light-code-color1: $light-text-color2;
+$light-code-color2: #006064;
+$light-code-color3: #047d65;
+$light-code-color4: #1d75b3;
+$light-code-color5: #e65100;
+$light-code-color6: #f9a825;
+$light-code-color7: #b35e14;
+$light-code-color8: #75438a;
 
 /* dark theme */
 $dark-background-color: #212121;
-// 212121 + bdbdbd = 8.57 212121 + f0f0f0 = 14.12
 $dark-text-color1: #f0f0f0;
-$dark-text-color2: #bdbdbd;
+$dark-text-color2: #cccccc;
 $dark-point-color: #90caf9;
 
 $dark-text-inactive: scale-color($dark-text-color1, $alpha: -40%);
@@ -54,15 +52,15 @@ $dark-social-icon-hov: scale-color($dark-text-color1, $alpha: -20%);
 $dark-social-icon-inactive: scale-color($dark-text-color1, $alpha: -90%);
 
 // prismjs color
-$dark-code-background: #2b303b;
-$dark-code-highlight: #38404d;
-$dark-code-comment: #656d8b;
+$dark-code-background: $dark-background-color;
+$dark-code-highlight: #2f2f2f;
+$dark-code-comment: #5f5e5f;
 
-$dark-code-color1: #e3edff;
-$dark-code-color2: #75aea5;
-$dark-code-color3: #87bbce;
-$dark-code-color4: #6e98bf;
-$dark-code-color5: #e183a2;
-$dark-code-color6: #f58578;
-$dark-code-color7: #829b88;
-$dark-code-color8: #b77881;
+$dark-code-color1: $dark-text-color2;
+$dark-code-color2: #4f9a94;
+$dark-code-color3: #4bacb8;
+$dark-code-color4: #5d99c6;
+$dark-code-color5: #c97b63;
+$dark-code-color6: #caae53;
+$dark-code-color7: #75a478;
+$dark-code-color8: #bf5f82;

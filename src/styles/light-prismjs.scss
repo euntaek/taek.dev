@@ -22,15 +22,15 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: $light-code-color1;
   background: none;
-  font-family: Source Code Pro, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-family: Roboto mono, monospace;
   font-size: 0.925rem;
-  font-weight: 500;
+  font-weight: normal;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.5;
+  line-height: 1.7;
 
   -moz-tab-size: 2;
   -o-tab-size: 2;
@@ -71,7 +71,6 @@ pre[class*="language-"] {
   margin: 0.5rem 0;
   overflow: auto;
   border: 1px solid $light-text-box;
-  //  scale-color($color: $light-text-color1, $alpha: -80%);
   // border-radius: 0.25rem;
   background: $light-code-background;
 }
@@ -121,7 +120,6 @@ pre[class*="language-"] {
 }
 .token.string,
 .token.char,
-.token.builtin,
 .token.inserted {
   color: $light-code-color7;
 }
@@ -138,6 +136,7 @@ pre[class*="language-"] {
 .token.keyword {
   color: $light-code-color4;
 }
+.token.builtin,
 .token.function {
   color: $light-code-color3;
 }

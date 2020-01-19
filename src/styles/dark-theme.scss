@@ -109,6 +109,9 @@ body.dark {
     color: $dark-text-color2;
     a {
       color: $dark-text-color2;
+      &:hover {
+        color: $dark-text-color1;
+      }
     }
   }
 
@@ -125,9 +128,9 @@ body.dark {
     .post-main {
       @import "./dark-prismjs.scss";
       a {
-        color: $dark-point-color;
+        color: $dark-text-color2;
         &:hover {
-          background-color: $dark-point-box;
+          background-color: $dark-text-box;
         }
         &.anchor svg {
           stroke: $dark-text-color1;
