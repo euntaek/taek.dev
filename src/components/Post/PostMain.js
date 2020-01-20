@@ -9,7 +9,7 @@ const style = css`
     display: block;
     width: 100%;
     border: none;
-    border-radius: 1px;
+    border-radius: 0.125rem;
     height: 2px;
     background-color: black;
   }

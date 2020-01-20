@@ -56,8 +56,7 @@ body.light {
     }
 
     .tags {
-      border-top: 1px solid scale-color($light-point-color, $alpha: -80%);
-      border-bottom: 1px solid scale-color($light-point-color, $alpha: -80%);
+      border-color: scale-color($light-point-color, $alpha: -80%);
       .tag {
         color: $light-point-color-inactive;
         background-color: $transparent;

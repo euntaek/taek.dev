@@ -24,7 +24,7 @@ const navigator = navName => css`
   a {
     display: block;
     padding: 1rem 1.25rem;
-    border-radius: 0.25rem;
+    border-radius: 0.125rem;
     &:hover,
     &:link,
     &:visited {

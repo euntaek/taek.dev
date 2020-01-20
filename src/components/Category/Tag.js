@@ -5,7 +5,7 @@ const style = css`
   padding: 0 8px;
   height: 28px;
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 0.125rem;
   cursor: pointer;
   transition: color 100ms ease-in-out;
   font-size: 0.875rem;
