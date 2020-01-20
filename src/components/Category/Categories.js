@@ -16,10 +16,14 @@ function Categories({ selectedCategory, selectCategory }) {
 
   return (
     <div css={style} className="categories" role="tablist">
-      <Category title="all" selected={selectedCategory} selectCategory={selectCategory} />
+      <Category
+        categoryName="all"
+        selected={selectedCategory}
+        selectCategory={selectCategory}
+      />
       {categories.map(category => (
         <Category
-          title={category.fieldValue}
+          categoryName={category.fieldValue}
           selected={selectedCategory}
           selectCategory={selectCategory}
           key={category.fieldValue}

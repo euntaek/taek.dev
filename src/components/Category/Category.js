@@ -1,30 +1,31 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import { startCase } from "lodash";
 
 const style = css`
-  width: 76px;
-  height: 32px;
+  padding: 0.25rem 1rem;
   border: none;
-  border-radius: 15px;
+  border-radius: 0.125rem;
   outline: none;
   cursor: pointer;
   transition: color 100ms ease-in-out;
   font-size: 1.25rem;
+  font-weight: 400;
 `;
 
-function Category({ title, selected, selectCategory }) {
+function Category({ categoryName, selected, selectCategory }) {
   return (
     <button
-      id={`category-${title}`}
+      id={`category-${categoryName}`}
       css={style}
-      className={`category ${title === selected && "category-active"}`}
+      className={`category ${categoryName === selected && "category-active"}`}
       // aria-label={`view ${category} posts`}
-      aria-controls={`tags-${title}`}
+      aria-controls={`tags-${categoryName}`}
       role="tab"
-      aria-selected={selected === title}
-      onClick={() => selectCategory(title)}
+      aria-selected={selected === categoryName}
+      onClick={() => selectCategory(categoryName)}
     >
-      {title.toUpperCase()}
+      {startCase(categoryName)}
     </button>
   );
 }
