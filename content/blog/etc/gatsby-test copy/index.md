@@ -2,15 +2,16 @@
 title: "아마존 AWS Bilders 온라인 컨퍼런스 후기"
 date: "2015-05-01T22:12:03.284Z"
 category: "etc"
-tags: 
-          - "컨퍼런스"
-          - "후기"
+tags:
+  - "컨퍼런스"
+  - "후기"
 description: "1월 22일 아마존 aws 서비스 온라인 컨퍼런스 참가하였습니다. 세션 별 후기 등을 기술합니다."
 ---
 
-This is my first post on my new fake blog! How exciting!
-
-I'm sure I'll write a lot more interesting things in the future.
+The Big Oxmox advised her not to do so, because there were thousands of bad
+Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
+didn’t listen. She packed her seven versalia, put her initial into the belt and
+made herself on the way.
 
 Oh, and here's a great quote from this Wikipedia on
 [salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
