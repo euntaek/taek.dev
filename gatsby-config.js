@@ -24,7 +24,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 656,
             },
           },
           {
@@ -53,8 +53,8 @@ module.exports = {
         name: siteMetadata.title,
         short_name: siteMetadata.title,
         start_url: `/`,
-        background_color: `#f9f9f9`,
-        theme_color: `#242932`,
+        background_color: `#fff`,
+        theme_color: `#212121`,
         display: `minimal-ui`,
         icon: siteMetadata.icon,
       },
@@ -65,11 +65,63 @@ module.exports = {
         trackingId: siteMetadata.ga,
       },
     },
-    `gatsby-plugin-react-svg`,
-    // `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.frontmatter.description,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                });
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
+                  edges {
+                    node {
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                        date
+                        description
+                      }
+                      html
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "TAEK LOG Blog RSS Feed",
+          },
+        ],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
+    `gatsby-plugin-react-svg`,
     `gatsby-plugin-lodash`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
