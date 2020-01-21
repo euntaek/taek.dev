@@ -1,12 +1,10 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
-import { Link } from "gatsby";
 import React, { useEffect } from "react";
+import { css } from "@emotion/core";
+import { Link } from "gatsby";
 import _ from "lodash";
 
 import useSiteMetadata from "../../hooks/useSiteMetadata";
 import ThemeContainer from "./ThemeContainer";
-import tree from "../SVG/tree";
 import { useRef } from "react";
 
 const style = pathName => {
@@ -14,39 +12,27 @@ const style = pathName => {
   const fontSize = pathName === "/" ? "3rem" : "1.75rem";
 
   return css`
-  margin-bottom: 0.5rem;
-  padding: 1.5rem 0 0;
-  max-width: 100%;
-  height: ${height};
-  display: flex;
-  flex-flow:row wrap-reverse; 
-  align-items: center;
-  justify-content: space-between; 
-  .title{
-    margin: 0; 
-    font: bold ${fontSize}/1 "rubik", san-serif;
-    a {
-      &:hover,
-      &:link,
-      &:visited {
-        text-decoration: none;
+    margin-bottom: 0.5rem;
+    padding: 1.5rem 0 0;
+    max-width: 100%;
+    height: ${height};
+    display: flex;
+    flex-flow: row wrap-reverse;
+    align-items: center;
+    justify-content: space-between;
+    .title {
+      margin: 0;
+      font: bold ${fontSize} / 1 "rubik", san-serif;
+      a {
+        &:hover,
+        &:link,
+        &:visited {
+          text-decoration: none;
+        }
       }
     }
-    }
-    }
-  /* .title:after {
-    background: url("${tree}") no-repeat;
-    display: inline-block;
-    width: 24px;
-    background-size: contain;
-    height: 39px;
-    content: "";
-    margin-left: 4px; 
-    transform: rotate(-15deg);
-  } */
-`;
+  `;
 };
-
 function Header({ pathName }) {
   const { title } = useSiteMetadata();
   const header = useRef(null);
