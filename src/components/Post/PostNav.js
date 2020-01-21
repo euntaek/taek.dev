@@ -34,8 +34,6 @@ const navigator = navName => css`
 `;
 
 function PostNav({ previous, next }) {
-  console.log(previous);
-  console.log(next);
   return (
     <nav css={style} className="post-nav">
       <ul>

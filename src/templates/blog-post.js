@@ -16,7 +16,7 @@ function PostTemplate({ pageContext, location }) {
     previous,
     next,
   } = pageContext;
-  console.log(utterances);
+
   const url = encodeURI(slug);
 
   return (

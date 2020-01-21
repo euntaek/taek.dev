@@ -48,7 +48,6 @@ const style = pathName => {
 };
 
 function Header({ pathName }) {
-  console.log("header", pathName);
   const { title } = useSiteMetadata();
   const header = useRef(null);
 

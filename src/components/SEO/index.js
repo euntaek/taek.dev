@@ -23,8 +23,6 @@ const SEO = ({ description, lang, meta, title, tags = [], url }) => {
   const metaKeywords = [...new Set([...defaultKeywords, ...tags])];
   const metaUrl = url ? siteUrl + url : siteUrl;
 
-  console.log(metaUrl);
-  console.log(metaKeywords);
   return (
     <Helmet
       htmlAttributes={{
