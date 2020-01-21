@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { startCase } from "lodash";
 
 const style = css`
   padding: 0.25rem 1rem;
@@ -9,11 +8,11 @@ const style = css`
   outline: none;
   cursor: pointer;
   transition: color 100ms ease-in-out;
-  font-size: 1.25rem;
-  font-weight: 400;
+  font-size: 1.125rem;
+  font-weight: 500;
 `;
 
-function Category({ categoryName, selected, selectCategory }) {
+function Category({ categoryName, selected, onSelectCategory }) {
   return (
     <button
       id={`category-${categoryName}`}
@@ -23,9 +22,9 @@ function Category({ categoryName, selected, selectCategory }) {
       aria-controls={`tags-${categoryName}`}
       role="tab"
       aria-selected={selected === categoryName}
-      onClick={() => selectCategory(categoryName)}
+      onClick={() => onSelectCategory(categoryName)}
     >
-      {startCase(categoryName)}
+      {categoryName.toUpperCase()}
     </button>
   );
 }

@@ -9,31 +9,31 @@ const style = css`
   cursor: pointer;
   transition: color 100ms ease-in-out;
   font-size: 0.875rem;
-  font-weight: bold;
+  font-weight: 500;
   outline: none;
   data {
-    margin-left: 0.25rem;
+    margin-left: 0.125rem;
   }
   span {
     margin-left: 0.25rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 `;
 
-function Tag({ tag, checkedTags, checkTag }) {
+function Tag({ tag, checkedTags, onCheckTag }) {
   const checked = !!checkedTags.find(checkedTag => checkedTag === tag.fieldValue);
 
   return (
     <div
       css={style}
       className={`tag ${checked && "tag-active"} align-center`}
-      onClick={() => checkTag(tag.fieldValue)}
+      onClick={() => onCheckTag(tag.fieldValue)}
       role="checkbox"
       aria-checked={checked}
       tabIndex="0"
     >
       {tag.fieldValue.toUpperCase()}
-      {checked === true ? (
+      {checked ? (
         <span>&times;</span>
       ) : (
         <data value={tag.totalCount}>({tag.totalCount})</data>

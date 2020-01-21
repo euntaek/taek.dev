@@ -18,7 +18,7 @@ const index = ({ data, location }) => {
 
   const posts = data.allMarkdownRemark.edges;
 
-  const selectCategory = useCallback(
+  const onSelectCategory = useCallback(
     selectedCategory => {
       if (selectedCategory === category) return;
       setCategory(selectedCategory);
@@ -26,14 +26,14 @@ const index = ({ data, location }) => {
     },
     [category],
   );
-  const checkTag = useCallback(tag => {
+  const onCheckTag = useCallback(tag => {
     setTags(prevTags => {
       return prevTags.find(prevTag => prevTag === tag)
         ? prevTags.filter(prevTag => prevTag !== tag)
         : prevTags.concat(tag);
     });
   }, []);
-  const checkTagInsidePost = useCallback(tag => {
+  const onCheckTaginPost = useCallback(tag => {
     setTags([tag]);
   }, []);
 
@@ -45,14 +45,14 @@ const index = ({ data, location }) => {
         <CategoryContainer
           category={category}
           tags={tags}
-          selectCategory={selectCategory}
-          checkTag={checkTag}
+          onSelectCategory={onSelectCategory}
+          onCheckTag={onCheckTag}
         />
         <ContentsContainer
           posts={posts}
           category={category}
           tags={tags}
-          checkTagInsidePost={checkTagInsidePost}
+          onCheckTaginPost={onCheckTaginPost}
         />
       </main>
     </Layout>

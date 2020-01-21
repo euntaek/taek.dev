@@ -11,7 +11,7 @@ const style = css`
   }
 `;
 
-function Categories({ selectedCategory, selectCategory }) {
+function Categories({ selectedCategory, onSelectCategory }) {
   const categories = useCategories();
 
   return (
@@ -19,13 +19,13 @@ function Categories({ selectedCategory, selectCategory }) {
       <Category
         categoryName="all"
         selected={selectedCategory}
-        selectCategory={selectCategory}
+        onSelectCategory={onSelectCategory}
       />
       {categories.map(category => (
         <Category
           categoryName={category.fieldValue}
           selected={selectedCategory}
-          selectCategory={selectCategory}
+          onSelectCategory={onSelectCategory}
           key={category.fieldValue}
         />
       ))}
