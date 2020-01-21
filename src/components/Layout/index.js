@@ -14,7 +14,7 @@ const style = css`
 const Layout = ({ location, children }) => {
   return (
     <div css={style}>
-      <Header pathName={location.pathname} />
+      <Header pathName={location && location.pathname} />
       {children}
       <Footer />
     </div>
