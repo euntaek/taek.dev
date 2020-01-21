@@ -7,8 +7,7 @@ const style = css`
   font-size: 14px;
 
   a {
-    font-weight: bold;
-
+    font-weight: 500;
     &:hover,
     &:link,
     &:visited {
