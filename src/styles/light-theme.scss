@@ -151,7 +151,7 @@ body.light {
         background-color: scale-color($color: $light-text-color1, $alpha: -70%);
       }
       &:after {
-        background-color: $light-point-box;
+        background-color: scale-color($color: $light-text-color1, $alpha: -70%);
       }
     }
     .post-nav {

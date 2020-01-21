@@ -139,9 +139,9 @@ body.dark {
     .post-main {
       @import "./dark-prismjs.scss";
       a {
-        color: $dark-text-color2;
+        color: $dark-point-color;
         &:hover {
-          background-color: $dark-text-box;
+          background-color: $dark-point-box;
         }
         &.anchor svg {
           stroke: $dark-text-color1;
@@ -151,7 +151,7 @@ body.dark {
         background-color: scale-color($color: $dark-text-color1, $alpha: -70%);
       }
       &:after {
-        background-color: $dark-point-box;
+        background-color: scale-color($color: $dark-text-color1, $alpha: -70%);
       }
     }
     .post-nav {
