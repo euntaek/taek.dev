@@ -20,7 +20,7 @@ const style = css`
 `;
 
 function Tag({ tag, checkedTags, onCheckTag }) {
-  const checked = !!checkedTags.find(checkedTag => checkedTag === tag.fieldValue);
+  const checked = !!checkedTags.includes(tag.fieldValue);
 
   return (
     <div

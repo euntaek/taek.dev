@@ -6,7 +6,7 @@ const filterPosts = (posts, category, checkedTags) => {
   if (checkedTags.length) {
     filteredPosts = filteredPosts.filter(({ node }) => {
       for (const checkedTag of checkedTags) {
-        if (node.frontmatter.tags.find(tag => tag === checkedTag)) {
+        if (node.frontmatter.tags.includes(checkedTag)) {
           return true;
         }
       }

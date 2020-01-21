@@ -28,7 +28,7 @@ const index = ({ data, location }) => {
   );
   const onCheckTag = useCallback(tag => {
     setTags(prevTags => {
-      return prevTags.find(prevTag => prevTag === tag)
+      return prevTags.includes(tag)
         ? prevTags.filter(prevTag => prevTag !== tag)
         : prevTags.concat(tag);
     });
