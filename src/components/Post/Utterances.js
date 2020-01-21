@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 
 const src = "https://utteranc.es/client.js";
 
 function Utterances({ repo }) {
   const rootElement = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const utterances = document.createElement("script");
     const attributes = {
       src,
