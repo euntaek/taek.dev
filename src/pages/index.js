@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
@@ -78,7 +78,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
-          excerpt(format: PLAIN, pruneLength: 105, truncate: true)
+          excerpt(format: PLAIN, pruneLength: 115, truncate: true)
         }
       }
     }
