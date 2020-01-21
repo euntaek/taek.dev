@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 
-import Github from "../SVG/github.svg";
-import Facebook from "../SVG/facebook.svg";
-import LinkedIn from "../SVG/linked-in.svg";
-import Insta from "../SVG/insta.svg";
-import Twitter from "../SVG/twitter.svg";
+import Github from "../../images/github.svg";
+import Facebook from "../../images/facebook.svg";
+import LinkedIn from "../../images/linked-in.svg";
+import Insta from "../../images/insta.svg";
+import Twitter from "../../images/twitter.svg";
 
 const style = css`
   svg {
