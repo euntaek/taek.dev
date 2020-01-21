@@ -54,7 +54,18 @@ body.dark {
         }
       }
     }
-
+    .show-tags-button {
+      background-color: transparent;
+      svg {
+        fill: $dark-point-color-inactive;
+      }
+      &:hover,
+      &.open {
+        svg {
+          fill: $dark-point-color;
+        }
+      }
+    }
     .tags {
       border-color: scale-color($dark-point-color, $alpha: -80%);
       .tag {
@@ -97,8 +108,9 @@ body.dark {
       color: scale-color($dark-point-color, $alpha: -20%);
     }
     .post-tag {
-      color: $dark-point-color;
+      color: $dark-point-color-inactive;
       &:hover {
+        color: $dark-point-color;
         border-bottom: 1px solid $dark-point-color;
       }
     }

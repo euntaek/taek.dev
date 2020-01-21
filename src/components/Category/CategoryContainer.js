@@ -1,8 +1,9 @@
-import React, { useState, useLayoutEffect, useRef } from "react";
+import React, { useState, useLayoutEffect, useRef, useCallback } from "react";
 import Swiper from "swiper";
 
 import Categories from "./Categories";
 import Tags from "./Tags";
+import ShowTagsButton from "./ShowTagsButton";
 
 function CategoryContainer({ category, tags, onSelectCategory, onCheckTag }) {
   const [showTags, setShowTags] = useState(false);
@@ -28,11 +29,22 @@ function CategoryContainer({ category, tags, onSelectCategory, onCheckTag }) {
     swiper.current.update();
   }, [tags]);
 
-  const onShowTags = () => {};
+  const onShowTags = useCallback(() => {
+    setShowTags(prevState => {
+      !prevState && swiper.current.update();
+      return !prevState;
+    });
+  }, []);
   return (
-    <div id="category" style={{ marginTop: "2.5rem" }}>
+    <div id="category" style={{ marginTop: "3.5rem" }}>
       <Categories selectedCategory={category} onSelectCategory={onSelectCategory} />
-      <Tags selectedCategory={category} checkedTags={tags} onCheckTag={onCheckTag} />
+      <ShowTagsButton showTags={showTags} onShowTags={onShowTags} />
+      <Tags
+        selectedCategory={category}
+        checkedTags={tags}
+        onCheckTag={onCheckTag}
+        showTags={showTags}
+      />
     </div>
   );
 }

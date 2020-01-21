@@ -4,38 +4,46 @@ import { jsx, css } from "@emotion/core";
 import useTags from "../../hooks/useTags";
 import Tag from "./Tag";
 
-const style = css`
-  margin: 1.25rem -1.25rem 0;
-  height: 3.75rem;
-  border-top: 1px solid;
-  box-sizing: border-box;
-  border-bottom: 1px solid;
+const style = showTags => {
+  return css`
+    margin: 1.25rem -1.25rem ${showTags ? "3.5rem" : 0};
+    height: ${showTags ? "3.75rem" : "0"};
+    border-top: ${showTags ? "1px" : "0"} solid;
+    box-sizing: border-box;
+    border-bottom: ${showTags ? "1px" : "0"} solid;
+    transition: all 300ms ease-in-out ${showTags ? "0ms" : "300ms"};
 
-  .swiper-container {
-    font-size: 13px;
-    width: auto;
-    height: 100%;
-    display: flex;
-  }
-  .swiper-wrapper {
-    padding: 0;
-    list-style: none;
-  }
-  .swiper-slide {
-    width: auto;
-    height: auto;
-    padding-top: 4px;
-    border: none;
-    outline: none;
-  }
-`;
+    .swiper-container {
+      font-size: 13px;
+      width: auto;
+      height: 100%;
+      display: flex;
+    }
+    .swiper-wrapper {
+      padding: 0;
+      list-style: none;
+    }
+    .swiper-slide {
+      width: auto;
+      height: auto;
+      padding-top: 4px;
+      border: none;
+      outline: none;
+    }
+    .swiper-pagination {
+      /* transition: <property> <duration> <timing-function> <delay>; */
+      transition: opacity 300ms ease-in-out ${showTags ? "300ms" : "0ms"};
+      opacity: ${showTags ? "1" : "0"};
+    }
+  `;
+};
 
-function Tags({ selectedCategory, checkedTags, onCheckTag }) {
+function Tags({ selectedCategory, checkedTags, onCheckTag, showTags }) {
   const tags = useTags(selectedCategory);
 
   return (
     <div
-      css={style}
+      css={style(showTags)}
       id={`tags-${selectedCategory}`}
       className="tags"
       role="tabpanel"

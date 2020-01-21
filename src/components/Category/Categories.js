@@ -5,6 +5,7 @@ import useCategories from "../../hooks/useCateroies";
 import Category from "./Category";
 
 const style = css`
+  display: inline;
   button {
     margin-right: 0.5rem;
   }

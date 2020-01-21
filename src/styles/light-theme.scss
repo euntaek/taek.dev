@@ -54,7 +54,18 @@ body.light {
         }
       }
     }
-
+    .show-tags-button {
+      background-color: transparent;
+      svg {
+        fill: $light-point-color-inactive;
+      }
+      &:hover,
+      &.open {
+        svg {
+          fill: $light-point-color;
+        }
+      }
+    }
     .tags {
       border-color: scale-color($light-point-color, $alpha: -80%);
       .tag {
@@ -97,8 +108,9 @@ body.light {
       color: scale-color($light-point-color, $alpha: -20%);
     }
     .post-tag {
-      color: $light-point-color;
+      color: $light-point-color-inactive;
       &:hover {
+        color: $light-point-color;
         border-bottom: 1px solid $light-point-color;
       }
     }
