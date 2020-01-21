@@ -1,15 +1,14 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { useEffect } from "react";
-import Swiper from "swiper";
 
 import useTags from "../../hooks/useTags";
 import Tag from "./Tag";
 
 const style = css`
   margin: 1.25rem -1.25rem 0;
-  height: 60px;
+  height: 3.75rem;
   border-top: 1px solid;
+  box-sizing: border-box;
   border-bottom: 1px solid;
 
   .swiper-container {
@@ -31,25 +30,8 @@ const style = css`
   }
 `;
 
-function Tags({ selectedCategory, checkedTags, checkTag }) {
+function Tags({ selectedCategory, checkedTags, onCheckTag }) {
   const tags = useTags(selectedCategory);
-
-  useEffect(() => {
-    // eslint-disable-next-line no-unused-vars
-    var swiper = new Swiper(".swiper-container", {
-      slidesPerView: "auto",
-      spaceBetween: 16,
-      freeMode: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: true,
-      },
-    });
-    return () => {
-      swiper.destroy();
-    };
-  }, [selectedCategory]);
 
   return (
     <div
@@ -63,7 +45,7 @@ function Tags({ selectedCategory, checkedTags, checkTag }) {
         <ul className="swiper-wrapper">
           {tags.map(tag => (
             <li className="swiper-slide" key={tag.fieldValue}>
-              <Tag tag={tag} checkedTags={checkedTags} checkTag={checkTag} />
+              <Tag tag={tag} checkedTags={checkedTags} onCheckTag={onCheckTag} />
             </li>
           ))}
         </ul>
