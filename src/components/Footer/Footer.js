@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
 import React from "react";
+import { css } from "@emotion/core";
 
 const style = css`
   margin-top: 40px;

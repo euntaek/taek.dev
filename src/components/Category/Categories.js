@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
 import React from "react";
+import { css } from "@emotion/core";
 
 import useCategories from "../../hooks/useCateroies";
 import Category from "./Category";

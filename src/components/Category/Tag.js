@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
-
+import React from "react";
+import { css } from "@emotion/core";
 const style = css`
   padding: 0 8px;
   height: 28px;
@@ -42,4 +41,4 @@ function Tag({ tag, checkedTags, onCheckTag }) {
   );
 }
 
-export default Tag;
+export default React.memo(Tag);

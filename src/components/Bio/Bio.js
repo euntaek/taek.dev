@@ -1,7 +1,6 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
-import { Link } from "gatsby";
 import React from "react";
+import { css } from "@emotion/core";
+import { Link } from "gatsby";
 
 import useSiteMetadata from "../../hooks/useSiteMetadata";
 import SocialContainer from "./SocialContainer";
