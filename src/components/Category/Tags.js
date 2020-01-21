@@ -40,6 +40,10 @@ const style = showTags => {
 
 function Tags({ selectedCategory, checkedTags, onCheckTag, showTags }) {
   const tags = useTags(selectedCategory);
+  const checkedTagsData = tags.filter(tag => {
+    return checkedTags.includes(tag.fieldValue);
+  });
+  const filteredTags = Array.from(new Set([...checkedTagsData, ...tags]));
 
   return (
     <div
@@ -51,7 +55,7 @@ function Tags({ selectedCategory, checkedTags, onCheckTag, showTags }) {
     >
       <div className="swiper-container" role="group">
         <ul className="swiper-wrapper">
-          {tags.map(tag => (
+          {filteredTags.map(tag => (
             <li className="swiper-slide" key={tag.fieldValue}>
               <Tag tag={tag} checkedTags={checkedTags} onCheckTag={onCheckTag} />
             </li>
