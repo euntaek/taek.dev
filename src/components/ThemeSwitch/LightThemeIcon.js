@@ -1,24 +1,19 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 
-const style = css`
+const style = animate => css`
   position: absolute;
-  transition: all 0.5s cubic-bezier(0.42, 0, 0, 0.68);
+  transform: translateY(${animate ? "0" : "3rem"});
+  visibility: ${animate ? "visible" : "hidden"};
+  transition-property: transform, visibility;
+  transition-duration: 600ms, 0ms;
+  transition-delay: ${animate ? "500ms, 0ms" : "0ms, 600ms"};
 `;
 
-const fade = {
-  ["in"]: css`
-    transform: translateY(0);
-  `,
-  ["out"]: css`
-    transform: translateY(60px);
-    visibility: hidden;
-  `,
-};
 function LightThemeIcon({ animate }) {
   return (
     <svg
-      css={[style, fade[animate ? "in" : "out"]]}
+      css={style(animate)}
       xmlns="http://www.w3.org/2000/svg"
       width="18"
       height="18"
