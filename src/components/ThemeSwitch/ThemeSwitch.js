@@ -39,7 +39,7 @@ function ThemeSwitch({ initialTheme }) {
 }
 
 ThemeSwitch.defaultProps = {
-  theme: "light",
+  initialTheme: "light",
 };
 
 export default ThemeSwitch;
