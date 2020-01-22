@@ -1,27 +1,33 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
-import usePosts from "../hooks/usePosts";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import Bio from "../components/Bio";
 import CategoryContainer from "../components/Category";
 import ContentsContainer from "../components/Contents";
 
+import usePosts from "../hooks/usePosts";
+import * as storage from "../utils/storage";
+
 const index = ({ location }) => {
-  const InitialCategory = "all";
-  const InitialTags = [];
+  const InitialCategory = storage.getCategory() || "all";
+  const InitialTags = storage.getTags() || [];
 
   // selected category, checked tags
   const [category, setCategory] = useState(InitialCategory);
   const [tags, setTags] = useState(InitialTags);
-
   const { title, posts } = usePosts();
+
+  useEffect(() => {
+    storage.setCategory(category);
+    storage.setTags(tags);
+  }, [category, tags]);
 
   const onSelectCategory = useCallback(
     selectedCategory => {
       if (selectedCategory === category) return;
       setCategory(selectedCategory);
-      setTags(InitialTags);
+      setTags([]);
     },
     [category],
   );
