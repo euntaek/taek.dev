@@ -38,7 +38,7 @@ const style = css`
     font-weight: bold;
   }
   .post-title {
-    margin: 0.5rem 0 0 0;
+    margin: 0.25rem 0 0 0;
     line-height: 1.2;
     font-size: 1.75rem;
     font-weight: bold;

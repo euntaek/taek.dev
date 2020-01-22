@@ -12,7 +12,9 @@ const style = css`
     line-height: 1.2;
   }
   time {
-    font-size: 0.875rem;
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.925rem;
   }
 `;
 
