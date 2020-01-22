@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import useDefultSEO from "../../hooks/useDefultSEO";
+import useSEO from "../../hooks/useSEO";
 
 const SEO = ({ description, lang, meta, title, tags = [], url }) => {
   const {
@@ -17,7 +17,7 @@ const SEO = ({ description, lang, meta, title, tags = [], url }) => {
     file: {
       childImageSharp: { original: metaOgImage },
     },
-  } = useDefultSEO();
+  } = useSEO();
 
   const metaDescription = description || defaultDescription;
   const metaKeywords = [...new Set([...defaultKeywords, ...tags])];

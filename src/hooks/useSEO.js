@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 const useSiteMetadata = () => {
   const seoMetaData = useStaticQuery(
     graphql`
-      query defaultSEO {
+      query SEO {
         file(absolutePath: { regex: "/meta-og-image.png/" }) {
           name
           childImageSharp {
