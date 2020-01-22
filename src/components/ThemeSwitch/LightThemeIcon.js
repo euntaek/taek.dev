@@ -7,7 +7,7 @@ const style = animate => css`
   visibility: ${animate ? "visible" : "hidden"};
   transition-property: transform, visibility;
   transition-duration: 600ms, 0ms;
-  transition-delay: ${animate ? "500ms, 0ms" : "0ms, 600ms"};
+  transition-delay: ${animate ? "400ms, 0ms" : "0ms, 600ms"};
 `;
 
 function LightThemeIcon({ animate }) {
