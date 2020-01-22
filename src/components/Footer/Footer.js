@@ -1,6 +1,8 @@
 import React from "react";
 import { css } from "@emotion/core";
 
+import useSiteMetadata from "../../hooks/useSiteMetadata";
+
 const style = css`
   margin-top: 40px;
   width: 100%;
@@ -17,9 +19,18 @@ const style = css`
 `;
 
 function Footer() {
+  const date = new Date().getFullYear();
+  const {
+    author: { en },
+    social: { github },
+  } = useSiteMetadata();
+
   return (
     <footer id="footer" css={style} className="align-center">
-      &copy;{2020},&nbsp;<a href="#">Euntaek Kim</a>
+      &copy;{date},&nbsp;
+      <a target="_blank" rel="noreferrer noopener" href={github}>
+        {en}
+      </a>
     </footer>
   );
 }
