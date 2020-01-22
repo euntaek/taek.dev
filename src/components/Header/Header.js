@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { css } from "@emotion/core";
 import { Link } from "gatsby";
-import _ from "lodash";
 
 import useSiteMetadata from "../../hooks/useSiteMetadata";
 import ThemeContainer from "./ThemeContainer";
-import { useRef } from "react";
 
 const style = pathName => {
   const height = pathName === "/" ? "5rem" : "3rem";
@@ -35,30 +33,9 @@ const style = pathName => {
 };
 function Header({ pathName }) {
   const { title } = useSiteMetadata();
-  const header = useRef(null);
-
-  useEffect(() => {
-    const headerWidth = [...header.current.children].reduce((acc, node) => {
-      return acc + node.offsetWidth;
-    }, 0);
-    window.addEventListener("resize", onResize(headerWidth), false);
-    1;
-    return () => {
-      window.removeEventListener("resize", onResize(headerWidth), false);
-    };
-  }, []);
-
-  const onResize = headerWidth =>
-    _.debounce(() => {
-      // title + theme = 296
-      // innerWidth = 343
-      // siteWidth = 328 ( title(260) + theme(36) + margin(16))
-      // scrollBarWidth = 15 (innerWidth(343) - siteWidth(343))
-      console.log("onresize", headerWidth);
-    }, 300);
 
   return (
-    <header ref={header} css={style(pathName)} id="header">
+    <header css={style(pathName)} id="header">
       {pathName === "/" ? (
         <h1 className="title">
           <Link to="/">{title}</Link>
