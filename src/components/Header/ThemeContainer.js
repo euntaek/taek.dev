@@ -1,5 +1,5 @@
 import React from "react";
-import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
+import ThemeSwitch from "./ThemeSwitch/ThemeSwitch";
 
 import { windowGlobal } from "../../utils/window";
 
