@@ -41,7 +41,7 @@ const index = ({ location }) => {
     });
   }, []);
 
-  const onCheckTaginPost = useCallback(tag => {
+  const onCheckTagInPost = useCallback(tag => {
     scrollTo("#category");
     setTags([tag]);
   }, []);
@@ -61,7 +61,7 @@ const index = ({ location }) => {
           posts={posts}
           selectedCategory={category}
           checkedTags={tags}
-          onCheckTaginPost={onCheckTaginPost}
+          onCheckTagInPost={onCheckTagInPost}
         />
       </main>
     </Layout>

@@ -55,7 +55,7 @@ const style = css`
   }
 `;
 
-function PostListItem({ post, onCheckTaginPost }) {
+function PostListItem({ post, onCheckTagInPost }) {
   return (
     <article css={style} className="post-list-item">
       <header>
@@ -67,7 +67,7 @@ function PostListItem({ post, onCheckTaginPost }) {
             {post.frontmatter.tags.map((tag, index) => (
               <li key={tag}>
                 {index !== 0 && <span className="tag-bullet">•</span>}
-                <button className="post-tag" onClick={() => onCheckTaginPost(tag)}>
+                <button className="post-tag" onClick={() => onCheckTagInPost(tag)}>
                   {tag.toUpperCase()}
                 </button>
               </li>
