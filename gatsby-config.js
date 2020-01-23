@@ -125,5 +125,6 @@ module.exports = {
     `gatsby-plugin-lodash`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-smoothscroll`,
   ],
 };
