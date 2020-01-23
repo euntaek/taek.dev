@@ -55,7 +55,7 @@ function CategoryContainer({
   }, []);
 
   return (
-    <div id="category" style={{ marginTop: "3.5rem" }}>
+    <div id="category" style={{ marginTop: "2.5rem", paddingTop: "1rem" }}>
       <Categories
         selectedCategory={selectedCategory}
         onSelectCategory={onSelectCategory}
