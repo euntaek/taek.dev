@@ -1,12 +1,12 @@
 import React from "react";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 
-const win = typeof window !== "undefined" && window;
+import { windowGlobal } from "../../utils/window";
 
 function ThemeContainer() {
   return (
     <div style={{ margin: "0 0 4px 4px" }}>
-      <ThemeSwitch initialTheme={win.__theme} />
+      <ThemeSwitch initialTheme={windowGlobal.__theme} />
     </div>
   );
 }
