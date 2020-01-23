@@ -122,7 +122,6 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-svg`,
-    `gatsby-plugin-lodash`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-smoothscroll`,
