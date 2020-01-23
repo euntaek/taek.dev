@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
@@ -41,6 +42,7 @@ const index = ({ location }) => {
   }, []);
 
   const onCheckTaginPost = useCallback(tag => {
+    scrollTo("#category");
     setTags([tag]);
   }, []);
 
