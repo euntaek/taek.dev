@@ -19,7 +19,12 @@ const swiperjs = () =>
     },
   });
 
-function CategoryContainer({ category, tags, onSelectCategory, onCheckTag }) {
+function CategoryContainer({
+  selectedCategory,
+  checkedTags,
+  onSelectCategory,
+  onCheckTag,
+}) {
   const [showTags, setShowTags] = useState(false);
   const swiper = useRef(null);
 
@@ -32,11 +37,11 @@ function CategoryContainer({ category, tags, onSelectCategory, onCheckTag }) {
     return () => {
       swiper.current.destroy();
     };
-  }, [category]);
+  }, [selectedCategory]);
 
   useEffect(() => {
     swiper.current.update();
-  }, [tags]);
+  }, [checkedTags]);
 
   useEffect(() => {
     storage.setShowTags(showTags);
@@ -51,11 +56,14 @@ function CategoryContainer({ category, tags, onSelectCategory, onCheckTag }) {
 
   return (
     <div id="category" style={{ marginTop: "3.5rem" }}>
-      <Categories selectedCategory={category} onSelectCategory={onSelectCategory} />
+      <Categories
+        selectedCategory={selectedCategory}
+        onSelectCategory={onSelectCategory}
+      />
       <ShowTagsButton showTags={showTags} onShowTags={onShowTags} />
       <Tags
-        selectedCategory={category}
-        checkedTags={tags}
+        selectedCategory={selectedCategory}
+        checkedTags={checkedTags}
         onCheckTag={onCheckTag}
         showTags={showTags}
       />

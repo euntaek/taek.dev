@@ -52,15 +52,15 @@ const index = ({ location }) => {
       <Bio />
       <main>
         <CategoryContainer
-          category={category}
-          tags={tags}
+          selectedCategory={category}
+          checkedTags={tags}
           onSelectCategory={onSelectCategory}
           onCheckTag={onCheckTag}
         />
         <ContentsContainer
           posts={posts}
-          category={category}
-          tags={tags}
+          selectedCategory={category}
+          checkedTags={tags}
           onCheckTaginPost={onCheckTaginPost}
         />
       </main>

@@ -3,11 +3,11 @@ import PostListItem from "./PostListItem";
 
 import filterPosts from "../../utils/filterPosts";
 
-function ContentsContainer({ posts, category, tags, onCheckTaginPost }) {
-  const filteredPosts = useMemo(() => filterPosts(posts, category, tags), [
+function ContentsContainer({ posts, selectedCategory, checkedTags, onCheckTaginPost }) {
+  const filteredPosts = useMemo(() => filterPosts(posts, selectedCategory, checkedTags), [
     posts,
-    category,
-    tags,
+    selectedCategory,
+    checkedTags,
   ]);
 
   return (
