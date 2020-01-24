@@ -1,9 +1,12 @@
 import React, { useMemo } from "react";
 import PostListItem from "./PostListItem";
 
+import usePosts from "../../hooks/usePosts";
 import filterPosts from "../../utils/filterPosts";
 
-function ContentsContainer({ posts, selectedCategory, checkedTags, onCheckTagInPost }) {
+function ContentsContainer({ selectedCategory, checkedTags, onCheckTagInPost }) {
+  const posts = usePosts();
+
   const filteredPosts = useMemo(() => filterPosts(posts, selectedCategory, checkedTags), [
     posts,
     selectedCategory,

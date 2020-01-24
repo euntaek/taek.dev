@@ -2,18 +2,10 @@ import { useStaticQuery, graphql } from "gatsby";
 
 const usePosts = () => {
   const {
-    site: {
-      siteMetadata: { title },
-    },
     allMarkdownRemark: { edges: posts },
   } = useStaticQuery(
     graphql`
       query Posts {
-        site {
-          siteMetadata {
-            title
-          }
-        }
         allMarkdownRemark(
           sort: { fields: frontmatter___date, order: DESC }
           filter: { frontmatter: { category: { ne: "" }, tags: { ne: "" } } }
@@ -39,7 +31,7 @@ const usePosts = () => {
     `,
   );
 
-  return { title, posts };
+  return posts;
 };
 
 export default usePosts;
