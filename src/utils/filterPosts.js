@@ -1,4 +1,4 @@
-const filterPosts = (posts, category, checkedTags) => {
+const filterPosts = (posts, category, checkedTags, postsCount) => {
   let filteredPosts = posts.filter(({ node }) => {
     return category === "all" || category === node.frontmatter.category;
   });
@@ -12,7 +12,7 @@ const filterPosts = (posts, category, checkedTags) => {
       }
     });
   }
-  return filteredPosts;
+  return filteredPosts.slice(0, postsCount * 10);
 };
 
 export default filterPosts;
