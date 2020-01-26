@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useRef } from "react";
+import React, { useMemo, useEffect, useState } from "react";
 import PostListItem from "./PostListItem";
 
 import usePosts from "../../hooks/usePosts";
@@ -6,31 +6,43 @@ import useInfiniteScroll from "../../hooks/useInfiniteScroll";
 import filterPosts from "../../utils/filterPosts";
 
 function ContentsContainer({ selectedCategory, checkedTags, onCheckTagInPost }) {
-  // const [postsCount, setPostsCount] = useState(1);
-  const posts = usePosts();
+  const INITIAL_PAGE_NUMBER = 1;
+  const INITIAL_POSTS_COUNT = 10;
 
-  const onGetPosts = () => {
-    setPageNumber(prev => prev + 1);
-  };
+  const [PageNumber, setPageNumber] = useState(INITIAL_PAGE_NUMBER);
+  const posts = usePosts();
   const [
-    pageNumber,
-    setPageNumber,
-    setScroll,
     onInfiniteScrollInit,
     onInfiniteScrollUpdate,
     onInfiniteScrollDisconnect,
   ] = useInfiniteScroll(() => setPageNumber(prev => prev + 1));
 
-  console.log(pageNumber);
-
   const filteredPosts = useMemo(
-    () => filterPosts(posts, selectedCategory, checkedTags, pageNumber),
-    [posts, selectedCategory, checkedTags, pageNumber],
+    () =>
+      filterPosts(posts, selectedCategory, checkedTags, PageNumber, INITIAL_POSTS_COUNT),
+    [posts, selectedCategory, checkedTags, PageNumber],
+  );
+
+  console.log(
+    PageNumber,
+    PageNumber * INITIAL_POSTS_COUNT,
+    filteredPosts.length,
+    PageNumber * INITIAL_POSTS_COUNT > filteredPosts.length,
   );
 
   useEffect(() => {
     onInfiniteScrollInit(document.querySelector("#footer"));
-  });
+  }, []);
+
+  useEffect(() => {
+    setPageNumber(INITIAL_PAGE_NUMBER);
+    onInfiniteScrollUpdate();
+  }, [selectedCategory, checkedTags]);
+
+  useEffect(() => {
+    PageNumber * INITIAL_POSTS_COUNT > filteredPosts.length &&
+      onInfiniteScrollDisconnect();
+  }, [PageNumber]);
 
   return (
     <div id="contents">
@@ -43,4 +55,4 @@ function ContentsContainer({ selectedCategory, checkedTags, onCheckTagInPost }) 
   );
 }
 
-export default ContentsContainer;
+export default React.memo(ContentsContainer);
