@@ -24,14 +24,14 @@ const swiperjs = () =>
   });
 
 const index = ({ location }) => {
-  const InitialCategory = storage.getCategory() || "all";
-  const InitialTags = storage.getTags() || [];
-  const InitialShowTags = false;
+  const INITIAL_CATEGORY = storage.getCategory() || "all";
+  const INITIAL_TAGS = storage.getTags() || [];
+  const INITIAL_SHOW_TAGS = false;
 
   // selected category, checked tags
-  const [category, setCategory] = useState(InitialCategory);
-  const [tags, setTags] = useState(InitialTags);
-  const [showTags, setShowTags] = useState(InitialShowTags);
+  const [category, setCategory] = useState(INITIAL_CATEGORY);
+  const [tags, setTags] = useState(INITIAL_TAGS);
+  const [showTags, setShowTags] = useState(INITIAL_SHOW_TAGS);
 
   const swiper = useRef(null);
   const { title } = useSiteMetadata();
