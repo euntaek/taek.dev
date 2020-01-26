@@ -1,17 +1,36 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useEffect, useRef } from "react";
 import PostListItem from "./PostListItem";
 
 import usePosts from "../../hooks/usePosts";
+import useInfiniteScroll from "../../hooks/useInfiniteScroll";
 import filterPosts from "../../utils/filterPosts";
 
 function ContentsContainer({ selectedCategory, checkedTags, onCheckTagInPost }) {
+  // const [postsCount, setPostsCount] = useState(1);
   const posts = usePosts();
 
-  const filteredPosts = useMemo(() => filterPosts(posts, selectedCategory, checkedTags), [
-    posts,
-    selectedCategory,
-    checkedTags,
-  ]);
+  const onGetPosts = () => {
+    setPageNumber(prev => prev + 1);
+  };
+  const [
+    pageNumber,
+    setPageNumber,
+    setScroll,
+    onInfiniteScrollInit,
+    onInfiniteScrollUpdate,
+    onInfiniteScrollDisconnect,
+  ] = useInfiniteScroll(() => setPageNumber(prev => prev + 1));
+
+  console.log(pageNumber);
+
+  const filteredPosts = useMemo(
+    () => filterPosts(posts, selectedCategory, checkedTags, pageNumber),
+    [posts, selectedCategory, checkedTags, pageNumber],
+  );
+
+  useEffect(() => {
+    onInfiniteScrollInit(document.querySelector("#footer"));
+  });
 
   return (
     <div id="contents">
