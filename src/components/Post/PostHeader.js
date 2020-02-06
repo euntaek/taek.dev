@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 
-import dateFormatter from "../../utils/dateFormatter";
+import { dateForMatter } from "../../utils/dateForMatter";
 
 const style = css`
   margin-top: 3.5rem;
@@ -23,7 +23,7 @@ function PostHeader({ title, date }) {
     <header css={style}>
       <h1>{title}</h1>
       <time dateTime={date} className="post-date">
-        {dateFormatter(date)}
+        {dateForMatter(date)}
       </time>
     </header>
   );

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { Link } from "gatsby";
-import dateFormatter from "../../utils/dateFormatter";
+import { dateForMatter } from "../../utils/dateForMatter";
 
 const style = css`
   width: 100%;
@@ -61,7 +61,7 @@ function PostListItem({ post, onCheckTagInPost }) {
       <header>
         <div className="date-and-tag">
           <time dateTime={post.frontmatter.date} className="post-date">
-            {dateFormatter(post.frontmatter.date).toUpperCase()}
+            {dateForMatter(post.frontmatter.date).toUpperCase()}
           </time>
           <ul className="tag-group">
             {post.frontmatter.tags.map((tag, index) => (
