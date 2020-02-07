@@ -1,4 +1,4 @@
-import metaData from "../../gatsby-siteMetadata-config";
+import metaData from "../../gatsby-siteMetadata";
 import { sessionStorage } from "./window";
 
 const key = `_${metaData.siteUrl}_`;

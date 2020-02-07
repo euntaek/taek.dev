@@ -1,4 +1,4 @@
-const siteMetadata = require("./gatsby-siteMetadata-config");
+const siteMetadata = require("./gatsby-siteMetadata");
 
 module.exports = {
   siteMetadata,
