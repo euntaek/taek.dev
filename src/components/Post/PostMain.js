@@ -7,10 +7,10 @@ const style = css`
     content: "";
     margin: 5rem auto 3.5rem;
     display: block;
-    width: 80%;
+    width: 100%;
     border: none;
-    border-radius: 0.125rem;
-    height: 2px;
+    border-radius: 0.25rem;
+    height: 1px;
     background-color: black;
   }
 
@@ -62,6 +62,10 @@ const style = css`
     padding: 0;
     border: none;
     height: 1px;
+  }
+  .gatsby-resp-image-wrapper {
+    border-radius: 0.25rem;
+    overflow: hidden;
   }
 `;
 

@@ -23,7 +23,6 @@ pre[class*="language-"] {
   color: $light-code-color1;
   background: none;
   font-family: Roboto mono, monospace;
-  font-size: 0.925rem;
   font-weight: normal;
   text-align: left;
   white-space: pre;
@@ -69,9 +68,10 @@ code[class*="language-"] ::selection {
 pre[class*="language-"] {
   padding: 1.25rem;
   margin: 0.5rem 0;
+  font-size: 0.875rem;
   overflow: auto;
   border: 1px solid $light-text-box;
-  border-radius: 0.125rem;
+  border-radius: 0.25rem;
   background: $light-code-background;
 }
 

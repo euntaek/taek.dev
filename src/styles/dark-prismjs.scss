@@ -23,7 +23,6 @@ pre[class*="language-"] {
   color: $dark-code-color1;
   background: none;
   font-family: Roboto mono, monospace;
-  font-size: 0.925rem;
   font-weight: normal;
   text-align: left;
   white-space: pre;
@@ -69,16 +68,17 @@ code[class*="language-"] ::selection {
 pre[class*="language-"] {
   padding: 1.25rem;
   margin: 0.5rem 0;
+  font-size: 0.875rem;
   overflow: auto;
   border: 1px solid $dark-text-box;
-  border-radius: 0.125rem;
+  border-radius: 0.25rem;
   background: $dark-code-background;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
   padding: 0.1rem 0.5rem;
-  border-radius: 0.125rem;
+  border-radius: 0.25rem;
   white-space: normal;
   background: $dark-point-box;
   color: $dark-point-color;
