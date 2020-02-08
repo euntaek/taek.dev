@@ -78,7 +78,7 @@ function PostListItem({ post, onCheckTagInPost }) {
           <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
         </h3>
       </header>
-      <p className="post-spoiler">{post.excerpt}</p>
+      <p className="post-spoiler">{post.frontmatter.description}</p>
     </article>
   );
 }
