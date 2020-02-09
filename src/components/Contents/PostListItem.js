@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { Link } from "gatsby";
-import { dateFormat } from "../../utils/dateForMatter";
+import { dateFormat } from "../../utils/dateFormat";
 
 const style = css`
   width: 100%;
