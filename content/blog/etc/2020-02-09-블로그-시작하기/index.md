@@ -21,24 +21,32 @@ description: 생에 처음으로 블로그를 시작하였다. 블로그를 시�
 블로그 이름은 예전부터 친구들이 은택이보다는 택이로 많이 불러줘서 TAEKLOG로 지었습니다.<br> 
 TAEKLOG는 [Gatsby](https://www.gatsbyjs.org/)와 [Netlify](https://www.netlify.com/)로 만들었습니다.
 
-- ### 템플릿
+### 템플릿
 템플릿은 [gatsby starters](https://www.gatsbyjs.org/starters/?v=2)에서 제일 인기 많은 [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog)를 사용했습니다. 디렉토리 구조도 깔끔하고 gatsby 튜토리얼 진행 후 gatsby-config나 gatsby-node에 대해 더 자세히 파악할 수 있어서 좋았습니다.
 
-- ### 스타일
-![npm trends](images/npm-trends.png)
+### 스타일
+
+![emotion vs styled-components](images/npm-trends.png)
+
 CSS in JS인 [emotion](https://emotion.sh/docs/introduction)을 사용하였습니다. CSS in JS의 대표적 라이브러이인 [styled-components](https://styled-components.com/)를 사용하지 않고 emotion을 사용한 이유는 일단 velopert님의 [Storybook을 이용한 리액트 디자인 시스템 구축하기](https://velog.io/@velopert/series/storybook-typescript-design-system) 오프라인 강의 때 처음 사용해봤는데 편리했던 기억이 있었습니다. 그리고 emotion이 styled-componets 보다 파일 사이즈가 더 작고 [npm trends](https://www.npmtrends.com/@emotion/core-vs-styled-components)의 다운로드 수를 보면 styled-components를 넘어섰습니다. 하지만 아직 저의 미숙한 실력 덕분인지 dark mode 때문에 color를 따로 분리했는데 스파게티 코드가 되어버려 아쉬움이 남습니다.
  
-- ### 카테고리
+### 카테고리
+
 ![카테고리](./images/category.gif)
+
 메인 카테고리와 서브 카테고리를 만들었습니다. 서브 카테고리는 중복 설정이 가능하여 사실상 메인 카테고리의 태그라고 보시면 됩니다. 컴포넌트도 이름도 태그라고 지었고 [Swipter.js](https://swiperjs.com/)를 사용해서 만들었습니다. 깔끔하게 보이기 위해 기본적으로 메인 카테고리만 보이고 서브 카테고리는 버튼을 눌러야 보이는 드롭 다운 형태로 만들었습니다. 카테고리 설정 시 세션 스토리지에 저장하고 새로 고침 시 설정한 카테고리가 유지되게 만들었습니다.
  
-- ### 다크모드
+### 다크모드
+
 ![다크모드](./images/dark-mode.gif)
+
 다크 모드는 요즘 웹디자인 트렌드 중 하나라고 합니다. 저 또한 트렌드를 따라가고 싶어 다크 모드를 적용했습니다. 개인적으로 아이폰과 유튜브의 다크모드를 잘 사용하고 있어서 꼭 추가해보고 싶은 기능이었습니다. 
 테마 설정 시 로컬 스토리지에 변경 된 테마를 저장하고 후에 블로그에 들어오는 경우 로컬 스토리지에 있는 테마 값으로 테마를 설정합니다. 없을 경우 라이트를 디폴트 값으로 사용합니다.
  
-- ### 포스트 생성 cli
+### 포스트 생성 cli
+
 ![cli](./images/cli.gif)
+
 어차피 저만 사용하는 블로그이지만 조금이라도 생상성을 높이기 위해 포스트를 생성하는 cli를 만들었습니다. 처음 만들어봐서 그런지 재밌게 만들었습니다. 
 
 ## 후기
