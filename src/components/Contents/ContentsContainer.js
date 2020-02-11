@@ -47,14 +47,9 @@ function ContentsContainer({ selectedCategory, checkedTags, onCheckTagInPost }) 
   return (
     <div id="contents">
       <div style={{ width: "100%", minHeight: "60vh", marginTop: "1.5rem" }}>
-        {/* {filteredPosts.map(({ node }) => (
+        {filteredPosts.map(({ node }) => (
           <PostListItem key={node.id} post={node} onCheckTagInPost={onCheckTagInPost} />
-        ))} */}
-        <PostListItem
-          key={filteredPosts[1].node.id}
-          post={filteredPosts[1].node}
-          onCheckTagInPost={onCheckTagInPost}
-        />
+        ))}
       </div>
     </div>
   );
