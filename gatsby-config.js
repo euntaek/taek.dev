@@ -113,7 +113,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "TAEK LOG Blog RSS Feed",
+            title: "TAEKLOG Blog RSS Feed",
           },
         ],
       },

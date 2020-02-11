@@ -1,4 +1,4 @@
-# [TAEK LOG](https://taek.io)
+# [TAEKLOG](https://taek.io)
 
 저의 개인 블로그입니다.
 
