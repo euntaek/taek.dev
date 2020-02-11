@@ -64,7 +64,7 @@ const style = css`
     height: 1px;
   }
   img {
-    margin: 0 0 1.75rem 0;
+    max-width: 100%;
   }
   .gatsby-resp-image-figure {
     margin: 0 0 1.75rem 0;
