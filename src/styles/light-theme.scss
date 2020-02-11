@@ -153,6 +153,9 @@ body.light {
       &:after {
         background-color: scale-color($color: $light-text-color1, $alpha: -70%);
       }
+      .gatsby-resp-image-figcaption {
+        color: $light-text-inactive;
+      }
     }
     .post-nav {
       a {

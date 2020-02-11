@@ -63,6 +63,16 @@ const style = css`
     border: none;
     height: 1px;
   }
+  img {
+    margin: 0 0 1.75rem 0;
+  }
+  .gatsby-resp-image-figure {
+    margin: 0 0 1.75rem 0;
+  }
+  .gatsby-resp-image-figcaption {
+    text-align: center;
+    font-size: 0.875rem;
+  }
   .gatsby-resp-image-wrapper {
     border-radius: 0.25rem;
     overflow: hidden;
