@@ -24,9 +24,12 @@ async function getTags(categories) {
   for (const category of categories) {
     const temp = [];
     const categoryPath = postsPath + path.sep + category;
+
     (await readdir(categoryPath)).forEach(mdDir => {
-      const mdPath = categoryPath + path.sep + mdDir + path.sep + "index.md";
-      temp.push(...matter.read(mdPath).data.tags);
+      if (mdDir[0] !== ".") {
+        const mdPath = categoryPath + path.sep + mdDir + path.sep + "index.md";
+        temp.push(...matter.read(mdPath).data.tags);
+      }
     });
     tags.set(category, [...new Set([...temp])]);
   }
