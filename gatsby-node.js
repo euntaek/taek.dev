@@ -1,6 +1,9 @@
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 
+const re = /(\d{4}-\d{2}-\d{2})-/;
+const filterDateFromPath = path => path.replace(re, "");
+
 const getPostNav = navData => {
   return navData ? { title: navData.frontmatter.title, slug: navData.fields.slug } : null;
 };
@@ -72,7 +75,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   posts.forEach(({ node, next, previous }) => {
     createPage({
-      path: node.fields.slug,
+      path: filterDateFromPath(node.fields.slug),
       component: path.resolve(`./src/templates/blog-post.js`),
       context: {
         title: node.frontmatter.title,

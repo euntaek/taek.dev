@@ -2,6 +2,8 @@
 import { jsx, css } from "@emotion/core";
 import { Link } from "gatsby";
 
+import { filterDateFromPath } from "../../utils/date";
+
 const style = css`
   margin: 2rem -1.25rem;
   ul {
@@ -54,7 +56,7 @@ function PostNav({ previous, next }) {
       <ul>
         <li css={navigator("prev")}>
           {previous && (
-            <Link to={previous.slug} rel="prev">
+            <Link to={filterDateFromPath(previous.slug)} rel="prev">
               <span>이전</span>
               {previous.title}
             </Link>
@@ -62,7 +64,7 @@ function PostNav({ previous, next }) {
         </li>
         <li css={navigator("next")}>
           {next && (
-            <Link to={next.slug} rel="next">
+            <Link to={filterDateFromPath(next.slug)} rel="next">
               <span>다음</span>
               {next.title}
             </Link>

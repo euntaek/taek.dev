@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { Link } from "gatsby";
-import { dateFormat } from "../../utils/dateFormat";
+import { dateFormat, filterDateFromPath } from "../../utils/date";
 
 const style = css`
   width: 100%;
@@ -75,7 +75,7 @@ function PostListItem({ post, onCheckTagInPost }) {
           </ul>
         </div>
         <h3 className="post-title">
-          <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+          <Link to={filterDateFromPath(post.fields.slug)}>{post.frontmatter.title}</Link>
         </h3>
       </header>
       <p className="post-spoiler">{post.frontmatter.description}</p>
