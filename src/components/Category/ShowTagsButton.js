@@ -6,7 +6,7 @@ const style = showTags => css`
   position: relative;
   width: 1.75rem;
   height: 1.75rem;
-  border-radius: 0.25rem;
+  border-radius: 0.125rem;
   border: none;
   outline: none;
   cursor: pointer;

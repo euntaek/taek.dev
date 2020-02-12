@@ -9,7 +9,7 @@ const style = css`
     display: block;
     width: 100%;
     border: none;
-    border-radius: 0.25rem;
+    border-radius: 0.125rem;
     height: 1px;
     background-color: black;
   }
@@ -74,7 +74,7 @@ const style = css`
     font-size: 0.875rem;
   }
   .gatsby-resp-image-wrapper {
-    border-radius: 0.25rem;
+    border-radius: 0.125rem;
     overflow: hidden;
   }
 `;
