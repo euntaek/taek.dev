@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 
-import { dateFormat } from "../../utils/dateFormat";
+import { dateFormat } from "../../utils/date";
 
 const style = css`
   margin-top: 3.5rem;
