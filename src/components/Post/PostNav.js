@@ -24,11 +24,26 @@ const navigator = navName => css`
   a {
     display: block;
     padding: 1rem 1.25rem;
-    border-radius: 0.25rem;
+    border-radius: 0.125rem;
+    position: relative;
     &:hover,
     &:link,
     &:visited {
       text-decoration: none;
+    }
+    &:after {
+      content: "";
+      width: 0%;
+      height: 100%;
+      top: 0;
+      position: absolute;
+      left: ${navName === "prev" ? "100%" : "0"};
+      transition: all 200ms ease-in;
+    }
+    &:hover:after {
+      left: 0;
+      width: 100%;
+      z-index: -1;
     }
   }
 `;

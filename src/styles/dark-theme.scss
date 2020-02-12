@@ -160,8 +160,8 @@ body.dark {
     .post-nav {
       a {
         color: $dark-text-color1;
-        &:hover {
-          background-color: $dark-text-box;
+        &:hover:after {
+          background: $dark-text-box;
         }
       }
     }

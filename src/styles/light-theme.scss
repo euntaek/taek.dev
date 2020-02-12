@@ -160,8 +160,8 @@ body.light {
     .post-nav {
       a {
         color: $light-text-color1;
-        &:hover {
-          background-color: $light-text-box;
+        &:hover:after {
+          background: $light-text-box;
         }
       }
     }
