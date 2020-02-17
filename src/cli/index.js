@@ -36,6 +36,26 @@ async function getTags(categories) {
 
   return tags;
 }
+async function setDirName(date) {
+  const reg = /^[a-zA-Z0-9]*$/;
+  let { name } = await inquirer.prompt({
+    name: "name",
+    message: "게시물 폴더 이름을 입력해주세요. (영어 또는 숫자만 가능)",
+    validate: value => {
+      return new Promise(res => {
+        if (value.length <= 0) {
+          return res("한글자 이상 입력해주세요.");
+        }
+        if (!reg.test(value)) {
+          return res("폴더 이름은 영문 또는 숫자만 가능합니다.");
+        }
+        return res(true);
+      });
+    },
+  });
+  const dirName = `${date} ${name}`.replace(/ /gi, "-");
+  return dirName;
+}
 async function setTitle() {
   let { title } = await inquirer.prompt({
     name: "title",
@@ -44,6 +64,9 @@ async function setTitle() {
       return new Promise(res => {
         if (value.length <= 0) {
           return res("한글자 이상 입력해주세요.");
+        }
+        if (!(value[0] === '"' && value[value.length - 1] === '"')) {
+          return res('제목을 큰 따옴표로 제목을 감싸주세요. ex) "제목"');
         }
         return res(true);
       });
@@ -172,8 +195,7 @@ function createMatters(matters) {
     .split("'")
     .join("");
 }
-async function createPost(category, title, date, matters) {
-  const dirName = `${date} ${title}`.replace(/ /gi, "-");
+async function createPost(category, dirName, matters) {
   const dirPath = postsPath + path.sep + category + path.sep + dirName;
   const postPath = dirPath + path.sep + "index.md";
   const test = await exist(dirPath);
@@ -193,6 +215,7 @@ async function createPost(category, title, date, matters) {
 }
 async function startCli(categories, tagList) {
   const date = format(new Date(), dateFormat);
+  const dirName = await setDirName(date);
   const title = await setTitle();
   const category = await setCategory(categories);
   const tags = await setTags(tagList, category);
@@ -201,7 +224,9 @@ async function startCli(categories, tagList) {
   const confirmed = await confirm(matters);
 
   if (confirmed) {
-    await createPost(category, title, date, matters);
+    await createPost(category, dirName, matters);
+  } else {
+    console.log("포스트 생성을 취소하셨습니다.");
   }
 }
 
