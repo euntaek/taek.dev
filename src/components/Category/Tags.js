@@ -41,8 +41,8 @@ const style = showTags => {
 function Tags({ selectedCategory, checkedTags, onCheckTag, showTags }) {
   const tags = useTags(selectedCategory);
 
-  const checkedTagsData = tags.filter(tag => {
-    return checkedTags.includes(tag.fieldValue);
+  const checkedTagsData = checkedTags.map(checkedTag => {
+    return tags.find(tag => tag.fieldValue === checkedTag);
   });
 
   const filteredTags = Array.from(new Set([...checkedTagsData, ...tags]));
