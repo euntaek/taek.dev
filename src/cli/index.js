@@ -37,7 +37,7 @@ async function getTags(categories) {
   return tags;
 }
 async function setDirName(date) {
-  const reg = /^[a-zA-Z0-9]*$/;
+  const reg = /^[a-zA-Z0-9\s]*$/;
   let { name } = await inquirer.prompt({
     name: "name",
     message: "게시물 폴더 이름을 입력해주세요. (영어 또는 숫자만 가능)",
