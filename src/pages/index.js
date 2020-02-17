@@ -59,9 +59,11 @@ const index = ({ location }) => {
     },
     [category],
   );
-
+  console.log(tags);
   const onCheckTag = useCallback(tag => {
+    console.log(1, tag);
     setTags(prevTags => {
+      console.log(2, prevTags);
       return prevTags.includes(tag)
         ? prevTags.filter(prevTag => prevTag !== tag)
         : prevTags.concat(tag);

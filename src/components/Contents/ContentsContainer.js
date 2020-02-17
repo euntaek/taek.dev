@@ -23,12 +23,12 @@ function ContentsContainer({ selectedCategory, checkedTags, onCheckTagInPost }) 
     [posts, selectedCategory, checkedTags, PageNumber],
   );
 
-  console.log(
-    PageNumber,
-    PageNumber * INITIAL_POSTS_COUNT,
-    filteredPosts.length,
-    PageNumber * INITIAL_POSTS_COUNT > filteredPosts.length,
-  );
+  // console.log(
+  //   PageNumber,
+  //   PageNumber * INITIAL_POSTS_COUNT,
+  //   filteredPosts.length,
+  //   PageNumber * INITIAL_POSTS_COUNT > filteredPosts.length,
+  // );
 
   useEffect(() => {
     onInfiniteScrollInit(document.querySelector("#footer"));

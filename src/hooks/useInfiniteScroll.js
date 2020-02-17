@@ -19,7 +19,7 @@ function useInfiniteScroll(callbackFn, option) {
 
   useEffect(() => {
     if (!target) return;
-    console.log(`init`);
+    // console.log(`init`);
     io.current = new IntersectionObserver(checkCallback, { ...baseOption, ...option });
     io.current.observe(target);
     return () => io.current && io.current.disconnect();
@@ -29,11 +29,11 @@ function useInfiniteScroll(callbackFn, option) {
     setTarget(target);
   };
   const onInfiniteScrollUpdate = () => {
-    console.log("update");
+    // console.log("update");
     return io.current && io.current.observe(target);
   };
   const onInfiniteScrollDisconnect = () => {
-    console.log("disconnect");
+    // console.log("disconnect");
     return io.current && io.current.disconnect();
   };
   return [onInfiniteScrollInit, onInfiniteScrollUpdate, onInfiniteScrollDisconnect];
