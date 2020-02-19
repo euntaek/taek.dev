@@ -40,7 +40,7 @@ const navigator = navName => css`
       top: 0;
       position: absolute;
       left: ${navName === "prev" ? "100%" : "0"};
-      transition: all 200ms ease-in;
+      transition: all 250ms ease-in-out;
     }
     &:hover:after {
       left: 0;

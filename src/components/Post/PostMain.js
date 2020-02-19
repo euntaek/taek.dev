@@ -7,7 +7,7 @@ const style = css`
     content: "";
     margin: 5rem auto 3.5rem;
     display: block;
-    width: 100%;
+    width: 85%;
     border: none;
     border-radius: 0.125rem;
     height: 1px;
@@ -58,7 +58,8 @@ const style = css`
     margin-bottom: 0;
   }
   hr {
-    margin: 0 0 1.75rem;
+    margin: 0 auto 1.75rem;
+    width: 85%;
     padding: 0;
     border: none;
     height: 1px;

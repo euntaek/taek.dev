@@ -148,10 +148,10 @@ body.dark {
         }
       }
       hr {
-        background-color: scale-color($color: $dark-text-color1, $alpha: -70%);
+        background-color: scale-color($color: $dark-text-color1, $alpha: -80%);
       }
       &:after {
-        background-color: scale-color($color: $dark-text-color1, $alpha: -70%);
+        background-color: scale-color($color: $dark-text-color1, $alpha: -80%);
       }
       .gatsby-resp-image-figcaption {
         color: $dark-text-inactive;
