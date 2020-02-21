@@ -49,6 +49,9 @@ class Queue {
   dequeue() {
     return this.array.shift();
   }
+  size() {
+    return this.array.length;
+  }
 }
 
 const queue = new Queue();
@@ -130,6 +133,7 @@ class PriorityQueue {
   isEmpty() {...}
   peek() {...}
   dequeue() {...}
+  size() {...}
   
   enqueue(priority, value) {
     let i = 0;
