@@ -169,3 +169,4 @@ console.log(pq.getBuffer()); // log: [[0,'e'], [1,'c'], [2,'d'], [3,'a'], [4,'b'
 
 - [패스트캠퍼스 알고리즘 온라인강의 큐](https://www.fastcampus.co.kr/dev_online_algo/)
 - https://www.tutorialspoint.com/data_structures_algorithms/dsa_queue.htm
+- https://www.tutorialspoint.com/data_structures_algorithms/priority_queue.htm
