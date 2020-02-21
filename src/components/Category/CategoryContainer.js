@@ -1,7 +1,6 @@
 import React from "react";
 
 import Categories from "./Categories";
-import ShowTagsButton from "./ShowTagsButton";
 import Tags from "./Tags";
 
 function CategoryContainer({
@@ -17,8 +16,9 @@ function CategoryContainer({
       <Categories
         selectedCategory={selectedCategory}
         onSelectCategory={onSelectCategory}
+        showTags={showTags}
+        onShowTags={onShowTags}
       />
-      <ShowTagsButton showTags={showTags} onShowTags={onShowTags} />
       <Tags
         selectedCategory={selectedCategory}
         checkedTags={checkedTags}

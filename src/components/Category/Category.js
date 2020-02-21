@@ -2,7 +2,7 @@
 import { jsx, css } from "@emotion/core";
 
 const style = css`
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0.875rem;
   border: none;
   border-radius: 0.125rem;
   outline: none;
@@ -10,6 +10,10 @@ const style = css`
   transition: color 100ms ease-in-out;
   font-size: 1.125rem;
   font-weight: 500;
+
+  & + & {
+    margin-right: 0.5rem;
+  }
 `;
 
 function Category({ categoryName, selected, onSelectCategory }) {

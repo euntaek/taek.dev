@@ -3,15 +3,13 @@ import { css } from "@emotion/core";
 
 import useCategories from "../../hooks/useCateroies";
 import Category from "./Category";
+import ShowTagsButton from "./ShowTagsButton";
 
 const style = css`
   display: inline;
-  button {
-    margin-right: 0.5rem;
-  }
 `;
 
-function Categories({ selectedCategory, onSelectCategory }) {
+function Categories({ selectedCategory, onSelectCategory, showTags, onShowTags }) {
   const categories = useCategories();
 
   return (
@@ -29,6 +27,7 @@ function Categories({ selectedCategory, onSelectCategory }) {
           key={category.fieldValue}
         />
       ))}
+      <ShowTagsButton showTags={showTags} onShowTags={onShowTags} />
     </div>
   );
 }
