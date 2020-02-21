@@ -4,7 +4,7 @@ import ShowTags from "../../images/show-tags.svg";
 
 const style = showTags => css`
   position: relative;
-  margin: 0.5rem 0.875rem 0;
+  margin: 0.5rem 0 0 0.875rem;
   width: auto;
   height: auto;
   border-radius: 0.125rem;
