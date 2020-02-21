@@ -3,8 +3,8 @@ title: "[자료구조] 큐"
 date: 2020-02-19
 category: development
 tags:
-  - javascript
-  - data structures
+  - 자바스크립트
+  - 자료구조
 description: 자료구조의 큐에 대해 공부한 내용을 정리하고 나는 자바스크립트로 어떻게 큐를 구현했는지 공유해본다.
 ---
 

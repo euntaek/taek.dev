@@ -3,7 +3,7 @@ title: "[자료구조] 스택"
 date: 2020-02-18
 category: development
 tags:
-  - javascript
+  - 자바스크립트
   - 자료구조
 description: 자료구조 스택에 대해 공부한 내용을 정리하고 자바스크립트로 어떻게 스택을 구현했는지 공유해본다.
 ---

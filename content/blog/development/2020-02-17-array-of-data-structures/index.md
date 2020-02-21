@@ -3,7 +3,7 @@ title: "[자료구조] 배열"
 date: 2020-02-17
 category: development
 tags:
-  - javascript
+  - 자바스크립트
   - 자료구조
 description: 자료구조 배열에 대해 공부했다. 자료구조의 배열을 바탕으로 자바스크립트의 배열은 어떠한 특징이 있는지에 대해 공부 및 정리한 내용을 공유해본다.
 ---
