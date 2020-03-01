@@ -56,7 +56,7 @@ module.exports = {
         short_name: siteMetadata.title,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#212121`,
+        theme_color: `#fff`,
         display: `minimal-ui`,
         icon: siteMetadata.icon,
       },
