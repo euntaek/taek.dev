@@ -30,6 +30,7 @@ const style = css`
   ol {
     padding: 0;
     margin-bottom: 1.75rem;
+    overflow-wrap: break-word;
     @media only screen and (max-width: 420px) {
       margin-left: 1.25rem;
     }
