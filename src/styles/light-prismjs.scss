@@ -41,6 +41,7 @@ pre[class*="language-"] {
   hyphens: none;
 }
 
+/* selection 제거
 pre[class*="language-"]::-moz-selection,
 pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection,
@@ -55,7 +56,7 @@ code[class*="language-"]::selection,
 code[class*="language-"] ::selection {
   text-shadow: none;
   background: none;
-}
+} */
 
 @media print {
   code[class*="language-"],
