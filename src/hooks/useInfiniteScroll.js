@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import "intersection-observer";
 
 function useInfiniteScroll(callbackFn, option) {
   const [target, setTarget] = useState(null);
