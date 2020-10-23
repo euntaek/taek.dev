@@ -7,12 +7,12 @@ module.exports = {
   icon: `content/assets/taek-icon.png`,
   keywords: [`blog`, `development`, `frontend`],
   social: {
-    github: `https://github.com/EuntaekKim`,
+    github: `https://github.com/euntaek`,
     facebook: `https://www.facebook.com/profile.php?id=100002769998965`,
     linkedIn: ``,
     insta: `https://www.instagram.com/zmn5113/?hl=ko`,
     twitter: ``,
   },
-  utterances: `EuntaekKim/taek.io`,
+  utterances: `euntaek/taek.io`,
   ga: `UA-157953694-1`,
 };
