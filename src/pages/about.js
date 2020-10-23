@@ -2,12 +2,14 @@ import React from "react";
 
 import Layout from "../components/Layout";
 
-import Bio from "../components/Bio";
-import Category from "../components/Category";
-import Contents from "../components/Contents";
-
 const index = () => {
-  return <Layout>about</Layout>;
+  return (
+    <Layout>
+      <div id="about">
+        <h2>준비 중입니다!!</h2>
+      </div>
+    </Layout>
+  );
 };
 
 export default index;
