@@ -5,25 +5,25 @@ category: development
 tags:
   - 자바스크립트
   - 자료구조
-description: 자료구조의 큐에 대해 공부한 내용을 정리하고 나는 자바스크립트로 어떻게 큐를 구현했는지 공유해본다.
+description: 자료구조의 큐(queue)에 대해 알아보고 자바스크립트(Javascript)로 구현해보자.
 ---
 
 > 이 포스트는 제가 개인적으로 공부한 내용을 정리한 글입니다. 잘못된 내용이나 부족한 부분 등 자유로운 피드백은 저에게 큰 도움이 됩니다!
 
-## 큐(Queue)란?
+## 큐(Queue)
 
 **큐는 양쪽 끝이 열려 있어 한쪽에는 항상 자료를 삽입하는 데 사용되고 한쪽은 항상 자료를 제거하는데 사용되는 선입선출(FIFO, first in first out) 형태로 데이터 접근을 제한한 자료구조이다.** 예를 들면 티켓팅을 위해 줄을 선 것을 생각하면 된다. 줄을 제일 먼저 선 사람이 티켓을 제일 빨리 구매할 수 있듯이 자료구조의 큐도 이처럼 가장 먼저 들어간 것이 가장 먼저 나오고 가장 마지막에 들어간 것이 가장 마지막에 나온다.
 
 이러한 큐의 개념은 자바스크립트의 태스크 큐, OS CPU의 연산 처리 시 작업대기, 프린터 문서 대기 목록, 동영상의 버퍼링 등 많은 곳에서 활용된다.
 
-## 자바스크립트로 큐 구현하기
+## 구현
 
 자바스크립트 배열에는 유용한 메서드들이 많기 때문에 큐를 구현하기가 쉽다.
 
 ### 큐 ADT
 
 - `isFull()` 큐가 가득 찼는지를 확인한다.
-- `isEmpry()` 큐가 비어 있는지를 확인한다.
+- `isEmpry()` 큐가 비였는지를 확인한다.
 - `enqueue(x)` x를 큐 맨 뒤에 삽입(저장)한다.
 - `dequeue()` 큐 맨 앞에서 하나의 요소를 제거하고 반환한다.
 - `peek()` 큐의 맨 앞에서 하나의 요소를 반환한다.
@@ -172,6 +172,5 @@ console.log(pq.getBuffer()); // log: [[0,'e'], [1,'c'], [2,'d'], [3,'a'], [4,'b'
 
 ### 참고
 
-- [패스트캠퍼스 알고리즘 온라인강의 큐](https://www.fastcampus.co.kr/dev_online_algo/)
 - https://www.tutorialspoint.com/data_structures_algorithms/dsa_queue.htm
 - https://www.tutorialspoint.com/data_structures_algorithms/priority_queue.htm
