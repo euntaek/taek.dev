@@ -20,7 +20,7 @@ const style = css`
 function ThemeSwitch({ initialTheme }) {
   const [theme, setTheme] = useState(initialTheme);
 
-  const onClick = theme => {
+  const onClick = (theme) => {
     const newTheme = theme === "light" ? "dark" : "light";
     window.__onChangeTheme(newTheme);
     setTheme(newTheme);
@@ -32,8 +32,8 @@ function ThemeSwitch({ initialTheme }) {
       className="theme-switch align-center"
       aria-label="Dark/Ligth Mode Switch"
     >
-      <LightThemeIcon animate={theme === "light"} />
-      <DarkThemeIcon animate={theme === "dark"} />
+      <LightThemeIcon animate={theme === "dark"} />
+      <DarkThemeIcon animate={theme === "light"} />
     </button>
   );
 }
