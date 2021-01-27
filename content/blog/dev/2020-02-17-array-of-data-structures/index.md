@@ -3,7 +3,6 @@ title: "자료구조 | 배열"
 date: 2020-02-17
 category: dev
 tags:
-  - 자바스크립트
   - 자료구조
 description: 자료구조 배열(Array)에 대해 알아보고 자바스크립트(Javascript)로 구현해보자.
 ---

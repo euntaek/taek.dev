@@ -3,7 +3,6 @@ title: "자료구조 | 연결 리스트"
 date: 2020-10-23
 category: dev
 tags:
-  - 자바스크립트
   - 자료구조
 description: 자료구조의 연결 리스트(Linked list)에 대해 알아보고 자바스크립트(Javascript)로 구현해보자.
 ---
