@@ -1,7 +1,7 @@
 ---
-title: "[자료구조] 연결 리스트"
+title: "자료구조 | 연결 리스트"
 date: 2020-10-23
-category: development
+category: dev
 tags:
   - 자바스크립트
   - 자료구조
@@ -150,12 +150,12 @@ for (let i = 1; i < 11; i++) {
 }
 
 // 맨 앞 노드 추가
-linkedList.prepend(0);    // log: 0, 1, 2, ... 10
-linkedList.pop();         // log: 10
-linkedList.remove(5);     // log: 5
-linkedList.getHead();     // log: Node { data: 0, next: [Node] }
-linkedList.getTail();     // log: Node { data: 9, next: null }
-linkedList.print();       // log: 0, 2, 3, 4, 6 ...9 
+linkedList.prepend(0); // log: 0, 1, 2, ... 10
+linkedList.pop(); // log: 10
+linkedList.remove(5); // log: 5
+linkedList.getHead(); // log: Node { data: 0, next: [Node] }
+linkedList.getTail(); // log: Node { data: 9, next: null }
+linkedList.print(); // log: 0, 2, 3, 4, 6 ...9
 ```
 
 ## 마치며

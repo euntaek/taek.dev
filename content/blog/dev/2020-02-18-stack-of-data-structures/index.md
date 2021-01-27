@@ -1,7 +1,7 @@
 ---
-title: "[자료구조] 스택"
+title: "자료구조 | 스택"
 date: 2020-02-18
-category: development
+category: dev
 tags:
   - 자바스크립트
   - 자료구조
@@ -59,15 +59,15 @@ class Stack {
 
 const stack = new Stack();
 
-console.log(stack.isEmpty());   // log: true
+console.log(stack.isEmpty()); // log: true
 
 stack.push(1);
 stack.push(2);
 
 console.log(stack.getBuffer()); // log: [1,2]
-console.log(stack.peek());      // log: 2
-console.log(stack.pop());       // log: 2
-console.log(stack.size());      // log: 1
+console.log(stack.peek()); // log: 2
+console.log(stack.pop()); // log: 2
+console.log(stack.size()); // log: 1
 ```
 
 ### 스택 특정 항목에 접근 및 검색하기

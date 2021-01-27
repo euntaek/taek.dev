@@ -1,7 +1,7 @@
 ---
-title: "[자료구조] 배열"
+title: "자료구조 | 배열"
 date: 2020-02-17
-category: development
+category: dev
 tags:
   - 자바스크립트
   - 자료구조
