@@ -1,5 +1,9 @@
 # [TAEKLOG](https://taek.io)
 
-저의 개인 블로그입니다.
+개인 블로그입니다.
 
-이 블로그는 [Gatsby](https://gatsbyjs.org)와 [Netlify](https://www.netlify.com/)로 만들었습니다.
+## 스택
+
+![gatsby](https://img.shields.io/badge/-Gatsby-663399?&logo=Gatsby&logoColor=white)
+![netlify](https://img.shields.io/badge/-Netlify-00C7B7?&logo=Netlify&logoColor=white)
+![emotion](https://img.shields.io/badge/-Emotion-%23C43BAD)
