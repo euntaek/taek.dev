@@ -118,14 +118,3 @@ function stackSearch(stack, element) {
 console.log(stackSearch(stack2, "b")); // log: true
 console.log(stackSearch(stack2, "d")); // log: false
 ```
-
-## 마치며
-
-저번 배열에 이어 스택을 공부했다. 스택이 무엇인지는 알고 있었는데 실제로 구현한 것은 이번이 처음이다. 자바스크립트 배열은 정말 편리한 것 같다. 사실 스택 클래스를 따로 구현 안 해도 배열 자체로 스택처럼 활용할 수 있지만, 스택을 직접 구현해봄으로써 자료구조의 ADT라는 개념이 있다는 것을 알게 되었고 스택 ADT에 대해 알게 되었다.
-
----
-
-### 참고
-
-- [나무위키 추상 자료형(ADT)](https://ko.wikipedia.org/wiki/%EC%B6%94%EC%83%81_%EC%9E%90%EB%A3%8C%ED%98%95)
-- https://www.tutorialspoint.com/stack-adt-in-data-structures

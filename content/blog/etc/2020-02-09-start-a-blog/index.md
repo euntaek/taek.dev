@@ -11,23 +11,25 @@ description: 생에 처음으로 블로그를 시작하였습니다. 블로그�
 
 ## 블로그를 시작하게 된 이유
 
-따로 거창한 이유는 없고 프로그래밍 공부를 하면서 접하는 여러 기술 블로그들을 보며 저도 후에 블로그를 한번 해보자는 목표가 생겼습니다. 그렇게 기약 없는 목표만 가지고 있다가 [개발자가 블로그를 운영해야 할 이유](https://taegon.kim/archives/7107)라는 포스트를 읽고 바로 시작하게 되었습니다. 저는 제가 이해하고 있다고 생각하는 것을 남들한테 설명을 한다면 아직은 쉽게 말이 나오지는 않습니다. 이 말은 곧 제가 이해했다고 생각은 하지만 실제로는 잘 이해하지 못하고 있다는 것의 반증이라고 생각합니다. 따라서 블로그는 자신의 생각이나 정보를 글로 정리 및 공유하는 곳이니 저의 부족한 부분을 채워줄 뿐만 아니라 큰 도움이 될 것이라고 생각합니다.
+따로 거창한 이유는 없고 프로그래밍 공부를 하면서 접하는 여러 기술 블로그들을 보며 저도 후에 블로그를 한번 해보자는 목표가 생겼습니다. 그렇게 기약 없는 목표만 가지고 있다가 [개발자가 블로그를 운영해야 할 이유](https://taegon.kim/archives/7107)라는 포스트를 읽고 바로 시작하게 되었습니다. 블로그는 자신의 생각이나 정보를 글로 정리 및 공유하는 곳이니 저의 부족한 부분을 채워줄 뿐만 아니라 큰 도움이 될 것이라고 생각합니다.
 
 ## 블로그를 만들게 된 이유
-처음에는 좋은 블로그 플랫폼들이 많아 블로그 플랫폼을 이용하려고 했습니다. 근데 저는 지금까지 개발자를 목표로 공부를 해오면서 실습 예제를 따라 만들어 본 적은 있지만 그 외 아직은 제가 직접 무엇인가를 만들어 본 적이 없었습니다. 안 그래도 슬슬 취업 준비를 위해 포트폴리오 용 프로젝트를 시작해보려고 하는 참에 첫 프로젝트로 블로그를 만들어 보기로 했습니다. 그리고 요즘 정적 웹사이트 생성기인 [Gatsby](https://www.gatsbyjs.org/)가 굉장히 인기가 많은데 많은 개발자분들이 Gatsby로 블로그를 만드는 것을 보고 저도 따라서 한번 만들어 보고 싶었습니다.
+처음에는 좋은 블로그 플랫폼들이 많아 플랫폼을 이용하려고 했었는데 지금까지 공부하면서 예제들만 따라 만들어 봤지 혼자 무엇을 만들어 본 적이 없어 이번에 블로그를 한번 만들어보자 마음먹어 만들게 되었습니다.
+
 
 ## TAEKLOG
 TAEKLOG는 [Gatsby](https://www.gatsbyjs.org/)와 [Netlify](https://www.netlify.com/)로 만들었습니다.<br>
-블로그 이름은 저의 이름 맨 끝 글자를 따서 **TAEKLOG**로 지었습니다.
+블로그 이름은 저의 이름 맨 끝 자를 따서 **TAEKLOG**로 지었습니다.
 
 ### 템플릿
-템플릿은 [Gatsby starters](https://www.gatsbyjs.org/starters/?v=2)에서 제일 인기 많은 [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog)를 사용했습니다. 디렉토리 구조나 gatsby-config와 gatsby-node 등 gatsby에 대해 더 자세히 배우고 파악할 수 있어서 좋았습니다.
+템플릿은 [Gatsby starters](https://www.gatsbyjs.org/starters/?v=2)에서 제일 인기 많은 [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog)를 사용했습니다.
 
 ### 스타일
 
 ![npm trends](images/npm-trends.png)
 
-CSS in JS인 [emotion](https://emotion.sh/docs/introduction)을 사용했습니다. emotion은 [styled-components](https://styled-components.com/)보다 파일 사이즈가 더 작고 [다운로드 수](https://www.npmtrends.com/@emotion/core-vs-styled-components)도 styled-components보다 높으며 서버사이드 렌더링 시 따로 작업을 안 해도 된다고 합니다. 저는 [velopert님](https://velopert.com/)의 스토리북 오프라인 강의 때 한번 사용해 본 경험이 있는데 따로 스타일 컴포넌트틀 만들지 않고  바로 [css-props](https://emotion.sh/docs/css-prop)로 스타일 설정하는 것이 편리하여 사용했습니다.
+CSS in JS인 [emotion](https://emotion.sh/docs/introduction)을 사용했습니다. emotion은 [styled-components](https://styled-components.com/)보다 파일 사이즈가 더 작고 [다운로드 수](https://www.npmtrends.com/@emotion/core-vs-styled-components)도 styled-components보다 높습니다.
+emotion을 사용하게 된 이유는 [velopert님](https://velopert.com/)의 스토리북 오프라인 강의 때 한번 사용해 본 경험이 있고 또 따로 스타일 컴포넌트틀 만들지 않고  바로 [css-props](https://emotion.sh/docs/css-prop)로 스타일 설정하는 것이 편리하여 사용하게 되었습니다.
  
 ### 카테고리
 
@@ -38,14 +40,14 @@ CSS in JS인 [emotion](https://emotion.sh/docs/introduction)을 사용했습니�
 
 ![다크 테마](./images/dark-mode.gif)
 
-다크 테마는 요즘 웹디자인 트렌드 중 하나라고 합니다. 저 또한 트렌드를 따라가고 싶어 다크 테마를 적용했습니다. 개인적으로 아이폰과 유튜브의 다크 모드를 잘 사용하고 있어서 꼭 만들어 보고 싶은 기능이었습니다. 
+다크 테마는 요즘 웹디자인 트렌드 중 하나라고 합니다. 저 또한 트렌드에 뒤쳐지고 싶지 않아 다크 테마를 적용했습니다. 개인적으로 아이폰과 유튜브의 다크 모드를 잘 사용하고 있어서 꼭 만들어 보고 싶은 기능이었습니다. 
 테마 설정 시 로컬 스토리지에 변경된 테마를 저장하고 새로 고침 및 후에 블로그에 들어올 시 로컬 스토리지에 있는 테마 값으로 테마를 설정합니다. 디폴트 값으로 라이트 테마를 사용합니다.
  
 ### 포스트 생성 cli
 
 ![cli](./images/cli.gif)
 
-저만 사용하는 블로그이겠지만 조금이라도 생상성을 높이기 위해 포스트를 생성하는 cli를 만들어 봤습니다. 처음으로 cli를 만들어 봤는데 생각보다 재밌게 만들었습니다. 결과물은 어설프지만 직접 게시물 파일의 데이터를 작성하는 것보다 훨씬 편해서 마음에 듭니다.
+저만 사용하는 블로그지만 조금이라도 생상성을 높이기 위해 포스트를 생성하는 cli를 만들어 봤습니다. 처음으로 cli를 만들어 봤는데 생각보다 재밌게 만들었습니다. 결과물은 어설프지만 생각보다 편해서 마음에 듭니다.
 
 ## 후기
-직접 무엇인가를 만들어 본 적 없는 제가 이렇게 무엇을 하나 만들어 봤다는 거에 대해 큰 성취감을 얻었습니다. 그리고 제가 너무 부족하다는 걸 한 번 더 깨닫게 되는 계기가 되었습니다. 처음에는 저도 열심히 만들어서 [Gatsby Starters](https://www.gatsbyjs.org/starters/?v=2)에 한번 올려보자는 마음으로 했는데 만들면서 아직 너무 부족하다고 느끼기에 잠시 접어두기로 했습니다. 이번 블로그를 만들면서 많은 개발자님들의 코드를 참고하였는데 너무나도 큰 배움이 되었습니다. 특히 [한재엽님](https://jbee.io/)의 [gatsby-starter-bee](https://github.com/JaeYeopHan/gatsby-starter-bee)는 블로그 만드는 걸 떠나서 굉장히 큰 배움이 되었습니다. 고수분들의 코드는 이런 거구나라고 깨닫게 되었습니다.저는 이번 첫 개인 프로젝트를 통해 전보다는 조금 더 성장했다고 생각합니다.
+이번 블로그를 만들면서 처음으로 직접 만들어봤다는 것에 정말 큰 성취감과 자신감을 얻었습니다. 또 만들면서 저의 부족한 부분을 다시 한번 더 깨닫게 되었고, 개발에 더욱더 재미를 느끼게 되었습니다. 이번 블로그를 만들면서 많은 개발자분의 코드를 참고하였는데 정말 큰 배움이 되었습니다. 그런 분들과 같이 일하는 날이 올 수 있게 더욱더 노력해야겠습니다.

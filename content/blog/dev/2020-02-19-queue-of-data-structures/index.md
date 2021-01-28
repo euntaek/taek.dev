@@ -162,14 +162,3 @@ pq.enqueue(2, "d");
 pq.enqueue(0, "e");
 console.log(pq.getBuffer()); // log: [[0,'e'], [1,'c'], [2,'d'], [3,'a'], [4,'b']]
 ```
-
-## 마치며
-
-저번 스택에 이어 큐를 공부했다. 큐 역시도 자바스크립트 배열의 메소드로 손쉽게 구현이 가능했다. 이번 공부를 통해 큐의 adt를 알 수 있었다. 큐와 스택을 공부했으니 큐 &#183; 스택 관련된 알고리즘 문제를 열심히 풀어봐야겠다. 아자!
-
----
-
-### 참고
-
-- https://www.tutorialspoint.com/data_structures_algorithms/dsa_queue.htm
-- https://www.tutorialspoint.com/data_structures_algorithms/priority_queue.htm
