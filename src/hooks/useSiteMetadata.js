@@ -14,6 +14,7 @@ const useSiteMetadata = () => {
             siteUrl
             description
             introduction
+            aboutUrl
             icon
             keywords
             social {

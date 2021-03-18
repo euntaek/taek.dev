@@ -4,6 +4,7 @@ module.exports = {
   siteUrl: `https://taek.io`,
   description: `김은택의 개인 블로그입니다. 개인적인 공부, 취미 등을 기록합니다.`,
   introduction: `현재 프론트엔드 개발자를 목표로 공부하고 있습니다.`,
+  aboutUrl: "https://www.notion.so/1766de626e274aa584d0e0cd3fcd4abe",
   icon: `content/assets/taek-icon.png`,
   keywords: [`blog`, `development`, `frontend`],
   social: {

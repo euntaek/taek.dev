@@ -28,12 +28,12 @@ const style = css`
 `;
 
 function Bio() {
-  const { author, introduction, social } = useSiteMetadata();
+  const { author, introduction, aboutUrl, social } = useSiteMetadata();
 
   return (
     <aside id="bio" css={style}>
       <p>
-        👋 안녕하세요! <Link to="/about">{author.ko}</Link>이라고 합니다.
+        👋 안녕하세요! <Link to={aboutUrl}>{author.ko}</Link>이라고 합니다.
         <br />
         📖 {introduction}
       </p>
