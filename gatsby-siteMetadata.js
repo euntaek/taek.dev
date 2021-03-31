@@ -9,9 +9,9 @@ module.exports = {
   keywords: [`blog`, `development`, `frontend`],
   social: {
     github: `https://github.com/euntaek`,
-    facebook: `https://www.facebook.com/profile.php?id=100002769998965`,
+    facebook: ``,
     linkedIn: ``,
-    insta: `https://www.instagram.com/zmn5113/?hl=ko`,
+    insta: ``,
     twitter: ``,
   },
   utterances: `euntaek/taek.io`,
