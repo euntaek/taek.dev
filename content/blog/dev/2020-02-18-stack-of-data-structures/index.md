@@ -1,10 +1,11 @@
 ---
-title: "자료구조 | 스택"
+title: "자료구조 | 스택(Stack)"
 date: 2020-02-18
 category: dev
 tags:
   - 자료구조
-description: 자료구조의 스택(Stack)에 대해 알아보고 자바스크립트(Javascript)로 구현해보자.
+  - Javascript
+description: 자바스크립트로 구현해보는 스택(Stack)
 ---
 
 > 이 포스트는 제가 개인적으로 공부한 내용을 정리한 글입니다. 잘못된 내용이나 부족한 부분 등 자유로운 피드백은 저에게 큰 도움이 됩니다!

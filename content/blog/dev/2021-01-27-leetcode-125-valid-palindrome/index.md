@@ -5,7 +5,8 @@ category: dev
 tags:
   - 알고리즘
   - 문제풀이
-description: LeetCode 125. Valid Palindrome 문제 풀이(Javascript)
+  - Javascript
+description: LeetCode 125. Valid Palindrome 문제 풀이
 ---
 
 > 이 포스트는 제가 개인적으로 공부한 내용을 정리한 글입니다. 잘못된 내용이나 부족한 부분 등 자유로운 피드백은 저에게 큰 도움이 됩니다!
