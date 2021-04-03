@@ -60,7 +60,7 @@ console.log(strNum.length, elapsed); // log: 252
 이대로 구현만 하면 된다.
 
 ```js
-// 백준에서 입력을 받는다. - Node.Js
+// 입력을 받는다.
 const fs = require('fs')
 const strLine = fs.readFileSync('/dev/stdin').toString().split("\n");
 
