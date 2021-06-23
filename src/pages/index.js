@@ -38,7 +38,7 @@ const index = ({ location }) => {
 
   useEffect(() => {
     swiper.current = swiperjs();
-    storage.getShowTags() && setTimeout(onShowTags, 300);
+    storage.getShowTags() && onShowTags();
   }, []);
 
   useEffect(() => {
