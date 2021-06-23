@@ -1,8 +1,8 @@
-# [TAEKLOG](https://taek.io)
+# [TAEKLOG](https://taek.io) [![Netlify Status](https://api.netlify.com/api/v1/badges/a73769be-f56c-4b5a-9cdf-c3b7a1547110/deploy-status)](https://app.netlify.com/sites/taeklog-blog/deploys)
 
-개인 블로그입니다.
+저의 개인 블로그입니다.
 
-## 스택
+### 기술 스택
 
 ![gatsby](https://img.shields.io/badge/-Gatsby-663399?&logo=Gatsby&logoColor=white)
 ![netlify](https://img.shields.io/badge/-Netlify-00C7B7?&logo=Netlify&logoColor=white)
