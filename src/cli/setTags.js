@@ -1,7 +1,6 @@
 const chalk = require("chalk");
 
 async function setTags(inquirer, tags, selectedCategory, selectedTags = []) {
-  console.log("tags!!!!!!!!!!", tags, selectedCategory, selectedTags);
   const temp = tags.has(selectedCategory)
     ? tags.get(selectedCategory).filter(tag => !selectedTags.includes(tag))
     : [];
