@@ -22,6 +22,12 @@ const style = css`
   h6 {
     margin: 3.5rem 0 1.75rem;
   }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 1.125rem;
+  }
   a {
     text-decoration: none;
     font-weight: bold;
@@ -38,11 +44,16 @@ const style = css`
   li {
     &,
     & > p {
-      margin-bottom: calc(1.75rem / 2);
+      margin-bottom: calc(1.75rem / 4);
+    }
+    & > strong {
+      display: inline-block;
+      margin-bottom: calc(1.75rem / 4);
     }
     & > ul,
     ol {
       margin-left: 1.25rem;
+      margin-bottom: calc(1.75rem / 4);
     }
   }
   p {
