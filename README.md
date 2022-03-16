@@ -1,4 +1,4 @@
-# [TAEKLOG](https://taek.io) [![Netlify Status](https://api.netlify.com/api/v1/badges/a73769be-f56c-4b5a-9cdf-c3b7a1547110/deploy-status)](https://app.netlify.com/sites/taeklog-blog/deploys)
+# [TAEKLOG](https://taek.dev) [![Netlify Status](https://api.netlify.com/api/v1/badges/a73769be-f56c-4b5a-9cdf-c3b7a1547110/deploy-status)](https://app.netlify.com/sites/taeklog-blog/deploys)
 
 저의 개인 블로그입니다.
 

@@ -1,11 +1,11 @@
 {
-  "name": "taek.io",
+  "name": "taek.dev",
   "private": true,
   "description": "A blog by Euntaek Kim",
   "version": "0.1.0",
   "author": "Euntaek Kim <zmn5119@gmail.com>",
   "bugs": {
-    "url": "https://github.com/EuntaekKim/taek.io/issues"
+    "url": "https://github.com/euntaek/taek.dev/issues"
   },
   "dependencies": {
     "@emotion/core": "^10.0.27",
@@ -55,7 +55,7 @@
     "eslint-plugin-react": "^7.17.0",
     "prettier": "^1.19.1"
   },
-  "homepage": "https://github.com/EuntaekKim/taek.io#readme",
+  "homepage": "https://github.com/euntaek/taek.dev#readme",
   "keywords": [
     "gatsby"
   ],
@@ -63,7 +63,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EuntaekKim/taek.io.git"
+    "url": "git+https://github.com/euntaek/taek.dev.git"
   },
   "scripts": {
     "build": "gatsby build",
