@@ -4,7 +4,7 @@ date: 2021-07-03
 category: dev
 tags:
   - 코드스피츠
-description: 코드스피츠77 ES6+ 1회차 Programing & JavaScript Elementry의 내용을 정리해보자.
+description: 코드스피츠77 ES6+ 1회차 Programing & JavaScript Elementry 강의 정리
 ---
 
 > 이 포스트는 [코드스피츠77 ES6+ 1회차](https://www.youtube.com/watch?v=0j_eGoF8Q98&list=PLBNdLLaRx_rIF3jAbhliedtfixePs5g2q&index=1)를 보고 개인적으로 정리한 내용입니다. 잘못된 내용이나 부족한 부분이 있으면 언제든 알려주세요. 😉
