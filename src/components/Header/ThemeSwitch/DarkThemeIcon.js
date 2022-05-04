@@ -1,7 +1,6 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
-
-const style = animate => css`
+import React from "react";
+import { css } from "@emotion/react";
+const style = (animate) => css`
   position: absolute;
   transform: translateY(${animate ? "0" : "3rem"});
   visibility: ${animate ? "visible" : "hidden"};

@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
-
+import React from "react";
+import { css } from "@emotion/react";
 import Header from "../Header/Header";
 import Footer from "../Footer";
 

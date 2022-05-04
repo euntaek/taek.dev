@@ -1,5 +1,5 @@
 import React from "react";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 
 import useCategories from "../../hooks/useCateroies";
 import Category from "./Category";
@@ -19,7 +19,7 @@ function Categories({ selectedCategory, onSelectCategory, showTags, onShowTags }
         selected={selectedCategory}
         onSelectCategory={onSelectCategory}
       />
-      {categories.map(category => (
+      {categories.map((category) => (
         <Category
           categoryName={category.fieldValue}
           selected={selectedCategory}

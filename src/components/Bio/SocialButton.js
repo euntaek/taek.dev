@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import { css, jsx } from "@emotion/react";
 
 import Github from "../../images/github.svg";
 import Facebook from "../../images/facebook.svg";

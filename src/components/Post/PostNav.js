@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import React from "react";
+import { css } from "@emotion/react";
 import { Link } from "gatsby";
 
 import { filterDateFromPath } from "../../utils/date";
@@ -15,7 +15,7 @@ const style = css`
   }
 `;
 
-const navigator = navName => css`
+const navigator = (navName) => css`
   text-align: ${navName === "prev" ? "left" : "right"};
   font-weight: bold;
   span {

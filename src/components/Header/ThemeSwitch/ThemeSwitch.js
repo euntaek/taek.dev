@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
-
+import React from "react";
+import { css } from "@emotion/react";
 import LightThemeIcon from "./LightThemeIcon.js";
 import DarkThemeIcon from "./DarkThemeIcon.js";
 import { useState } from "react";

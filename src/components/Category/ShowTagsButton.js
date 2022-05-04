@@ -1,8 +1,8 @@
 import React from "react";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import ShowTags from "../../images/show-tags.svg";
 
-const style = showTags => css`
+const style = (showTags) => css`
   position: relative;
   margin: 0.5rem 0 0 0.5rem;
   width: auto;

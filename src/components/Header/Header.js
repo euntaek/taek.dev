@@ -1,11 +1,11 @@
 import React from "react";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import { Link } from "gatsby";
 
 import useSiteMetadata from "../../hooks/useSiteMetadata";
 import ThemeContainer from "./ThemeContainer";
 
-const style = pathName => {
+const style = (pathName) => {
   const height = pathName === "/" ? "5rem" : "3rem";
   const fontSize = pathName === "/" ? "3rem" : "1.75rem";
 

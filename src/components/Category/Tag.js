@@ -1,5 +1,5 @@
 import React from "react";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 const style = css`
   padding: 0 8px;
   height: 28px;

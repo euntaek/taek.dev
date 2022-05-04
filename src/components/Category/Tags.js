@@ -1,10 +1,12 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import React from "react";
+import { css } from "@emotion/react";
+import { Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import useTags from "../../hooks/useTags";
 import Tag from "./Tag";
 
-const style = showTags => {
+const style = (showTags) => {
   return css`
     margin: 1.25rem -1.25rem ${showTags ? "3.5rem" : 0};
     height: ${showTags ? "3.75rem" : "0"};
@@ -13,7 +15,7 @@ const style = showTags => {
     border-bottom: ${showTags ? "1px" : "0"} solid;
     transition: all 300ms ease-in-out ${showTags ? "0ms" : "300ms"};
 
-    .swiper-container {
+    .swiper {
       font-size: 13px;
       width: auto;
       height: 100%;
@@ -41,8 +43,8 @@ const style = showTags => {
 function Tags({ selectedCategory, checkedTags, onCheckTag, showTags }) {
   const tags = useTags(selectedCategory);
 
-  const checkedTagsData = checkedTags.map(checkedTag => {
-    return tags.find(tag => tag.fieldValue === checkedTag);
+  const checkedTagsData = checkedTags.map((checkedTag) => {
+    return tags.find((tag) => tag.fieldValue === checkedTag);
   });
 
   const filteredTags = Array.from(new Set([...checkedTagsData, ...tags]));
@@ -55,16 +57,27 @@ function Tags({ selectedCategory, checkedTags, onCheckTag, showTags }) {
       role="tabpanel"
       aria-labelledby={`category-${selectedCategory}`}
     >
-      <div className="swiper-container" role="group">
-        <ul className="swiper-wrapper">
-          {filteredTags.map(tag => (
-            <li className="swiper-slide" key={tag.fieldValue}>
-              <Tag tag={tag} checkedTags={checkedTags} onCheckTag={onCheckTag} />
-            </li>
-          ))}
-        </ul>
+      <Swiper
+        modules={[Pagination]}
+        spaceBetween={16}
+        slidesPerView={"auto"}
+        freeMode={true}
+        onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper) => console.log(swiper)}
+        pagination={{
+          el: ".swiper-pagination",
+          type: "bullets",
+          clickable: true,
+          dynamicBullets: true,
+        }}
+      >
         <div className="swiper-pagination"></div>
-      </div>
+        {filteredTags.map((tag) => (
+          <SwiperSlide className="swiper-slide" key={tag.fieldValue}>
+            <Tag tag={tag} checkedTags={checkedTags} onCheckTag={onCheckTag} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 }

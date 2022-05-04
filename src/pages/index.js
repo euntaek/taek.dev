@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
-import Swiper from "swiper";
+import React, { useState, useEffect, useCallback } from "react";
 import scrollTo from "gatsby-plugin-smoothscroll";
 
 import Layout from "../components/Layout";
@@ -11,40 +10,24 @@ import ContentsContainer from "../components/Contents";
 import useSiteMetadata from "../hooks/useSiteMetadata";
 import * as storage from "../utils/storage";
 
-const swiperjs = () =>
-  new Swiper(".swiper-container", {
-    slidesPerView: "auto",
-    spaceBetween: 16,
-    freeMode: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-    },
-  });
-
 const index = ({ location }) => {
   const INITIAL_CATEGORY = storage.getCategory() || "all";
   const INITIAL_TAGS = storage.getTags() || [];
   const INITIAL_SHOW_TAGS = false;
 
-  // selected category, checked tags
   const [category, setCategory] = useState(INITIAL_CATEGORY);
   const [tags, setTags] = useState(INITIAL_TAGS);
   const [showTags, setShowTags] = useState(INITIAL_SHOW_TAGS);
 
-  const swiper = useRef(null);
   const { title } = useSiteMetadata();
 
   useEffect(() => {
-    swiper.current = swiperjs();
     storage.getShowTags() && onShowTags();
   }, []);
 
   useEffect(() => {
     storage.setCategory(category);
     storage.setTags(tags);
-    swiper.current.update();
   }, [category, tags]);
 
   useEffect(() => {
@@ -52,29 +35,28 @@ const index = ({ location }) => {
   }, [showTags]);
 
   const onSelectCategory = useCallback(
-    selectedCategory => {
+    (selectedCategory) => {
       if (selectedCategory === category) return;
       setCategory(selectedCategory);
       setTags([]);
     },
     [category],
   );
-  const onCheckTag = useCallback(tag => {
-    setTags(prevTags => {
+  const onCheckTag = useCallback((tag) => {
+    setTags((prevTags) => {
       return prevTags.includes(tag)
-        ? prevTags.filter(prevTag => prevTag !== tag)
+        ? prevTags.filter((prevTag) => prevTag !== tag)
         : prevTags.concat(tag);
     });
   }, []);
 
   const onShowTags = useCallback(() => {
-    setShowTags(prevState => {
-      !prevState && swiper.current.update();
+    setShowTags((prevState) => {
       return !prevState;
     });
   }, []);
 
-  const onCheckTagInPost = useCallback(tag => {
+  const onCheckTagInPost = useCallback((tag) => {
     scrollTo("#category");
     setTags([tag]);
   }, []);

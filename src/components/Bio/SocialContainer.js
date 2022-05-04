@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import React from "react";
+import { css } from "@emotion/react";
 import SocialButton from "./SocialButton";
 
 const style = css`
@@ -16,7 +16,7 @@ const style = css`
 function SocialContainer({ socials }) {
   return (
     <ul css={style}>
-      {Object.keys(socials).map(item => {
+      {Object.keys(socials).map((item) => {
         return socials[item] ? (
           <li key={item}>
             <SocialButton social={item} uri={socials[item]} />
