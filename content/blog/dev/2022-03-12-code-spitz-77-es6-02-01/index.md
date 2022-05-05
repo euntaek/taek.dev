@@ -4,7 +4,7 @@ date: 2022-03-12
 category: dev
 tags:
   - 코드스피츠
-description: 코드스피츠77 ES6+ 2회차 Flow Control Statement 1/2 강의 정리
+description: 코드스피츠77 ES6+ 2회차 Flow Control Statement 1/2 강의 내용을 정리했습니다.
 ---
 
 > 이 포스트는 [코드스피츠77 ES6+ 2회차 1/2](https://www.youtube.com/watch?v=FP9LBhPD4eo&list=PLBNdLLaRx_rIF3jAbhliedtfixePs5g2q&index=2) 를 보고 개인적으로 정리한 내용입니다. 잘못된 내용이나 부족한 부분이 있으면 언제든 알려주세요. 😉
