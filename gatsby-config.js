@@ -1,5 +1,8 @@
 const siteMetadata = require("./gatsby-siteMetadata");
 
+const re = /(\d{4}-\d{2}-\d{2})-/;
+const filterDateFromPath = (path) => path.replace(re, "");
+
 module.exports = {
   siteMetadata,
   plugins: [
@@ -94,12 +97,13 @@ module.exports = {
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map((edge) => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.description,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+                const { node } = edge;
+                return Object.assign({}, node.frontmatter, {
+                  description: node.frontmatter.description,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + filterDateFromPath(node.fields.slug),
+                  guid: site.siteMetadata.siteUrl + filterDateFromPath(node.fields.slug),
+                  custom_elements: [{ "content:encoded": node.html }],
                 });
               });
             },
