@@ -34,7 +34,7 @@
     "gatsby-remark-responsive-iframe": "^5.13.0",
     "gatsby-remark-smartypants": "^5.13.0",
     "gatsby-source-filesystem": "^4.13.0",
-    "gatsby-transformer-remark": "^5.13.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^4.13.0",
     "gray-matter": "^4.0.2",
     "inquirer": "^8.2.4",
