@@ -62,8 +62,6 @@ function Tags({ selectedCategory, checkedTags, onCheckTag, showTags }) {
         spaceBetween={16}
         slidesPerView={"auto"}
         freeMode={true}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
         pagination={{
           el: ".swiper-pagination",
           type: "bullets",
