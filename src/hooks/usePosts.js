@@ -7,7 +7,7 @@ const usePosts = () => {
     graphql`
       query Posts {
         allMarkdownRemark(
-          sort: { fields: frontmatter___date, order: DESC }
+          sort: { frontmatter: { date: DESC } }
           filter: { frontmatter: { category: { ne: "" }, tags: { ne: "" } } }
         ) {
           edges {

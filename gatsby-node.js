@@ -2,9 +2,9 @@ const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 
 const re = /(\d{4}-\d{2}-\d{2})-/;
-const filterDateFromPath = path => path.replace(re, "");
+const filterDateFromPath = (path) => path.replace(re, "");
 
-const getPostNav = navData => {
+const getPostNav = (navData) => {
   return navData ? { title: navData.frontmatter.title, slug: navData.fields.slug } : null;
 };
 
@@ -30,7 +30,7 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
       allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter: { date: DESC } }
         filter: { frontmatter: { category: { ne: "" }, tags: { ne: "" } } }
       ) {
         edges {

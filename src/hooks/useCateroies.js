@@ -7,7 +7,7 @@ const useCategories = () => {
     graphql`
       query Categories {
         allMarkdownRemark {
-          group(field: frontmatter___category) {
+          group(field: { frontmatter: { category: SELECT } }) {
             totalCount
             fieldValue
           }
